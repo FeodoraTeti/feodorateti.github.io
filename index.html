@@ -20,22 +20,6 @@
     .button-container {
   margin-top: 10px;
 }
-
-.button {
-  display: inline-block;
-  padding: 10px 15px;
-  margin-right: 10px;
-  font-weight: bold;
-  color: white;
-  background: rgb(10, 52, 104); /* ifoBlueDark */
-  border-radius: 5px;
-  text-decoration: none;
-  transition: background 0.3s;
-}
-
-.button:hover {
-  background: rgb(102, 0, 0); /* ifoRed */
-}
     header {
   background: rgb(10, 52, 104); /* ifoBlueDark */
   padding: 20px;
@@ -85,9 +69,27 @@ nav ul li a {
     .tile {
       background: rgb(245, 245, 245);
       padding: 20px;
-      border: 1px solid rgb(200, 200, 200);
-      border-radius: 8px;
-    }
+        border-radius: 10px; /* Rounded corners for a softer look */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Subtle shadow instead of a border */
+        transition: box-shadow 0.3s;
+      }
+      
+      .tile:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Slight lift on hover */
+      }
+    .button {
+        background: rgb(10, 52, 104);
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: background 0.3s;
+      }
+      
+      .button:hover {
+        background: rgb(102, 0, 0); /* ifoRed for hover */
+      }
     footer {
       text-align: center;
       padding: 10px;

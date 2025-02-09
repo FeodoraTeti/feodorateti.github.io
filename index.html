@@ -102,6 +102,19 @@ nav ul li a:hover {
         border-top: 1px solid rgb(200, 200, 200);
         margin: 40px 0;
       }
+    .about-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%; /* Makes the image circular */
+  object-fit: cover;
+  border: 2px solid rgb(200, 200, 200);
+}
     footer {
       text-align: center;
       padding: 10px;
@@ -126,9 +139,12 @@ nav ul li a:hover {
   </header>
 
   <section id="about">
-    <p>I am an IES Postdoctoral Fellow at Princeton University, an Assistant Professor (non-tenure) and Economist at the LMU and ifo Institute (currently on leave). 
-      I am a CESifo and CEPR research affiliate. 
-      My research interests lie in international trade, particularly trade policy.</p>
+      <div class="about-container">
+        <img src="your-photo.jpg" alt="Feodora Teti" class="profile-pic">
+        <p>I am an IES Postdoctoral Fellow at Princeton University, an Assistant Professor (non-tenure) and Economist at the LMU and ifo Institute (currently on leave). 
+        I am a CESifo and CEPR research affiliate. 
+        My research interests lie in international trade, particularly trade policy.</p>
+      </div>
   </section>
 
 <section id="research">

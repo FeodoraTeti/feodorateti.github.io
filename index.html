@@ -12,6 +12,25 @@
       margin: 0;
       padding: 0;
     }
+    .button-container {
+  margin-top: 10px;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 15px;
+  margin-right: 10px;
+  font-weight: bold;
+  color: white;
+  background: rgb(10, 52, 104); /* ifoBlueDark */
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.button:hover {
+  background: rgb(102, 0, 0); /* ifoRed */
+}
     header {
   background: rgb(10, 52, 104); /* ifoBlueDark */
   padding: 20px;
@@ -93,19 +112,27 @@ nav ul li a {
       My research interests lie in international trade, particularly trade policy.</p>
   </section>
 
-  <section id="research">
-    <h2>Research</h2>
-    <div class="grid-container">
-      <div class="tile">
-        <h3>Evading Trade Sanctions</h3>
-        <p>Evidence from Military Goods – Published in <em>American Economic Review</em>.</p>
-      </div>
-      <div class="tile">
-        <h3>The Welfare Effects of Trade Sanctions</h3>
-        <p>Published in <em>Journal of International Economics</em>.</p>
+<section id="research">
+  <h2>Research</h2>
+  <div class="grid-container">
+    <div class="tile">
+      <h3>Evading Trade Sanctions</h3>
+      <p>Evidence from Military Goods – Published in <em>American Economic Review</em>.</p>
+      <div class="button-container">
+        <a href="#" class="button">PDF</a>
+        <a href="#" class="button">BibTeX</a>
       </div>
     </div>
-  </section>
+    <div class="tile">
+      <h3>The Welfare Effects of Trade Sanctions</h3>
+      <p>Published in <em>Journal of International Economics</em>.</p>
+      <div class="button-container">
+        <a href="#" class="button">PDF</a>
+        <a href="#" class="button">BibTeX</a>
+      </div>
+    </div>
+  </div>
+</section>
 
   <section id="data">
     <h2>Data</h2>

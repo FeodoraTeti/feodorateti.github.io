@@ -15,22 +15,19 @@
     header {
       background: rgb(10, 52, 104); /* ifoBlueDark */
       padding: 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      max-width: 1200px; /* Same as your content sections */
-      margin: 0 auto;
       color: white;
+      text-align: center;
     }
     header h1 {
-      margin: 10;
-      font-size: 24px;
+      margin: 0;
+      font-size: 36px;
     }
     nav ul {
       list-style: none;
       padding: 0;
-      margin: 0;
+      margin: 20px 0;
       display: flex;
+      justify-content: center;
     }
     nav ul li {
       margin: 0 15px;
@@ -47,6 +44,18 @@
       padding: 40px 20px;
       max-width: 1200px;
       margin: 0 auto;
+      border-bottom: 1px solid rgb(200, 200, 200); /* Divider */
+    }
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    .tile {
+      background: rgb(245, 245, 245);
+      padding: 20px;
+      border: 1px solid rgb(200, 200, 200);
+      border-radius: 8px;
     }
     footer {
       text-align: center;
@@ -78,16 +87,30 @@
 
   <section id="research">
     <h2>Research</h2>
-    <p>My research focuses on international trade, particularly on the welfare effects of sanctions and evasion strategies. Key projects include:</p>
-    <ul>
-      <li><strong>Evading Trade Sanctions: Evidence from Military Goods</strong> – Published in <em>American Economic Review</em>.</li>
-      <li><strong>The Welfare Effects of Trade Sanctions</strong> – Published in <em>Journal of International Economics</em>.</li>
-    </ul>
+    <div class="grid-container">
+      <div class="tile">
+        <h3>Evading Trade Sanctions</h3>
+        <p>Evidence from Military Goods – Published in <em>American Economic Review</em>.</p>
+      </div>
+      <div class="tile">
+        <h3>The Welfare Effects of Trade Sanctions</h3>
+        <p>Published in <em>Journal of International Economics</em>.</p>
+      </div>
+    </div>
   </section>
 
   <section id="data">
     <h2>Data</h2>
-    <p>I work with novel datasets on trade flows and enforcement mechanisms. Selected datasets are available upon request for research collaboration.</p>
+    <div class="grid-container">
+      <div class="tile">
+        <h3>Trade Flow Data</h3>
+        <p>Novel datasets on trade flows and enforcement mechanisms.</p>
+      </div>
+      <div class="tile">
+        <h3>Collaboration Requests</h3>
+        <p>Selected datasets are available upon request for research collaboration.</p>
+      </div>
+    </div>
   </section>
 
   <section id="cv">
@@ -106,3 +129,4 @@
   </footer>
 </body>
 </html>
+

@@ -105,17 +105,10 @@ nav ul li a:hover {
 .about-container {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 40px;
   max-width: 1200px;
   margin: 40px auto;
-  text-align: left;
-}
-
-.profile-pic {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%; /* Circular shape */
-  object-fit: cover;
 }
 
 .about-text {
@@ -125,12 +118,20 @@ nav ul li a:hover {
   color: rgb(10, 52, 104); /* ifoBlueDark */
 }
 
+.profile-pic {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
 .icon-links {
   margin-top: 15px;
 }
 
 .icon-links a {
-  margin-right: 15px;
+  margin-right: 10px;
   display: inline-block;
 }
 
@@ -168,16 +169,16 @@ nav ul li a:hover {
 
 <section id="about">
   <div class="about-container">
-    <div style="text-align: center;">
-      <img src="Teti-Feodora_2022_23.JPG" alt="Feodora Teti" class="profile-pic">
-      <p>I am an IES Postdoctoral Fellow at Princeton University, an Assistant Professor (non-tenure) and Economist at the LMU and ifo Institute (currently on leave). 
-      I am a CESifo and CEPR research affiliate. My research interests lie in international trade, particularly trade policy.</p>
+    <div class="about-text">
+      <h2>Feodora Teti</h2>
+      <p>I am an IES Postdoctoral Fellow at Princeton University, an Assistant Professor (non-tenure) and Economist at the LMU and ifo Institute. My research focuses on international trade and trade policy.</p>
       <div class="icon-links">
         <a href="mailto:feodora.teti@example.com"><img src="email-icon.png" alt="Email" class="icon"></a>
         <a href="https://twitter.com/yourhandle" target="_blank"><img src="twitter-icon.png" alt="Twitter" class="icon"></a>
         <a href="https://linkedin.com/in/yourprofile" target="_blank"><img src="linkedin-icon.png" alt="LinkedIn" class="icon"></a>
       </div>
     </div>
+    <img src="Teti-Feodora_2022_23.JPG" alt="Feodora Teti" class="profile-pic">
   </div>
 </section>
 

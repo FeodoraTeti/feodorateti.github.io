@@ -102,18 +102,28 @@ nav ul li a:hover {
         border-top: 1px solid rgb(200, 200, 200);
         margin: 40px 0;
       }
-    .about-container {
-  display: flex;
-  align-items: center;
-  gap: 20px;
+.about-container {
+  text-align: center;
+  margin: 40px 0;
 }
 
 .profile-pic {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%; /* Makes the image circular */
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
   object-fit: cover;
-  border: 2px solid rgb(200, 200, 200);
+  border: 3px solid rgb(200, 200, 200);
+}
+    .icon-links a {
+  margin: 0 10px;
+  font-size: 24px;
+  color: rgb(10, 52, 104); /* ifoBlueDark */
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.icon-links a:hover {
+  color: rgb(102, 0, 0); /* ifoRed */
 }
     footer {
       text-align: center;
@@ -138,14 +148,23 @@ nav ul li a:hover {
     </nav>
   </header>
 
-  <section id="about">
-      <div class="about-container">
-        <img src="Teti-Feodora_2022_23.jpg" alt="Feodora Teti" class="profile-pic">
-        <p>I am an IES Postdoctoral Fellow at Princeton University, an Assistant Professor (non-tenure) and Economist at the LMU and ifo Institute (currently on leave). 
-        I am a CESifo and CEPR research affiliate. 
-        My research interests lie in international trade, particularly trade policy.</p>
+<section id="about">
+  <div class="about-container">
+    <div style="text-align: center;">
+      <img src="Teti-Feodora_2022_23.jpg" alt="Feodora Teti" class="profile-pic">
+      <h2>Feodora Teti</h2>
+      <p>I am an IES Postdoctoral Fellow at Princeton University, an Assistant Professor (non-tenure) and Economist at the LMU and ifo Institute (currently on leave). 
+      I am a CESifo and CEPR research affiliate. My research interests lie in international trade, particularly trade policy.</p>
+      <div class="icon-links">
+        <a href="mailto:feodora.teti@example.com">📧</a>
+        <a href="https://twitter.com/yourhandle" target="_blank">🐦</a>
+        <a href="https://linkedin.com/in/yourprofile" target="_blank">🔗</a>
+        <a href="cv.pdf" target="_blank">📄 CV</a>
       </div>
-  </section>
+    </div>
+  </div>
+</section>
+
 
 <section id="research">
   <h2 class="section-title">Working Paper</h2>

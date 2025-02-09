@@ -12,25 +12,20 @@
       margin: 0;
       padding: 0;
     }
-      h2 {
-    color: rgb(10, 52, 104); /* ifoBlueDark */
-    font-size: 20px;
-    margin-bottom: 10px;
-  }
-    .button-container {
-  margin-top: 10px;
-}
-    header {
-  background: rgb(10, 52, 104); /* ifoBlueDark */
-  padding: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: white;
-  max-width: 1200px;
-  margin: 0 auto;
-}
 
+  .button-container {
+    margin-top: 10px;
+  }
+  header {
+    background: rgb(10, 52, 104); /* ifoBlueDark */
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
 header h1 {
   margin: 0;
   font-size: 24px;
@@ -52,15 +47,26 @@ nav ul li a {
   text-decoration: none;
   font-weight: bold;
 }
-    nav ul li a:hover {
-      color: rgb(102, 0, 0); /* ifoRed */
-    }
+    
+nav ul li a:hover {
+  color: rgb(102, 0, 0); /* ifoRed */
+}
     section {
       padding: 40px 20px;
       max-width: 1200px;
       margin: 0 auto;
       border-bottom: 1px solid rgb(200, 200, 200); /* Divider */
     }
+     h2 {
+    color: rgb(10, 52, 104); /* ifoBlueDark */
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+    h2.section-title {
+  border-bottom: 1px solid rgb(200, 200, 200); /* Subtle divider */
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
     .grid-container {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -126,7 +132,7 @@ nav ul li a {
   </section>
 
 <section id="research">
-  <h2>Working Paper</h2>
+  <h2 class="section-title">Working Paper</h2>
   <div class="grid-container">
     <div class="tile">
       <h3>The Welfare Effects of Trade Sanctions</h3>

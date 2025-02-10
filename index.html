@@ -19,7 +19,9 @@
 
     /* Header Section Styling */
     header {
-      background: rgb(10, 52, 104); /* ifoBlueDark */
+      background: rgb(10, 52, 104);
+      flex-wrap: wrap; /* Ensures header content adapts on smaller screens */
+      padding: 15px; /* ifoBlueDark */
       padding: 20px;
       display: flex;
       justify-content: space-between;
@@ -36,6 +38,7 @@
     /* Navigation Menu */
     nav ul {
       list-style: none;
+      flex-wrap: wrap; /* Allows navigation links to wrap on small screens */
       padding: 0;
       margin: 0;
       display: flex;
@@ -54,7 +57,8 @@
 
     /* Section Styling */
     section {
-      padding: 40px 20px;
+      padding: 30px 15px; /* Reduce padding for smaller screens */
+      width: 95%; /* Ensure sections fit within the screen */
       max-width: 1200px;
       margin: 0 auto; /* Divider */
     }
@@ -73,6 +77,8 @@
     /* About Section Layout */
     .about-container {
       display: flex;
+      flex-direction: column; /* Stack items on small screens */
+      align-items: center;
       align-items: center;
       justify-content: space-between;
       gap: 40px;
@@ -87,7 +93,7 @@
       color: rgb(10, 52, 104); /* ifoBlueDark */
     }
     .profile-pic {
-      width: 200px;
+      width: 150px; /* Reduce profile picture size on small screens */
       height: auto;
       border-radius: 0; /* Keeps rectangular shape */
       object-fit: contain;
@@ -103,6 +109,16 @@
       margin-top: 20px;
     }
   </style>
+<script>
+  function toggleAbstract(id) {
+    var abstract = document.getElementById(id);
+    if (abstract.style.display === "none") {
+      abstract.style.display = "block";
+    } else {
+      abstract.style.display = "none";
+    }
+  }
+</script>
 </head>
 <body>
   <!-- Header Section -->
@@ -139,7 +155,115 @@
     </div>
   </section>
 
-  <!-- Footer -->
+
+<section id="research">
+  <h2 class="section-title">Publications</h2>
+  <div class="grid-container">
+    <div class="tile">
+      <h3>On the Profitability of Trade Deflection and the Need for Rules of Origin</h3>
+      <p>When a country grants preferential tariffs to another, either reciprocally in a free trade agreement (FTA) or unilaterally, 
+        rules of origin (RoOs) are defined to determine whether a product is eligible for preferential treatment. RoOs exist to avoid 
+        that exports from third countries enter through the member with the lowest tariff (trade deflection). 
+        However, RoOs distort exporters' sourcing decisions and burden them with red tape. 
+        Using a global data set, we show that, for 86% of all bilateral product-level comparisons within FTAs, trade deflection is not profitable because external tariffs are rather similar 
+        and transportation costs are non-negligible; in the case of unilateral trade preferences extended by rich countries to poor ones that ratio is a striking 98%. The pervasive and 
+        unconditional use of RoOs is, therefore, hard to rationalize.</p>
+      <div class="button-container">
+        <a href="#" class="button">PDF</a>
+        <a href="#" class="button">BibTeX</a>
+      </div>
+    </div>
+    <div class="tile">
+      <h3>Quantifying the General Equilibrium Effects of the 2014 and 2022 Sanctions on Russia</h3>
+      <p>Short description or abstract here.</p>
+      <div class="button-container">
+        <a href="#" class="button">PDF</a>
+        <a href="#" class="button">BibTeX</a>
+      </div>
+    </div>
+    <div class="tile">
+      <h3>Dodging Trade Sanctions? Evidence from Military Goods</h3>
+      <p>Short description or abstract here.</p>
+      <div class="button-container">
+        <a href="#" class="button">PDF</a>
+        <a href="#" class="button">BibTeX</a>
+      </div>
+    </div>
+  </div>
+
+ <div class="section-divider"></div> <!-- Divider between sections -->
+  <h2 class="section-title">Working Paper</h2>
+  <div class="grid-container">
+    <div class="tile">
+      <h3>The Welfare Effects of Trade Sanctions</h3>
+      <p>Published in <em>Journal of International Economics</em>.</p>
+      <div class="button-container">
+        <a href="#" class="button">PDF</a>
+        <a href="#" class="button">BibTeX</a>
+      </div>
+    </div>
+    <div class="tile">
+      <h3>Evading Trade Sanctions</h3>
+      <p>Evidence from Military Goods – Published in <em>...</em>.</p>
+      <div class="button-container">
+        <a href="#" class="button">PDF</a>
+        <a href="#" class="button">BibTeX</a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="section-divider"></div> <!-- Divider between sections -->
+
+      <h2 class="section-title">Work in Progress</h2>
+  <div class="grid-container">
+      <div class="tile">
+        <h3>Evading Trade Sanctions</h3>
+        <p>Evidence from Military Goods – Published in <em>...</em>.</p>
+      </div>
+      <div class="tile">
+        <h3>Evading Trade Sanctions</h3>
+        <p>Evidence from Military Goods – Published in <em>...</em>.</p>
+      </div>
+      <div class="tile">
+        <h3>Evading Trade Sanctions</h3>
+        <p>Evidence from Military Goods – Published in <em>...</em>.</p>
+      </div>
+      <div class="tile">
+        <h3>Evading Trade Sanctions</h3>
+        <p>Evidence from Military Goods – Published in <em>...</em>.</p>
+      </div>
+      <div class="tile">
+        <h3>Effective Sanctions?</h3>
+        <p>with Lisa Scheckenhofer and Joschka Wanner.</p>
+      </div>
+  </div>
+</section>
+
+  <section id="data">
+    <h2>Data</h2>
+    <div class="grid-container">
+      <div class="tile">
+        <h3>Trade Flow Data</h3>
+        <p>Novel datasets on trade flows and enforcement mechanisms.</p>
+      </div>
+      <div class="tile">
+        <h3>Collaboration Requests</h3>
+        <p>Selected datasets are available upon request for research collaboration.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="cv">
+    <h2>CV</h2>
+    <p><a href="cv.pdf" target="_blank">Download my CV (PDF)</a></p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:feodora.teti@example.com">feodora.teti@example.com</a></p>
+    <p>GitHub: <a href="https://github.com/feodorateti" target="_blank">github.com/feodorateti</a></p>
+  </section>
+
   <footer>
     <p>© 2025 Feodora Teti</p>
   </footer>

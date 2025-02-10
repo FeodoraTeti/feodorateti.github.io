@@ -119,20 +119,7 @@ nav ul li a:hover {
   opacity: 1;
   display: block;
 }
-</style>
 
-<script>
-  function toggleAbstract(id) {
-    var abstract = document.getElementById(id);
-    if (abstract.classList.contains("active")) {
-      abstract.classList.remove("active");
-      setTimeout(() => (abstract.style.display = "none"), 300);
-    } else {
-      abstract.style.display = "block";
-      setTimeout(() => abstract.classList.add("active"), 10);
-    }
-  }
-</script>
 
 .about-container {
   display: flex;
@@ -185,6 +172,25 @@ nav ul li a:hover {
       margin-top: 20px;
     }
   </style>
+
+
+
+
+  
+<script>
+  function toggleAbstract(id) {
+    var abstract = document.getElementById(id);
+    if (abstract.classList.contains("active")) {
+      abstract.classList.remove("active");
+      setTimeout(() => (abstract.style.display = "none"), 300);
+    } else {
+      abstract.style.display = "block";
+      setTimeout(() => abstract.classList.add("active"), 10);
+    }
+  }
+</script>
+
+  
 </head>
 <body>
   <header>

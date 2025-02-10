@@ -123,11 +123,10 @@ nav ul li a:hover {
 }
 
 .profile-pic {
-  width: auto; /* Maintain natural image width */
-  height: auto; /* Maintain natural image height */
-  max-width: 200px; /* Optional: set a max size */
+  width: 200px; /* Set a fixed width */
+  height: auto; /* Let the height adjust proportionally */
   border-radius: 0; /* Remove circular cropping */
-  object-fit: none; /* Display the image without resizing to fit */
+  object-fit: contain; /* Ensure the image fits without being cropped */
   flex-shrink: 0;
 }
 

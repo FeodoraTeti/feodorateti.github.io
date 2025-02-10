@@ -105,6 +105,37 @@ nav ul li a:hover {
         border-top: 1px solid rgb(200, 200, 200);
         margin: 40px 0;
       }
+    .abstract {
+  display: none;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  opacity: 0;
+  padding: 0 10px;
+}
+
+.abstract.active {
+  max-height: 500px;
+  opacity: 1;
+  display: block;
+}
+</style>
+
+<script>
+  function toggleAbstract(id) {
+    var abstract = document.getElementById(id);
+    if (abstract.classList.contains("active")) {
+      abstract.classList.remove("active");
+      setTimeout(() => (abstract.style.display = "none"), 300);
+    } else {
+      abstract.style.display = "block";
+      setTimeout(() => abstract.classList.add("active"), 10);
+    }
+  }
+</script>
+</head>
+<body>
+
 .about-container {
   display: flex;
   align-items: center;
@@ -171,19 +202,25 @@ nav ul li a:hover {
     </nav>
   </header>
 
-<section id="about">
-  <div class="about-container">
-    <div class="about-text">
-      <p>I am an IES Postdoctoral Fellow at Princeton University, an Assistant Professor (non-tenure) and Economist at the LMU and ifo Institute. My research focuses on international trade and trade policy.</p>
-      <div class="icon-links">
-        <a href="mailto:feodora.teti@example.com"><img src="email-icon.png" alt="Email" class="icon"></a>
-        <a href="https://twitter.com/yourhandle" target="_blank"><img src="twitter-icon.png" alt="Twitter" class="icon"></a>
-        <a href="https://linkedin.com/in/yourprofile" target="_blank"><img src="linkedin-icon.png" alt="LinkedIn" class="icon"></a>
+  <!-- About Section -->
+  <section id="about">
+    <div class="about-container">
+      <div class="about-text">
+        <p>
+          I am an IES Postdoctoral Fellow at Princeton University and an Assistant Professor (non-tenure) and Economist at LMU Munich and the ifo Institute. 
+          I am also a <a href="https://www.cesifo.org" target="_blank">CESifo</a> and <a href="https://cepr.org" target="_blank">CEPR</a> research affiliate. 
+          My research focuses on international trade and trade policy, with a particular interest in how firms and consumers adjust to changes in trade policy-induced costs.
+        </p>
+        <!-- Social Media Links -->
+        <div class="icon-links">
+          <a href="mailto:feodora.teti@example.com"><img src="email-icon.png" alt="Email" class="icon"></a>
+          <a href="https://twitter.com/yourhandle" target="_blank"><img src="twitter-icon.png" alt="Twitter" class="icon"></a>
+          <a href="https://linkedin.com/in/yourprofile" target="_blank"><img src="linkedin-icon.png" alt="LinkedIn" class="icon"></a>
+        </div>
       </div>
+      <img src="Teti-Feodora_2022_23.JPG" alt="Feodora Teti" class="profile-pic">
     </div>
-    <img src="Teti-Feodora_2022_23.JPG" alt="Feodora Teti" class="profile-pic">
-  </div>
-</section>
+  </section>
 
 
 <section id="research">
@@ -191,14 +228,18 @@ nav ul li a:hover {
   <div class="grid-container">
     <div class="tile">
       <h3>On the Profitability of Trade Deflection and the Need for Rules of Origin</h3>
-      <p>When a country grants preferential tariffs to another, either reciprocally in a free trade agreement (FTA) or unilaterally, 
-        rules of origin (RoOs) are defined to determine whether a product is eligible for preferential treatment. RoOs exist to avoid 
-        that exports from third countries enter through the member with the lowest tariff (trade deflection). 
-        However, RoOs distort exporters' sourcing decisions and burden them with red tape. 
-        Using a global data set, we show that, for 86% of all bilateral product-level comparisons within FTAs, trade deflection is not profitable because external tariffs are rather similar 
-        and transportation costs are non-negligible; in the case of unilateral trade preferences extended by rich countries to poor ones that ratio is a striking 98%. The pervasive and 
-        unconditional use of RoOs is, therefore, hard to rationalize.</p>
-      <div class="button-container">
+          <button onclick="toggleAbstract('abstract1')">Show Abstract</button>
+          <div id="abstract1" class="abstract">
+            <p>When a country grants preferential tariffs to another, either reciprocally in a free trade agreement (FTA) or unilaterally, 
+                  rules of origin (RoOs) are defined to determine whether a product is eligible for preferential treatment. RoOs exist to avoid 
+                  that exports from third countries enter through the member with the lowest tariff (trade deflection). 
+                  However, RoOs distort exporters' sourcing decisions and burden them with red tape. 
+                  Using a global data set, we show that, for 86% of all bilateral product-level comparisons within FTAs, trade deflection is not profitable because external tariffs are rather similar 
+                  and transportation costs are non-negligible; in the case of unilateral trade preferences extended by rich countries to poor ones that ratio is a striking 98%. The pervasive and 
+                  unconditional use of RoOs is, therefore, hard to rationalize.
+            </p>
+          </div>
+        <div class="button-container">
         <a href="#" class="button">PDF</a>
         <a href="#" class="button">BibTeX</a>
       </div>

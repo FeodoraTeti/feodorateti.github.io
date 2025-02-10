@@ -204,13 +204,17 @@ nav ul li a:hover {
 }
 
 .icon {
-  width: 25px;
-  height: 25px;
-  transition: transform 0.2s;
+  width: 32px;
+  height: 32px;
+  margin-right: 10px;
+  transition: transform 0.2s ease, fill 0.2s ease;
+  fill: #333; /* Default icon color */
 }
 
 .icon:hover {
-  transform: scale(1.2);
+  transform: scale(1.2);  /* Slight zoom effect on hover */
+  fill: #0073b1; /* LinkedIn blue for hover effect (change as you like) */
+
 }
     footer {
       text-align: center;
@@ -275,11 +279,43 @@ a:hover {
         My research focuses on international trade and trade policy, with a particular interest in how firms and consumers adjust to changes in trade policy-induced costs.
       </p>
       <!-- Social Media Links -->
-      <div class="icon-links">
-        <a href="mailto:feodora.teti@example.com"><img src="email-icon.png" alt="Email" class="icon"></a>
-        <a href="https://twitter.com/yourhandle" target="_blank"><img src="twitter-icon.png" alt="Twitter" class="icon"></a>
-        <a href="https://linkedin.com/in/yourprofile" target="_blank"><img src="linkedin-icon.png" alt="LinkedIn" class="icon"></a>
-      </div>
+        <div class="icon-links">
+          <!-- Email -->
+          <a href="mailto:teti@ifo.de" target="_blank">
+            <svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3 5H21C22.1 5 23 5.9 23 7V17C23 18.1 22.1 19 21 19H3C1.9 19 1 18.1 1 17V7C1 5.9 1.9 5 3 5ZM21 7L12 13L3 7V17H21V7ZM12 11L21 5H3L12 11Z" fill="currentColor"/>
+            </svg>
+          </a>
+        
+          <!-- Twitter -->
+          <a href="https://x.com/FeodoraTeti" target="_blank">
+            <svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M22.46 6C21.69 6.35 20.86 6.6 20 6.73C21.01 6.16 21.78 5.19 22.15 4.04C21.32 4.55 20.42 4.9 19.48 5.1C18.71 4.3 17.56 3.82 16.29 3.82C13.78 3.82 11.77 5.84 11.77 8.35C11.77 8.69 11.81 9.02 11.89 9.34C8.17 9.14 4.87 7.38 2.61 4.73C2.22 5.35 2 6.07 2 6.84C2 8.29 2.77 9.56 3.91 10.26C3.23 10.25 2.6 10.04 2.05 9.72V9.77C2.05 11.79 3.46 13.44 5.26 13.8C4.87 13.9 4.45 13.95 4.02 13.95C3.72 13.95 3.42 13.92 3.13 13.85C3.73 15.47 5.2 16.65 6.96 16.7C5.62 17.76 3.95 18.4 2.14 18.4C1.85 18.4 1.57 18.39 1.29 18.35C3.07 19.51 5.21 20.2 7.51 20.2C16.26 20.2 20.99 12.91 20.99 8.84C20.99 8.66 20.99 8.49 20.98 8.32C21.82 7.68 22.53 6.9 23 6Z" fill="currentColor"/>
+            </svg>
+          </a>
+        
+          <!-- Bluesky -->
+          <a href="https://bsky.app/profile/feodorateti.bsky.social" target="_blank">
+            <svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+              <path d="M12 6V12L16 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        
+          <!-- Google Scholar -->
+          <a href="https://scholar.google.com/citations?user=nsLvukYAAAAJ&hl=de" target="_blank">
+            <svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="currentColor"/>
+            </svg>
+          </a>
+        
+          <!-- LinkedIn -->
+          <a href="https://www.linkedin.com/in/feodorateti/" target="_blank">
+            <svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 3C5.11 3 6 3.89 6 5C6 6.11 5.11 7 4 7C2.89 7 2 6.11 2 5C2 3.89 2.89 3 4 3ZM2 8H6V20H2V8ZM8 8H12V10H12.1C12.75 9.33 13.58 8.87 14.5 8.87C17.05 8.87 18 10.33 18 13.05V20H14V13.65C14 12.6 13.79 11.87 12.87 11.87C11.95 11.87 11.5 12.56 11.5 13.65V20H8V8Z" fill="currentColor"/>
+            </svg>
+          </a>
+        </div>
     </div>
   </div>
 </section>

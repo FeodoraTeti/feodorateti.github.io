@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Meta Information -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Feodora Teti | Academic Website</title>
+  
+  <!-- Internal CSS Styling -->
   <style>
+    /* General Page Styling */
     body {
       font-family: 'Arial', sans-serif;
       background-color: #ffffff;
@@ -13,151 +17,95 @@
       padding: 0;
     }
 
-  .button-container {
-    margin-top: 10px;
-  }
-  header {
-    background: rgb(10, 52, 104); /* ifoBlueDark */
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: white;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-header h1 {
-  margin: 0;
-  font-size: 24px;
-}
+    /* Header Section Styling */
+    header {
+      background: rgb(10, 52, 104); /* ifoBlueDark */
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 24px;
+    }
 
-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-}
+    /* Navigation Menu */
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+    }
+    nav ul li {
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: rgb(10, 52, 104); /* Consistent link color across the site */ /* Soft dark gray for a modern, understated look */
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav ul li a:hover {
+      color: rgb(10, 52, 104); /* Matches ifoBlueDark for consistent design */ /* ifoRed */
+    }
 
-nav ul li {
-  margin: 0 15px;
-}
-
-nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-    
-nav ul li a:hover {
-  color: rgb(102, 0, 0); /* ifoRed */
-}
+    /* Section Styling */
     section {
       padding: 40px 20px;
       max-width: 1200px;
-      margin: 0 auto;
-      border-bottom: 1px solid rgb(200, 200, 200); /* Divider */
+      margin: 0 auto; /* Divider */
     }
-     h2 {
-    color: rgb(10, 52, 104); /* ifoBlueDark */
-    font-size: 20px;
-    margin-bottom: 10px;
-  }
+
+    h2 {
+      color: rgb(10, 52, 104); /* ifoBlueDark */
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
     h2.section-title {
-  border-bottom: 1px solid rgb(200, 200, 200); /* Subtle divider */
-  padding-bottom: 10px;
-  margin-bottom: 20px;
-}
-    .grid-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 20px;
+      border-bottom: 1px solid rgb(200, 200, 200); /* Keep dividers only under section titles */ /* Subtle divider */
+      padding-bottom: 10px;
+      margin-bottom: 20px;
     }
-    .tile {
-      background: rgb(245, 245, 245);
-      padding: 20px;
-      border: none; /* Removes the border */
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Subtle shadow instead of a border */
-      transition: box-shadow 0.3s;
-      text-align: justify; /* Align text naturally (not justified) */
-      word-wrap: break-word; /* Prevent long words from breaking the layout */
-      hyphens: auto; /* Add automatic hyphenation for a natural text flow */
-      }
-      
-    .tile:hover {
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Slight lift on hover */
-      }
-    .button {  
-      display: inline-block;
-      padding: 5px 10px;
-      font-size: 12px;
-      font-weight: bold;
-      color: white;
-      background: rgb(10, 52, 104); /* ifoBlueDark */
-      border-radius: 3px;
-      text-decoration: none; /* Removes underline */
-      transition: background 0.3s;
-      }
-      
-      .button:hover {
-        background: rgb(102, 0, 0); /* ifoRed for hover */
-      }
-    .section-divider {
-        border-top: 1px solid rgb(200, 200, 200);
-        margin: 40px 0;
-      }
-.about-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 40px;
-  flex-direction: row-reverse; /* Swaps picture and text positions */
-  max-width: 1200px;
-  margin: 40px auto;
-}
 
-.about-text {
-  flex: 1;
-  font-size: 16px;
-  line-height: 1.6;
-  color: rgb(10, 52, 104); /* ifoBlueDark */
-}
+    /* About Section Layout */
+    .about-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      flex-direction: row-reverse; /* Swaps picture and text positions */
+      max-width: 1200px;
+      margin: 40px auto;
+    }
+    .about-text {
+      flex: 1;
+      font-size: 16px;
+      line-height: 1.6;
+      color: rgb(10, 52, 104); /* ifoBlueDark */
+    }
+    .profile-pic {
+      width: 200px;
+      height: auto;
+      border-radius: 0; /* Keeps rectangular shape */
+      object-fit: contain;
+      flex-shrink: 0;
+    }
 
-.profile-pic {
-  width: 200px; /* Set a fixed width */
-  height: auto; /* Let the height adjust proportionally */
-  border-radius: 0; /* Remove circular cropping */
-  object-fit: contain; /* Ensure the image fits without being cropped */
-  flex-shrink: 0;
-}
-
-.icon-links {
-  margin-top: 15px;
-}
-
-.icon-links a {
-  margin-right: 10px;
-  display: inline-block;
-}
-
-.icon {
-  width: 25px;
-  height: 25px;
-  transition: transform 0.2s;
-}
-
-.icon:hover {
-  transform: scale(1.2);
-}
+    /* Footer Styling */
     footer {
       text-align: center;
       padding: 10px;
-      background: rgb(10, 52, 104); /* ifoBlueDark */
+      background: rgb(10, 52, 104);
       color: white;
       margin-top: 20px;
     }
   </style>
 </head>
 <body>
+  <!-- Header Section -->
   <header>
     <h1>Feodora Teti</h1>
     <nav>
@@ -171,135 +119,29 @@ nav ul li a:hover {
     </nav>
   </header>
 
-<section id="about">
-  <div class="about-container">
-    <div class="about-text">
-<p>
-  I am an IES Postdoctoral Fellow at Princeton University and an Assistant Professor (non-tenure) and Economist at LMU Munich and the ifo Institute. I am also a <a href="https://www.cesifo.org" target="_blank">CESifo</a> and <a href="https://cepr.org" target="_blank">CEPR</a> research affiliate. 
-  My research focuses on international trade and trade policy, with a particular interest in how firms and consumers adjust to changes in trade policy-induced costs.
-</p>
-      <div class="icon-links">
-        <a href="mailto:feodora.teti@example.com"><img src="email-icon.png" alt="Email" class="icon"></a>
-        <a href="https://twitter.com/yourhandle" target="_blank"><img src="twitter-icon.png" alt="Twitter" class="icon"></a>
-        <a href="https://linkedin.com/in/yourprofile" target="_blank"><img src="linkedin-icon.png" alt="LinkedIn" class="icon"></a>
+  <!-- About Section -->
+  <section id="about">
+    <div class="about-container">
+      <div class="about-text">
+        <p>
+          I am an IES Postdoctoral Fellow at Princeton University and an Assistant Professor (non-tenure) and Economist at LMU Munich and the ifo Institute. 
+          I am also a <a href="https://www.cesifo.org" target="_blank">CESifo</a> and <a href="https://cepr.org" target="_blank">CEPR</a> research affiliate. 
+          My research focuses on international trade and trade policy, with a particular interest in how firms and consumers adjust to changes in trade policy-induced costs.
+        </p>
+        <!-- Social Media Links -->
+        <div class="icon-links">
+          <a href="mailto:feodora.teti@example.com"><img src="email-icon.png" alt="Email" class="icon"></a>
+          <a href="https://twitter.com/yourhandle" target="_blank"><img src="twitter-icon.png" alt="Twitter" class="icon"></a>
+          <a href="https://linkedin.com/in/yourprofile" target="_blank"><img src="linkedin-icon.png" alt="LinkedIn" class="icon"></a>
+        </div>
       </div>
-    </div>
-    <img src="Teti-Feodora_2022_23.JPG" alt="Feodora Teti" class="profile-pic">
-  </div>
-</section>
-
-
-<section id="research">
-  <h2 class="section-title">Publications</h2>
-  <div class="grid-container">
-    <div class="tile">
-      <h3>On the Profitability of Trade Deflection and the Need for Rules of Origin</h3>
-      <p>When a country grants preferential tariffs to another, either reciprocally in a free trade agreement (FTA) or unilaterally, 
-        rules of origin (RoOs) are defined to determine whether a product is eligible for preferential treatment. RoOs exist to avoid 
-        that exports from third countries enter through the member with the lowest tariff (trade deflection). 
-        However, RoOs distort exporters' sourcing decisions and burden them with red tape. 
-        Using a global data set, we show that, for 86% of all bilateral product-level comparisons within FTAs, trade deflection is not profitable because external tariffs are rather similar 
-        and transportation costs are non-negligible; in the case of unilateral trade preferences extended by rich countries to poor ones that ratio is a striking 98%. The pervasive and 
-        unconditional use of RoOs is, therefore, hard to rationalize.</p>
-      <div class="button-container">
-        <a href="#" class="button">PDF</a>
-        <a href="#" class="button">BibTeX</a>
-      </div>
-    </div>
-    <div class="tile">
-      <h3>Quantifying the General Equilibrium Effects of the 2014 and 2022 Sanctions on Russia</h3>
-      <p>Short description or abstract here.</p>
-      <div class="button-container">
-        <a href="#" class="button">PDF</a>
-        <a href="#" class="button">BibTeX</a>
-      </div>
-    </div>
-    <div class="tile">
-      <h3>Dodging Trade Sanctions? Evidence from Military Goods</h3>
-      <p>Short description or abstract here.</p>
-      <div class="button-container">
-        <a href="#" class="button">PDF</a>
-        <a href="#" class="button">BibTeX</a>
-      </div>
-    </div>
-  </div>
-
- <div class="section-divider"></div> <!-- Divider between sections -->
-  <h2 class="section-title">Working Paper</h2>
-  <div class="grid-container">
-    <div class="tile">
-      <h3>The Welfare Effects of Trade Sanctions</h3>
-      <p>Published in <em>Journal of International Economics</em>.</p>
-      <div class="button-container">
-        <a href="#" class="button">PDF</a>
-        <a href="#" class="button">BibTeX</a>
-      </div>
-    </div>
-    <div class="tile">
-      <h3>Evading Trade Sanctions</h3>
-      <p>Evidence from Military Goods – Published in <em>...</em>.</p>
-      <div class="button-container">
-        <a href="#" class="button">PDF</a>
-        <a href="#" class="button">BibTeX</a>
-      </div>
-    </div>
-  </div>
-  
-  <div class="section-divider"></div> <!-- Divider between sections -->
-
-      <h2 class="section-title">Work in Progress</h2>
-  <div class="grid-container">
-      <div class="tile">
-        <h3>Evading Trade Sanctions</h3>
-        <p>Evidence from Military Goods – Published in <em>...</em>.</p>
-      </div>
-      <div class="tile">
-        <h3>Evading Trade Sanctions</h3>
-        <p>Evidence from Military Goods – Published in <em>...</em>.</p>
-      </div>
-      <div class="tile">
-        <h3>Evading Trade Sanctions</h3>
-        <p>Evidence from Military Goods – Published in <em>...</em>.</p>
-      </div>
-      <div class="tile">
-        <h3>Evading Trade Sanctions</h3>
-        <p>Evidence from Military Goods – Published in <em>...</em>.</p>
-      </div>
-      <div class="tile">
-        <h3>Effective Sanctions?</h3>
-        <p>with Lisa Scheckenhofer and Joschka Wanner.</p>
-      </div>
-  </div>
-</section>
-
-  <section id="data">
-    <h2>Data</h2>
-    <div class="grid-container">
-      <div class="tile">
-        <h3>Trade Flow Data</h3>
-        <p>Novel datasets on trade flows and enforcement mechanisms.</p>
-      </div>
-      <div class="tile">
-        <h3>Collaboration Requests</h3>
-        <p>Selected datasets are available upon request for research collaboration.</p>
-      </div>
+      <img src="Teti-Feodora_2022_23.JPG" alt="Feodora Teti" class="profile-pic">
     </div>
   </section>
 
-  <section id="cv">
-    <h2>CV</h2>
-    <p><a href="cv.pdf" target="_blank">Download my CV (PDF)</a></p>
-  </section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:feodora.teti@example.com">feodora.teti@example.com</a></p>
-    <p>GitHub: <a href="https://github.com/feodorateti" target="_blank">github.com/feodorateti</a></p>
-  </section>
-
+  <!-- Footer -->
   <footer>
     <p>© 2025 Feodora Teti</p>
   </footer>
 </body>
 </html>
-

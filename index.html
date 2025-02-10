@@ -171,24 +171,28 @@ nav ul li a:hover {
   display: block;
 }
 
-  .about-container {
+.about-container {
   display: flex;
-  flex-direction: row; /* Places the picture on the left */
-  align-items: flex-start; /* Align items at the top */
-  justify-content: space-between;
+  flex-direction: row; /* Ensures the image is on the left */
+  align-items: flex-start;
+  justify-content: flex-start; /* Aligns text and image to the left */
   gap: 20px;
   max-width: 1200px;
   margin: 40px auto;
 }
 
 .profile-pic {
-  flex: 1;
-  max-width: 150px; /* Set a maximum width */
+  width: 200px; /* Adjust this to change the size */
   height: auto;
-  object-fit: cover; /* Keeps the image proportionate */
-  border-radius: 0;
+  border-radius: 8px; /* Optional: gives the image rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds a soft shadow */
 }
 
+.about-text {
+  flex: 1; /* Makes the text take up the remaining space */
+  font-size: 16px;
+  line-height: 1.6;
+}
 
 .icon-links {
   margin-top: 15px;

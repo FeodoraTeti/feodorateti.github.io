@@ -176,11 +176,14 @@ nav ul li a:hover {
   margin: 40px auto;
 }
 
-.about-text {
-  flex: 2; /* Let the text take more space */
-  font-size: 16px;
-  line-height: 1.6;
-  color: rgb(10, 52, 104);
+.about-container {
+  display: flex;
+  flex-direction: row; /* Places the picture on the left */
+  align-items: flex-start; /* Align items at the top */
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 40px auto;
 }
 
 .profile-pic {

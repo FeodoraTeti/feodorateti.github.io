@@ -173,25 +173,25 @@ nav ul li a:hover {
 
 .about-container {
   display: flex;
-  flex-direction: row; /* Ensures the image is on the left */
-  align-items: flex-start;
-  justify-content: flex-start; /* Aligns text and image to the left */
-  gap: 20px;
+  flex-direction: row;
+  align-items: center; /* Align text and image vertically */
+  gap: 30px; /* Space between image and text */
   max-width: 1200px;
   margin: 40px auto;
 }
 
 .profile-pic {
-  width: 200px; /* Adjust this to change the size */
+  width: 300px; /* Increased size */
   height: auto;
-  border-radius: 8px; /* Optional: gives the image rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds a soft shadow */
+  border-radius: 12px; /* Rounded rectangle */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for a polished look */
 }
 
 .about-text {
-  flex: 1; /* Makes the text take up the remaining space */
+  flex: 1;
   font-size: 16px;
   line-height: 1.6;
+  text-align: justify; /* Optional: Justify text for a more formal style */
 }
 
 .icon-links {

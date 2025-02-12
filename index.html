@@ -63,16 +63,13 @@ nav ul li a:hover {
         margin: 0 auto;
          /*border-bottom: 1px solid rgb(200, 200, 200);*/  /*Divider */
       }
-     h2 {
-        color: rgb(10, 52, 104); /* ifoBlueDark */
-        font-size: 20px;
-        font-weight: 700;
-        margin-bottom: 10px;
-      }
     h2.section-title {
         border-bottom: 1px solid rgb(200, 200, 200); /* Subtle divider */
         padding-bottom: 10px;
         margin-bottom: 20px;
+        font-size: 20px;
+        font-weight: 700;
+
       }
     .grid-container {
         display: grid;
@@ -96,7 +93,7 @@ nav ul li a:hover {
     .tile h3 {
         margin-bottom: 5px;
         color: rgb(10, 52, 104);
-        font-size: 18px;  /* Recommended for tile headers */
+        font-size: 16px;  /* Recommended for tile headers */
         font-weight: 700; /* Make it bold for emphasis */
         }
     .bibliography {
@@ -262,15 +259,13 @@ a:hover {
 <body>
   <header>
     <h1>Feodora Teti</h1>
-    <nav>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#research">Research</a></li>
-        <li><a href="#data">Data</a></li>
-        <li><a href="#cv">CV</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#publications">Research</a></li> <!-- Publications, Working Papers, Work in Progress -->
+          <li><a href="#data">Data</a></li>
+        </ul>
+      </nav>
   </header>
 
 <!-- About Section -->
@@ -329,8 +324,9 @@ a:hover {
   </div>
 </section>
 
-
-<section id="research">
+  
+<!-- Publications Section -->
+<section id="publications">
   <h2 class="section-title">Publications</h2>
   <div class="grid-container">
     <div class="tile">
@@ -369,8 +365,10 @@ a:hover {
       </div>
     </div>
   </div>
+</section>
 
- <div class="section-divider"></div> <!-- Divider between sections -->
+<!-- Working Papers Section -->
+<section id="working-papers">
   <h2 class="section-title">Working Paper</h2>
   <div class="grid-container">
     <div class="tile">
@@ -390,9 +388,10 @@ a:hover {
       </div>
     </div>
   </div>
-  
-  <div class="section-divider"></div> <!-- Divider between sections -->
+  </section>
 
+<!-- Work in Progress Section -->
+  <section id="work-in-progress">
       <h2 class="section-title">Work in Progress</h2>
   <div class="grid-container">
       <div class="tile">
@@ -418,6 +417,7 @@ a:hover {
   </div>
 </section>
 
+  <!-- Data Section -->
   <section id="data">
     <h2>Data</h2>
     <div class="grid-container">
@@ -432,16 +432,6 @@ a:hover {
     </div>
   </section>
 
-  <section id="cv">
-    <h2>CV</h2>
-    <p><a href="cv.pdf" target="_blank">Download my CV (PDF)</a></p>
-  </section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:feodora.teti@example.com">feodora.teti@example.com</a></p>
-    <p>GitHub: <a href="https://github.com/feodorateti" target="_blank">github.com/feodorateti</a></p>
-  </section>
 
   <footer>
     <p>© 2025 Feodora Teti</p>

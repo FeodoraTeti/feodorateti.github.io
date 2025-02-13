@@ -175,10 +175,10 @@ nav ul li a:hover {
 }
 
 .about-container {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: auto 200px 1fr;
   align-items: flex-start; /* Align the text with the top of the image */
-  gap: 30px; /* Space between image and text */
+  gap: 20px; /* Space between image and text */
   max-width: 90%;
   margin: 20px auto;
 }
@@ -191,7 +191,7 @@ nav ul li a:hover {
 }
 .profile-pic-column {
   flex: 0 0 200px;       /* Fixed width for the profile picture */
-  text-align: center;
+  text-align: left;
 }
     
 .about-text {

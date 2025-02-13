@@ -95,13 +95,13 @@ nav ul li a:hover {
     .tile h3 {
         margin-bottom: 5px;
         color: rgb(10, 52, 104);
-        font-size: 12px;  /* Recommended for tile headers */
+        font-size: 14px;  /* Recommended for tile headers */
         font-weight: bold; /* Make it bold for emphasis */
         }
     .bibliography {
         font-size: 12px;
         color: rgb(125, 133, 150);
-        margin-bottom: 10px;
+        margin-bottom: 5px;
       }
       .coauthors {
         font-style: italic;
@@ -115,69 +115,79 @@ nav ul li a:hover {
         justify-content: space-between;
         flex-wrap: wrap;      /* Allows buttons to wrap if necessary */
       }
-      .text-link {
-        font-size: 12px;       /* Slightly larger for readability */
-        font-weight: bold;      /* Lighter for a minimalist feel */
-        font-family: 'IBM Plex Mono', monospace;
-        color: rgb(10, 52, 104); /* ifoBlueDark */
-        text-decoration: none;
-        transition: color 0.2s ease;
+    .link-container {
+      display: flex;
+      gap: 10px; /* Tighten the spacing */
+      align-items: center;
+      margin-top: 5px; /* Reduce space above links */
       }
-      
-      .text-link:hover {
-        color: #0073b1;       /* Light blue on hover */
-        text-decoration: underline;
-      }
-    .section-divider {
-        border-top: 1px solid rgb(200, 200, 200);
-        margin: 40px 0;
-      }
-.toggle-abstract {
-  background: none;
-  border: none;
-  color: rgb(10, 52, 104);
-  font-family: 'IBM Plex Mono', monospace;
-  font-weight: bold;
-  font-size: 12px;       /* Slightly larger for readability */
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
+    .text-link {
+      font-size: 12px;       /* Slightly larger for readability */
+      font-weight: bold;      /* Lighter for a minimalist feel */
+      font-family: 'IBM Plex Mono', monospace;
+      color: rgb(10, 52, 104); /* ifoBlueDark */
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+    
+    .text-link:hover {
+      color: #0073b1;       /* Light blue on hover */
+      text-decoration: underline;
+    }
+  .separator {
+     color: rgb(200, 200, 200); /* Subtle gray */
+     padding: 0 5px; /* Space around the separator */
+    }
+  .section-divider {
+      border-top: 1px solid rgb(200, 200, 200);
+      margin: 40px 0;
+    }
+  .toggle-abstract {
+    background: none;
+    border: none;
+    color: rgb(10, 52, 104);
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: bold;
+    font-size: 12px;       /* Slightly larger for readability */
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  
+  .toggle-abstract:hover {
+          color: #0073b1;       /* Light blue on hover */
+          text-decoration: underline;
+  }
 
-.toggle-abstract:hover {
-        color: #0073b1;       /* Light blue on hover */
-        text-decoration: underline;
-}
+  .button-container a {
+    padding: 5px 12px;
+    font-size: 10px;
+    font-weight: bold;
+    color: white;
+    background: rgb(10, 52, 104);
+    border-radius: 3px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+  }
 
-.button-container a {
-  padding: 5px 12px;
-  font-size: 10px;
-  font-weight: bold;
-  color: white;
-  background: rgb(10, 52, 104);
-  border-radius: 3px;
-  text-decoration: none;
-  transition: background 0.3s ease;
-}
+  .button-container a:hover {
+    background: rgb(102, 0, 0);
+  }
 
-.button-container a:hover {
-  background: rgb(102, 0, 0);
-}
-
-.abstract {
-  display: none;
-  margin-top: 10px;
-  font-size: 10px;
-  color: rgb(90,90,90); /* darkGray */
-  line-height: 1.4;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
-  opacity: 0;
-  padding: 0 10px;
-  text-align: justify;
-  hyphens: auto;
-  word-wrap: break-word;
-}
+  .abstract {
+    display: none;
+    margin-top: 10px;
+    font-size: 10px;
+    color: rgb(90,90,90); /* darkGray */
+    line-height: 1.4;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    opacity: 0;
+    padding: 0 10px;
+    text-align: justify;
+    hyphens: auto;
+    word-wrap: break-word;
+  }
 
 .abstract.active {
   max-height: 500px;
@@ -377,9 +387,12 @@ a:hover {
       <span class="coauthors"> (with Gabriel Felbermayr and Erdal Yalcin)</span>
     </div>
     <div class="tile-controls">
-      <a href="javascript:void(0);" class="toggle-abstract" onclick="toggleAbstract('abstract1')">Abstract</a>
-      <a href="path-to-pdf.pdf" class="text-link" target="_blank">Paper</a>
-      <a href="https://data.mendeley.com/datasets/mbfvv936s5/1" class="text-link" target="_blank">Data</a>
+      <a href="javascript:void(0);" class="toggle-abstract" onclick="toggleAbstract('abstract1')">abstract</a>
+      <span class="separator">|</span>
+      <a href="path-to-pdf.pdf" class="text-link" target="_blank">paper</a>
+      <span class="separator">|</span>
+      <a href="https://data.mendeley.com/datasets/mbfvv936s5/1" class="text-link" target="_blank">data</a>  
+      <span class="separator">|</span>
       <a href="https://cepr.org/voxeu/columns/rules-origin-trade-arrangements-largely-unnecessary-simply-protectionist" class="text-link" target="_blank">VoxEU</a>
     </div>
     <div id="abstract1" class="abstract">

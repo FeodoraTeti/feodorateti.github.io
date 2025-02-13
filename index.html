@@ -25,7 +25,7 @@
     justify-content: space-between;
     align-items: center;
     color: white;
-    max-width: 900px;
+    max-width: 100%;
     margin: 0 auto;
   }
 header h1 {
@@ -59,7 +59,7 @@ nav ul li a:hover {
 
     section {
         padding: 20px 20px 40px 20px; /* Reduce top padding */
-        max-width: 900px;
+        max-width: 90%;
         margin: 0 auto;
          /*border-bottom: 1px solid rgb(200, 200, 200);*/  /*Divider */
       }
@@ -179,12 +179,13 @@ nav ul li a:hover {
   flex-direction: row;
   align-items: center; /* Align text and image vertically */
   gap: 30px; /* Space between image and text */
-  max-width: 1200px;
+  max-width: 90%;
   margin: 20px auto;
 }
 
 .profile-pic {
-  width: 300px; /* Increased size */
+  width: 100%; /* Increased size */
+  max-width: 300px; /* Keep it reasonable on larger screens */
   height: auto;
   border-radius: 12px; /* Rounded rectangle */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for a polished look */
@@ -236,6 +237,12 @@ a:visited {
 a:hover {
   text-decoration: underline; /* Optional underline on hover */
 }
+
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    gap: 10px; /* Reduce the gap between the image and text */
+  }
   </style>
 
 

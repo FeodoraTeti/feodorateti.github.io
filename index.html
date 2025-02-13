@@ -117,7 +117,7 @@ nav ul li a:hover {
       }
       .text-link {
         font-size: 12px;       /* Slightly larger for readability */
-        font-weight: 300;      /* Lighter for a minimalist feel */
+        font-weight: bold;      /* Lighter for a minimalist feel */
         font-family: 'IBM Plex Mono', monospace;
         color: rgb(10, 52, 104); /* ifoBlueDark */
         text-decoration: none;
@@ -136,13 +136,16 @@ nav ul li a:hover {
   background: none;
   border: none;
   color: rgb(10, 52, 104);
+  font-family: 'IBM Plex Mono', monospace;
   font-weight: bold;
-  cursor: pointer;
-  transition: color 0.3s ease;
+  font-size: 12px;       /* Slightly larger for readability */
+  text-decoration: none;
+  transition: color 0.2s ease;
 }
 
 .toggle-abstract:hover {
-  color: rgb(102, 0, 0); /* ifoRed */
+        color: #0073b1;       /* Light blue on hover */
+        text-decoration: underline;
 }
 
 .button-container a {

@@ -108,36 +108,25 @@ nav ul li a:hover {
       }
     .tile-controls {
         display: flex;
+        gap: 10px;             /* Even spacing between the links */
+        margin-top: 10px;
         align-items: center;
         justify-content: space-between;
         flex-wrap: wrap;      /* Allows buttons to wrap if necessary */
-        gap: 10px 
-        margin-top: 10px;
       }
-.icon-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 70px;
-  height: 24px;
-  font-size: 10px;
-  font-family: 'Roboto', sans-serif;
-  color: rgb(10, 52, 104); /* ifoBlueDark */
-  background-color: white;
-  border: 1px solid rgb(10, 52, 104);
-  border-radius: 3px;
-  text-decoration: none;
-  margin-right: 10px;
-  text-decoration: none;
-  transition: background-color 0.2s ease, color 0.2s ease;
-  cursor: pointer;
-  text-align: center;
-}
+      .text-link {
+        font-size: 12px;       /* Slightly larger for readability */
+        font-weight: 300;      /* Lighter for a minimalist feel */
+        font-family: 'Roboto', sans-serif;
+        color: rgb(10, 52, 104); /* ifoBlueDark */
+        text-decoration: none;
+        transition: color 0.2s ease;
+      }
       
-.icon-button:hover {
-  background-color: #0073b1; /* Light blue hover */
-  color: white;
-}
+      .text-link:hover {
+        color: #0073b1;       /* Light blue on hover */
+        text-decoration: underline;
+      }
     .section-divider {
         border-top: 1px solid rgb(200, 200, 200);
         margin: 40px 0;
@@ -373,27 +362,27 @@ a:hover {
 <section id="publications">
   <h2 class="section-title">Publications</h2>
   <div class="grid-container">
-    <div class="tile">
-      <h3>On the Profitability of Trade Deflection and the Need for Rules of Origin</h3>
-          <div class="bibliography">
-              <span>Journal of International Economics, (121), 103248, 2019</span> 
-              <span class="coauthors"> (with Gabriel Felbermayr and Erdal Yalcin)</span>
-          </div>
-          <div class="tile-controls">
-            <button class="icon-button" onclick="toggleAbstract('abstract1')">Abstract</button>
-            <a href="path-to-pdf.pdf" class="icon-button" target="_blank">Paper</a>
-            <a href="https://data.mendeley.com/datasets/mbfvv936s5/1" class="icon-button" target="_blank">Data</a>
-            <a href="https://cepr.org/voxeu/columns/rules-origin-trade-arrangements-largely-unnecessary-simply-protectionist" class="icon-button" target="_blank">VoxEU</a>
-          </div>
-          <div id="abstract1" class="abstract">
-            <p>
-              When a country grants preferential tariffs to another, either reciprocally in a free trade agreement (FTA) or unilaterally, 
-              rules of origin (RoOs) are defined to determine whether a product is eligible for preferential treatment. RoOs exist to avoid 
-              that exports from third countries enter through the member with the lowest tariff (trade deflection). However, RoOs distort 
-              exporters' sourcing decisions and burden them with red tape.
-            </p>
-          </div>
+  <div class="tile">
+    <h3>On the Profitability of Trade Deflection and the Need for Rules of Origin</h3>
+    <div class="bibliography">
+      <span>Journal of International Economics, Vol. 58, 2023</span> 
+      <span class="coauthors"> (with Gabriel Felbermayr and Erdal Yalcin)</span>
     </div>
+    <div class="tile-controls">
+      <a href="#" class="text-link" onclick="toggleAbstract('abstract1')">Abstract</a>
+      <a href="path-to-pdf.pdf" class="text-link" target="_blank">Paper</a>
+      <a href="https://data.mendeley.com/datasets/mbfvv936s5/1" class="text-link" target="_blank">Data</a>
+      <a href="https://cepr.org/voxeu/columns/rules-origin-trade-arrangements-largely-unnecessary-simply-protectionist" class="text-link" target="_blank">VoxEU</a>
+    </div>
+    <div id="abstract1" class="abstract">
+      <p>
+        When a country grants preferential tariffs to another, either reciprocally in a free trade agreement (FTA) or unilaterally, 
+        rules of origin (RoOs) are defined to determine whether a product is eligible for preferential treatment. RoOs exist to avoid 
+        that exports from third countries enter through the member with the lowest tariff (trade deflection). However, RoOs distort 
+        exporters' sourcing decisions and burden them with red tape.
+      </p>
+    </div>
+  </div>
     <div class="tile">
       <h3>Quantifying the General Equilibrium Effects of the 2014 and 2022 Sanctions on Russia</h3>
       <p>Short description or abstract here.</p>

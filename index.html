@@ -176,33 +176,28 @@ nav ul li a:hover {
 
 .about-container {
   display: grid;
-  grid-template-columns: auto 200px 1fr;
+  grid-template-columns: 200px 1fr 1fr;
   align-items: flex-start; /* Align the text with the top of the image */
   gap: 20px; /* Space between image and text */
-  max-width: 90%;
-  margin: 20px auto;
+  max-width: 100%;
+  margin: 0 auto;
 }
 
 .profile-pic {
-  width: 100%;           /* Make sure the image fits its column */
+  width: 100%;
   height: auto;
   border-radius: 8px;
   object-fit: cover;
+  max-width: 200px; /* Keeps it square */
 }
-.profile-pic-column {
-  flex: 0 0 200px;       /* Fixed width for the profile picture */
-  text-align: left;
-}
-    
+       
 .about-text {
-  flex: 1;               /* Take up remaining space for the text */
   font-size: 14px;
   line-height: 1.6;
   text-align: justify;
 }
 
 .contact-info {
-  flex: 0 0 200px;       /* Fixed width for the contact info */
   font-size: 12px;
   line-height: 1.4;
   text-align: left;  /* Left-align contact information */
@@ -303,9 +298,7 @@ a:hover {
 <div class="about-container">
   
   <!-- Profile Picture Column -->
-      <div class="profile-pic-column">
         <img src="ProfilePic_cropped.JPG" alt="Feodora Teti" class="profile-pic">
-      </div>
 
   
   <!-- Contact Info Column -->

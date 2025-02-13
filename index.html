@@ -234,6 +234,13 @@ nav ul li a:hover {
 
 }
 
+.icon:hover .cv-text {
+  stroke: #0073b1;  /* Light blue outline on hover */
+}
+
+.cv-text {
+  transition: stroke 0.2s ease;
+}
 
     footer {
       text-align: center;
@@ -311,10 +318,10 @@ a:hover {
     <div class="icon-links">
        <!-- CV -->
        <a href="CV_Teti.pdf" target="_blank">
-        <svg class="icon cv" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-          <rect x="2" y="2" width="20" height="20" rx="3" ry="3"></rect>
-          <text x="6" y="16" font-size="10" font-family="Arial" fill="white">CV</text>
-        </svg>
+          <svg class="icon cv" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="2" width="20" height="20" rx="3" ry="3" fill="white" stroke="rgb(10, 52, 104)" stroke-width="1"></rect>
+            <text class="cv-text" x="6" y="16" font-size="10" font-family="Arial" stroke="rgb(10, 52, 104)" stroke-width="0.8" fill="none">CV</text>
+          </svg>
       </a>
       
        <!-- Twitter Icon -->

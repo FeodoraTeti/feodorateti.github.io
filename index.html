@@ -11,7 +11,7 @@
       font-family: 'Roboto', sans-serif;  /* Changed from 'Arial' to 'Roboto' */
       background-color: #ffffff;
       color: rgb(125, 133, 150); /* ifoGray */
-      margin: 10px auto;
+      margin: 40px auto;
       padding: 20px;
       font-size: 14px;
       line-height: 1.6;
@@ -281,20 +281,57 @@ a:hover {
   text-decoration: underline; /* Optional underline on hover */
 }
 
-/* Media query for phones */
+/* Responsive adjustments for screens smaller than 768px (phones) */
 @media (max-width: 768px) {
   body {
-    max-width: 95%;  /* Make it almost full-width on small screens */
-    margin: 20px auto;
+    max-width: 100%; /* Full width on mobile */
+    margin: 10px auto;
+    padding: 10px;
+    font-size: 12px; /* Slightly smaller font for mobile */
+  }
+
+  header {
+    flex-direction: column; /* Stack the header elements vertically */
+    text-align: center;
+  }
+
+  header h1 {
+    font-size: 18px;
+  }
+
+  nav ul {
+    flex-direction: column; /* Stack the menu items */
+  }
+
+  nav ul li {
+    margin: 5px 0;
+  }
+
+  .about-container {
+    grid-template-columns: 1fr; /* Single column on mobile */
+  }
+
+  .profile-pic {
+    max-width: 150px; /* Smaller profile picture */
+    margin: 0 auto;
+  }
+
+  .section-title {
+    font-size: 16px; /* Reduce the size of section titles */
+  }
+
+  .tile {
+    font-size: 12px;
     padding: 10px;
   }
-  
-  h1 {
-    font-size: 1.5rem;  /* Reduce headline size */
+
+  .abstract {
+    font-size: 10px;
   }
-  
-  p {
-    font-size: 0.9rem;  /* Slightly smaller text */
+
+  .icon {
+    width: 20px;
+    height: 20px;
   }
 }
   </style>

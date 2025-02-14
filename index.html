@@ -284,15 +284,15 @@ a:hover {
 /* Responsive adjustments for screens smaller than 768px (phones) */
 @media (max-width: 768px) {
   body {
-    max-width: 100%; /* Full width on mobile */
+    max-width: 100%;
     margin: 10px auto;
     padding: 10px;
-    font-size: 12px; /* Slightly smaller font for mobile */
+    font-size: 12px;
   }
 
   header {
-    flex-direction: column; /* Stack the header elements vertically */
-    text-align: center;
+    flex-direction: row; /* Ensure the header stays in a row */
+    justify-content: space-between;
   }
 
   header h1 {
@@ -300,24 +300,30 @@ a:hover {
   }
 
   nav ul {
-    flex-direction: column; /* Stack the menu items */
-  }
-
-  nav ul li {
-    margin: 5px 0;
+    flex-direction: row; /* Keep menu items inline */
+    justify-content: center;
   }
 
   .about-container {
-    grid-template-columns: 1fr; /* Single column on mobile */
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns for picture and contact */
+    gap: 10px;
+  }
+
+  .about-text {
+    grid-column: 1 / -1; /* Span the full width below the image and contact */
+    font-size: 12px;
+    margin-top: 10px;
   }
 
   .profile-pic {
-    max-width: 150px; /* Smaller profile picture */
-    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
   }
 
-  .section-title {
-    font-size: 16px; /* Reduce the size of section titles */
+  .contact-info {
+    font-size: 11px;
+    line-height: 1.4;
   }
 
   .tile {
@@ -334,6 +340,7 @@ a:hover {
     height: 20px;
   }
 }
+
   </style>
 
 

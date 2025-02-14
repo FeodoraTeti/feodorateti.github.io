@@ -281,11 +281,22 @@ a:hover {
   text-decoration: underline; /* Optional underline on hover */
 }
 
+/* Media query for phones */
 @media (max-width: 768px) {
-  .about-container {
-    flex-direction: column;
-    gap: 10px; /* Reduce the gap between the image and text */
+  body {
+    max-width: 95%;  /* Make it almost full-width on small screens */
+    margin: 20px auto;
+    padding: 10px;
   }
+  
+  h1 {
+    font-size: 1.5rem;  /* Reduce headline size */
+  }
+  
+  p {
+    font-size: 0.9rem;  /* Slightly smaller text */
+  }
+}
   </style>
 
 

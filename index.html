@@ -281,6 +281,12 @@ a:hover {
   text-decoration: underline; /* Optional underline on hover */
 }
 
+.data-heading {
+    color: rgb(10, 52, 104);
+    font-size: 14px;  /* Recommended for tile headers */
+    font-weight: bold; /* Make it bold for emphasis */
+}
+
 /* Responsive adjustments for screens smaller than 768px (phones) */
 @media (max-width: 768px) {
   body {
@@ -576,22 +582,36 @@ The issues arise from incomplete reporting, leading to measurement error from fa
   </div>
 </section>
 
-  <!-- Data Section -->
+<!-- Data Section -->
 <section id="data">
   <h2 class="section-title">Global Tariff Database (Beta Version)</h2>
-  <p><strong>Overview</strong><br>
-  The Global Tariff Database (GTD) contains bilateral statutory tariff rates for 200 importers and their partners, for 34 years (1988–2021), at the HS6-level (HS88/92 Nomenclature). Both applied MFN and preferential tariffs are included, totaling more than 6.9 billion observations.</p>
 
-  <p>Note: The GTD does not include safeguards, anti-dumping tariffs, or tariffs from the US–China trade war.</p>
+  <h3 class="data-heading">Overview</h3>
+    <p>
+      The Global Tariff Database (GTD) contains bilateral statutory tariff rates for 200 importers and their partners, for 34 years (1988–2021), at the HS6-level (HS88/92 Nomenclature). Both applied MFN and preferential tariffs are included, totaling more than 6.9 billion observations.
+    </p>
+    <p>Note: The GTD does not include safeguards, anti-dumping tariffs, or tariffs from the US–China trade war.</p>
 
-  <h3>Download Data</h3>
-  <p>Pair-level and sector-level (HS2) tariff data are available for download in .dta and .csv formats: <a href="#">[Data]</a></p>
+  <h3 class="data-heading">Download Data</h3>
+    <p>Pair-level and sector-level (HS2) tariff data are available for download in .dta and .csv formats: <a href="#">[Data]</a></p>
 
-  <p>If you use this data, please cite it as:<br>
-  "Feodora Teti's Global Tariff Database (v_beta1-2024-12) from Teti (2024)"<br>
-  Reference: Teti, Feodora A. (2024), <em>Missing Tariffs</em>, CESifo Working Papers No. 11590. <a href="#">[Bibtex]</a></p>
+  <h3 class="data-heading">How to Cite</h3>
+    <p>
+      If you use this data, please cite it as:<br>
+      <em>"Feodora Teti's Global Tariff Database (v_beta1-2024-12) from Teti (2024)"</em><br>
+      Reference: Teti, Feodora A. (2024), <em>Missing Tariffs</em>, CESifo Working Papers No. 11590.  
+      <a href="GTD/Bibtex_Teti2024.tex" class="text-link" target="_blank">BibTeX</a>
+    </p>
 
-  <p>This is a Beta Version. Please <a href="mailto:your-email@example.com">contact me</a> if you find any mistakes, so I can improve the algorithm.</p>
+    <h3 class="data-heading">Details</h3>
+  <p>
+    documentation of available data: button: Data Dictionary.pdf
+    description of filling algorithm: button to current draft (see appendix C for Details) 
+    reference data: button data 
+  </p>
+  
+  <h3 class="data-heading">Feedback</h3>
+  <p>This is a Beta Version. Please <a href="mailto:teti@ifo.de">contact me</a> if you find any mistakes, so I can improve the algorithm.</p>
 </section>
 
 

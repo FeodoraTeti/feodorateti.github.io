@@ -6,13 +6,12 @@
   <title>Data | Feodora Teti</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css"> <!-- Ensuring same styling as index.html -->
+  <link rel="stylesheet" href="styles.css">
   <style>
-    /* Ensure the same structure as index.html */
     body {
       font-family: 'Roboto', sans-serif;
       background-color: #ffffff;
-      color: rgb(125, 133, 150); /* ifoGray */
+      color: rgb(125, 133, 150);
       margin: 40px auto;
       padding: 20px;
       font-size: 14px;
@@ -20,7 +19,7 @@
       max-width: 1000px;
     }
     header {
-      background: rgb(10, 52, 104); /* ifoBlueDark */
+      background: rgb(10, 52, 104);
       padding: 20px;
       display: flex;
       justify-content: space-between;
@@ -51,10 +50,9 @@
       color: rgb(200, 200, 200);
     }
     
-    /* Match the section header styling */
     h2.section-title {
-      color: rgb(10, 52, 104); /* ifoBlueDark */
-      border-bottom: 1px solid rgb(200, 200, 200); /* Divider */
+      color: rgb(10, 52, 104);
+      border-bottom: 1px solid rgb(200, 200, 200);
       padding-bottom: 10px;
       margin-bottom: 20px;
       font-size: 20px;
@@ -70,29 +68,38 @@
       border-top: 1px solid rgb(200, 200, 200);
       margin: 40px 0;
     }
+
+    /* Ensure the footer matches index.html */
+    footer {
+      text-align: center;
+      padding: 10px;
+      background: rgb(10, 52, 104);
+      color: white;
+      margin-top: 20px;
+    }
   </style>
 </head>
 <body>
 
-  <!-- Header with navigation (identical to index.html) -->
+  <!-- Header (same as index.html) -->
   <header>
     <h1>Feodora Teti</h1>
     <nav>
       <ul>
         <li><a href="index.html#about">About</a></li>
         <li><a href="index.html#publications">Research</a></li>
-        <li><a href="data.html">Data</a></li> <!-- Stays active on this page -->
+        <li><a href="data.html">Data</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Data Section with matching header and divider -->
+  <!-- Data Section -->
   <section id="data">
     <h2 class="section-title">Global Tariff Database (Beta Version)</h2>
 
     <h3 class="data-heading">Overview</h3>
     <p>
-      The <strong>Global Tariff Database (GTD)</strong> contains bilateral statutory tariff rates for 200 importers and their partners, for 34 years (1988&ndash;2021), at the HS6-level (HS88/92 Nomenclature). Both applied MFN and preferential tariffs are included, totaling more than 6.9 billion observations.
+      The <strong>Global Tariff Database (GTD)</strong> contains bilateral statutory tariff rates for 200 importers and their partners, for 34 years (1988–2021), at the HS6-level (HS88/92 Nomenclature). Both applied MFN and preferential tariffs are included, totaling more than 6.9 billion observations.
     </p>
     <p><strong>Note:</strong> The GTD <strong>does not</strong> include other trade policies than MFN and preferential tariffs such as safeguards, anti-dumping tariffs, or tariffs from the <strong>US trade war</strong>.</p>
 
@@ -132,6 +139,7 @@
     <p>This is a Beta Version. Please <a href="mailto:teti@ifo.de">contact me</a> if you find any mistakes, so I can improve the algorithm.</p>
   </section>
 
+  <!-- Matching Footer -->
   <footer>
     <p>© 2025 Feodora Teti</p>
   </footer>

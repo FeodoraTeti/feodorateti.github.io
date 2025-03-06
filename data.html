@@ -8,6 +8,45 @@
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 
+<style>
+.tile-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  margin: 40px auto;
+  max-width: 1000px; /* Controls total width */
+}
+
+.tile {
+  background: rgb(245, 245, 245);
+  padding: 20px;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s;
+  text-align: left;
+  word-wrap: break-word;
+  hyphens: auto;
+  width: calc((100% - 160px) / 3); /* 3 tiles, accounting for 2 x 20px gaps */
+  min-width: 0; /* Allow shrinking */
+}
+
+      
+    .tile:hover {
+          box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Slight lift on hover */
+        }
+    .tile h3 {
+        margin-bottom: 5px;
+        color: rgb(10, 52, 104);
+        font-size: 14px;  /* Recommended for tile headers */
+        font-weight: bold; /* Make it bold for emphasis */
+        }
+@media (max-width: 768px) {
+  .tile {
+    max-width: 100%;
+  }
+}
+</style>
 </head>
 <body>
 
@@ -24,50 +63,70 @@
   </header>
 
   <!-- Data Section -->
-  <section id="data">
-    <h2 class="section-title">Global Tariff Database (Beta Version)</h2>
+<section id="data">
+  <h2 class="section-title">Global Tariff Database (Beta Version v_beta1-2024-12
+    )</h2>
 
-    <h3 class="data-heading">Overview</h3>
-    <p>
-      The <strong>Global Tariff Database (GTD)</strong> contains bilateral statutory tariff rates for 200 importers and their partners, for 34 years (1988–2021), at the HS6-level (HS88/92 Nomenclature). Both applied MFN and preferential tariffs are included, totaling more than 6.9 billion observations.
-    </p>
-    <p><strong>Note:</strong> The GTD <strong>does not</strong> include other trade policies than MFN and preferential tariffs such as safeguards, anti-dumping tariffs, or tariffs from the <strong>US trade war</strong>.</p>
+  <p>
+    The <strong>Global Tariff Database (GTD)</strong> contains bilateral statutory tariff rates for 200 importers and their partners, for 34 years (1988–2021), at the HS6-level (HS88/92 Nomenclature). Both applied MFN and preferential tariffs are included, totaling more than 6.9 billion observations.
+  </p>
+  <p>
+    <strong>Note:</strong> The GTD <strong>does not</strong> include other trade policies than MFN and preferential tariffs such as safeguards, anti-dumping tariffs, or tariffs from the <strong>US trade war</strong>.
+  </p>
 
-    <h3 class="data-heading">Download Data</h3>
-    <p>
-      Pair-level and sector-level tariff data are available for download in <code>.dta</code> and <code>.csv</code> formats, 
-      including both <strong>simple averages</strong> and <strong>trade-weighted</strong> averages. Sectoral aggregation is provided at the <strong>section</strong> 
-      <strong>GTAP</strong> and <strong>ISIC Rev. 3.3 (2-digit)</strong> levels, and separately for <strong>agriculture</strong> (HS2 &le; 24) and <strong>non-agriculture</strong> (HS2 > 24) products.
-      <a href="GTD/Bibtex_Teti2024.bib" class="text-link" target="_blank">[data]</a>
-    </p>
+  <!-- Tile container -->
+  <div class="tile-container">
 
-    <h3 class="data-heading">How to Cite</h3>
-    <p>
-      If you use this data, please cite it as:<br>
-      <em>"Feodora Teti's Global Tariff Database (v_beta1-2024-12) from Teti (2024)"</em><br>
-      Reference: Teti, Feodora A. (2024), <em>Missing Tariffs</em>, CESifo Working Papers No. 11590.  
-      <a href="GTD/Bibtex_Teti2024.bib" class="text-link" target="_blank">[bibtex]</a>
-    </p>
+    <!-- Download Data Tile -->
+    <div class="tile">
+      <h3>Download the Data</h3>
+      <p>
+        Pair-level and sector-level tariff data are available in <code>.dta</code> and <code>.csv</code> formats, including both <strong>simple averages</strong> and <strong>trade-weighted</strong> averages.
+      </p>
+      <p>
+        Sectoral aggregation is provided at the <strong>section</strong>, <strong>GTAP</strong>, and <strong>ISIC Rev. 3.3 (2-digit)</strong> levels, and separately for <strong>agriculture</strong> (HS2 &le; 24) and <strong>non-agriculture</strong> (HS2 > 24) products.
+      </p>
+      <p>
+        <a href="GTD/Bibtex_Teti2024.bib" class="text-link" target="_blank">[Download Data]</a>
+      </p>
+    </div>
 
-    <h3 class="data-heading">Details</h3>
-    <p>
-      Documentation of Available Data:
-      <a href="GTD/Data Dictionary.pdf" class="text-link" target="_blank">[data dictionary]</a>
-    </p>
-    <p>
-      Description of Filling Algorithm:
-      <a href="https://www.cesifo.org/en/publications/2024/working-paper/missing-tariffs" class="text-link" target="_blank">[paper] (Main text and Appendix C)</a>
-    </p>
-    <p>
-      Reference Data: 
-      <a href="path/to/reference_data.csv" class="text-link" target="_blank">[country codes]</a> 
-      <span class="separator">|</span>
-      <a href="path/to/reference_data.csv" class="text-link" target="_blank">[sectors]</a>
-    </p>
+    <!-- How to Cite Tile -->
+    <div class="tile">
+      <h3>How to Cite</h3>
+      <p>
+        Please cite the GTD as:<br>
+        <em>"Feodora Teti's Global Tariff Database (v_beta1-2024-12) from Teti (2024)"</em>
+      </p>
+      <p>
+        Reference: Teti, Feodora A. (2024), <em>Missing Tariffs</em>, CESifo Working Papers No. 11590.
+      </p>
+      <p>
+        <a href="GTD/Bibtex_Teti2024.bib" class="text-link" target="_blank">[BibTeX]</a>
+      </p>
+    </div>
 
-    <h3 class="data-heading">Feedback</h3>
-    <p>This is a Beta Version. Please <a href="mailto:teti@ifo.de">contact me</a> if you find any mistakes, so I can improve the algorithm.</p>
-  </section>
+    <!-- Details Tile -->
+    <div class="tile">
+      <h3>Details</h3>
+      <p>
+        <a href="GTD/Data Dictionary.pdf" class="text-link" target="_blank">[Data Dictionary]</a><br>
+        <a href="https://www.cesifo.org/en/publications/2024/working-paper/missing-tariffs" class="text-link" target="_blank">[Paper] (Main text and Appendix C)</a>
+      </p>
+      <p>
+        Reference Data:<br>
+        <a href="path/to/reference_data.csv" class="text-link" target="_blank">[Country Codes]</a> |
+        <a href="path/to/reference_data.csv" class="text-link" target="_blank">[Sectors]</a>
+      </p>
+    </div>
+
+  </div>
+
+  <h3 class="data-heading">Feedback</h3>
+  <p>
+    This is a Beta Version. Please <a href="mailto:teti@ifo.de">contact me</a> if you find any mistakes, so I can improve the algorithm.
+  </p>
+</section>
 
 
   <!-- Matching Footer -->

@@ -8,45 +8,21 @@
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 
-<style>
-.tile-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 20px;
-  margin: 40px auto;
-  max-width: 1000px; /* Controls total width */
-}
 
-.tile {
-  background: rgb(245, 245, 245);
-  padding: 20px;
-  border: none;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  transition: box-shadow 0.3s;
-  text-align: left;
-  word-wrap: break-word;
-  hyphens: auto;
-  width: calc((100% - 160px) / 3); /* 3 tiles, accounting for 2 x 20px gaps */
-  min-width: 0; /* Allow shrinking */
-}
 
-      
-    .tile:hover {
-          box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Slight lift on hover */
-        }
-    .tile h3 {
-        margin-bottom: 5px;
-        color: rgb(10, 52, 104);
-        font-size: 14px;  /* Recommended for tile headers */
-        font-weight: bold; /* Make it bold for emphasis */
-        }
-@media (max-width: 768px) {
-  .tile {
-    max-width: 100%;
+<script>
+  function toggleAbstract(id) {
+    var abstract = document.getElementById(id);
+    if (abstract.classList.contains("active")) {
+      abstract.classList.remove("active");
+      setTimeout(() => (abstract.style.display = "none"), 300);
+    } else {
+      abstract.style.display = "block";
+      setTimeout(() => abstract.classList.add("active"), 10);
+    }
   }
-}
-</style>
+</script>
+
 </head>
 <body>
 
@@ -66,58 +42,82 @@
 <section id="data">
   <h2 class="section-title">Global Tariff Database (Beta Version v_beta1-2024-12
     )</h2>
-
-  <p>
-    The <strong class="ifoblue">Global Tariff Database (GTD)</strong> contains bilateral statutory tariff rates for 200 importers and their partners, for 34 years (1988–2021), at the HS6-level (HS88/92 Nomenclature). Both applied <strong class="ifoblue">MFN</strong> and <strong class="ifoblue">preferential tariffs</strong> are included, totaling more than 6.9 billion observations.
-  </p>
-  <p>
-    <strong class="ifoblue">Note:</strong> The GTD <strong class="ifoblue">does not</strong> include other trade policies than <strong class="ifoblue">MFN</strong> and <strong class="ifoblue">preferential tariffs</strong> such as safeguards, anti-dumping tariffs, or tariffs from the <strong class="ifoblue">US trade war</strong>.
-  </p>
+    <p>
+      The <strong class="ifoblue">Global Tariff Database (GTD)</strong> provides 
+      <strong>bilateral statutory tariff rates</strong> for <strong>200 importers</strong> and their partners, 
+      spanning <strong>34 years (1988–2021)</strong> at the <strong>HS6-level (HS88/92 Nomenclature)</strong>. 
+      It includes both <strong class="ifoblue">MFN</strong> and <strong class="ifoblue">preferential tariffs</strong>, 
+      covering <strong>over 6.9 billion observations</strong>.
+    </p>
+    <p>
+      The <strong class="ifoblue">GTD does not</strong> include other types of tariffs 
+      <strong>beyond MFN</strong> and <strong>preferential tariffs</strong>, 
+      such as <strong class="ifoblue">safeguards, anti-dumping tariffs</strong>, or tariffs from the 
+      <strong class="ifoblue">US trade war</strong>. 
+    </p>
+    </p>
+    
 
   <!-- Tile container -->
   <div class="tile-container">
 
     <!-- Download Data Tile -->
-    <div class="tile">
-      <h3>Download the Data</h3>
-      <p>
-        Pair-level and sector-level tariff data are available in <code>.dta</code> and <code>.csv</code> formats, including both <strong>simple averages</strong> and <strong>trade-weighted</strong> averages.
-      </p>
-      <p>
-        Sectoral aggregation is provided at the <strong>section</strong>, <strong>GTAP</strong>, and <strong>ISIC Rev. 3.3 (2-digit)</strong> levels, and separately for <strong>agriculture</strong> (HS2 &le; 24) and <strong>non-agriculture</strong> (HS2 > 24) products.
-      </p>
-      <p>
-        <a href="GTD/Bibtex_Teti2024.bib" class="text-link" target="_blank">[Download Data]</a>
-      </p>
-    </div>
+<div class="tile">
+  <h3>Download the Data</h3>
+  <p class="moreText">
+    Pair-level and sector-level tariff data are available in <code>.dta</code> and <code>.csv</code> formats, 
+    including both <strong>simple averages</strong> and (contemporary) <strong>trade-weighted</strong> averages.
+  </p>
+  
+  <div class="tile-controls"> 
+    <a href="GTD/PAIRS_Teti2024.csv" class="text-link" target="_blank">pairs</a> 
+    <span class="separator">|</span>
+    <a href="javascript:void(0);" class="toggle-abstract" onclick="toggleAbstract('sectors')">avail. sectors</a>
+    <span class="separator">|</span>
+    <a href="GTD/ref_ISO3_vbeta1-2024-12.csv" class="text-link" target="_blank">countries</a>
+  </div>
+
+  <div id="sectors" class="abstract">
+    <ul class="dash-list">
+      <li><a href="GTD/PAIRS_Teti2024.csv" class="text-link" target="_blank">ag-nonAg</a> </li>
+      <li><a href="GTD/PAIRS_Teti2024.csv" class="text-link" target="_blank">sections</a></li>
+      <li><a href="GTD/PAIRS_Teti2024.csv" class="text-link" target="_blank">isic33 (2-dig)</a></li>
+      <li><a href="GTD/PAIRS_Teti2024.csv" class="text-link" target="_blank">GTAP</a></li>
+    </ul>
+  </div>
+</div>
 
     <!-- How to Cite Tile -->
     <div class="tile">
       <h3>How to Cite</h3>
-      <p>
+      <p class ="moreText"> 
         Please cite the GTD as:<br>
-        <em>"Feodora Teti's Global Tariff Database (v_beta1-2024-12) from Teti (2024)"</em>
+        <em> <strong>"Feodora Teti's Global Tariff Database (v_beta1-2024-12) from Teti (2024)"</strong></em>
       </p>
-      <p>
+      <p class="moreText">
         Reference: Teti, Feodora A. (2024), <em>Missing Tariffs</em>, CESifo Working Papers No. 11590.
       </p>
       <p>
-        <a href="GTD/Bibtex_Teti2024.bib" class="text-link" target="_blank">[BibTeX]</a>
+        <a href="GTD/Bibtex_Teti2024.bib" class="text-link" target="_blank">bibtex</a>
       </p>
     </div>
 
     <!-- Details Tile -->
     <div class="tile">
       <h3>Details</h3>
-      <p>
-        <a href="GTD/Data Dictionary.pdf" class="text-link" target="_blank">[Data Dictionary]</a><br>
-        <a href="https://www.cesifo.org/en/publications/2024/working-paper/missing-tariffs" class="text-link" target="_blank">[Paper] (Main text and Appendix C)</a>
+      <p class="moreText">
+        Find details about the <strong>available variables</strong> in the GTD and <strong>reference data</strong> in the dictionary below. 
+        The accompanying <strong> paper</strong> and its <strong> Online Appendix C</strong> provide a detailed <strong> description</strong>description <strong> algorithm</strong>. 
+        <br><br>
+        <strong>Note:</strong> Users should exercise caution when using data from the early years (<strong>1988–1994</strong>), as few reported data points reduce the reliability of the algorithm.             
       </p>
-      <p>
-        Reference Data:<br>
-        <a href="path/to/reference_data.csv" class="text-link" target="_blank">[Country Codes]</a> |
-        <a href="path/to/reference_data.csv" class="text-link" target="_blank">[Sectors]</a>
-      </p>
+      <div class="tile-controls">
+        <a href="GTD/Data Dictionary.pdf" class="text-link" target="_blank">data dictionary</a>
+        <span class="separator">|</span>
+        <a href="GTD/Data Dictionary.pdf" class="text-link" target="_blank">reference data</a>
+        <span class="separator">|</span>
+        <a href="https://www.cesifo.org/en/publications/2024/working-paper/missing-tariffs"class="text-link" target="_blank">paper </a>            
+      </div>
     </div>
 
   </div>

@@ -23,6 +23,27 @@
   }
 </script>
 
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const acc = document.getElementsByClassName("accordion");
+
+  for (let i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function () {
+      const panel = this.nextElementSibling;
+      this.classList.toggle("active");
+
+      if (panel.style.display === "block") {
+        panel.style.display = "none";
+      } else {
+        panel.style.display = "block";
+      }
+    });
+  }
+});
+</script>
+
+
 </head>
 <body>
 
@@ -40,24 +61,80 @@
 
   <!-- Data Section -->
 <section id="data">
-  <h2 class="section-title">Global Tariff Database (Beta Version v_beta1-2024-12
-    )</h2>
-    <p>
-      The <strong class="ifoblue">Global Tariff Database (GTD)</strong> provides 
-      <strong class="ifoblue">bilateral statutory tariff rates</strong> for <strong class="ifoblue">200 importers</strong> and their partners, 
-      spanning <strong class="ifoblue">34 years (1988–2021)</strong>. It includes both <strong class="ifoblue">MFN</strong> and <strong class="ifoblue">preferential tariffs</strong> and is based on <strong class="ifoblue">HS6-level tariff rates (HS88/92 Nomenclature)</strong>, covering <strong class="ifoblue">over 6.9 billion observations</strong>.
-    </p>
-    <p>
-      To ensure usability and accessibility, the publicly available versions are provided in <strong class="ifoblue">aggregated formats</strong>. The microdata at the HS6-level are, at this point, not publicly available.
-    </p>
-    <p>
-      The <strong class="ifoblue">GTD does not</strong> include other types of tariffs 
-      <strong>beyond MFN</strong> and <strong>preferential tariffs</strong>, 
-      such as <strong class="ifoblue">safeguards, anti-dumping tariffs</strong>, or tariffs from the 
-      <strong class="ifoblue">US trade war</strong>. 
-    </p>
-    </p>
-    
+  <h2 class="section-title">
+    Global Tariff Database (Beta Version v_beta1-2024-12)
+  </h2>
+
+  <!-- Accordion for Overview -->
+<button class="accordion data-heading">
+  Overview 
+  <svg class="arrow" width="12" height="12" viewBox="0 0 20 20" fill="none">
+    <polyline points="6 4 14 10 6 16" stroke="#003865" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+</button>
+<div class="panel">
+  <p>
+    The <strong class="ifoblue">Global Tariff Database (GTD)</strong> provides 
+    <strong class="ifoblue">bilateral statutory tariff rates</strong> for 
+    <strong class="ifoblue">200 importers</strong> and their partners, spanning 
+    <strong class="ifoblue">34 years (1988–2021)</strong>. It includes both 
+    <strong class="ifoblue">MFN</strong> and 
+    <strong class="ifoblue">preferential tariffs</strong> and is based on 
+    <strong class="ifoblue">HS6-level tariff rates (HS88/92 Nomenclature)</strong>, 
+    covering <strong class="ifoblue">over 6.9 billion observations</strong>.
+  </p>
+  </div>
+
+
+  <!-- Accordion for Limitations -->
+<button class="accordion data-heading">
+  Limitations 
+  <svg class="arrow" width="12" height="12" viewBox="0 0 20 20" fill="none">
+    <polyline points="6 4 14 10 6 16" stroke="#003865" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+</button>
+<div class="panel">
+  <p>
+    The <strong class="ifoblue">GTD does not</strong> include tariff types 
+    <strong>beyond MFN</strong> and <strong>preferential tariffs</strong>, such as 
+    <strong class="ifoblue">safeguards</strong>, 
+    <strong class="ifoblue">anti-dumping tariffs</strong>, or those related to the 
+    <strong class="ifoblue">US trade war</strong>.
+  </p>
+  </div>
+
+
+
+  <!-- Accordion for Access to Microdata -->
+<button class="accordion data-heading">
+  Access to HS6-Level Microdata 
+  <svg class="arrow" width="12" height="12" viewBox="0 0 20 20" fill="none">
+    <polyline points="6 4 14 10 6 16" stroke="#003865" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+</button>
+<div class="panel">
+<p>
+  The detailed microdata at the HS6-level are currently 
+  <strong class="ifoblue">not publicly available</strong>. 
+  Access is restricted to a <strong class="ifoblue">small test group</strong> of experienced researchers during this beta phase.
+  If you would like to be considered, please 
+  <a href="mailto:teti@ifo.de">send me an email</a> and include a completed copy of this 
+  <a href="https://github.com/FeodoraTeti/feodorateti.github.io/raw/refs/heads/main/GTD/ProjectOverview_template.xlsx" target="_blank">Excel sheet</a> 
+  outlining your project details.
+</p>
+<p>
+  Please note that access is not guaranteed. Priority is given to users who can provide constructive feedback and help improve the dataset for future public releases.
+</p>
+
+  </div>
+
+
+  
+
+
+
+   
+
 
   <!-- Tile container -->
   <div class="tile-container">

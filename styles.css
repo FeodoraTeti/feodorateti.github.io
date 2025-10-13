@@ -70,6 +70,27 @@ h2.section-title {
   font-size: 20px;
   font-weight: 700;
 }
+/* Ensure titles have consistent breathing space */
+h2.data-heading {
+  margin-top: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Indent text paragraphs inside data sections */
+#GTD p,
+#GTDUS p {
+  margin-left: 1.2rem;   /* same as pub-item indent */
+  margin-right: 1.2rem;
+  margin-bottom: 1rem;   /* adds a bit of space between paragraphs */
+  line-height: 1.6;
+}
+
+   section {
+        padding: 20px 20px 40px 20px; /* Reduce top padding */
+        max-width: 90%;
+        margin: 0 auto;
+         /*border-bottom: 1px solid rgb(200, 200, 200);*/  /*Divider */
+      }
 
 /* Footer styling */
 footer {
@@ -156,12 +177,7 @@ footer {
     .tile:hover {
           box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Slight lift on hover */
         }
-    .tile h3 {
-        margin-bottom: 5px;
-        color: rgb(10, 52, 104);
-        font-size: 14px;  /* Recommended for tile headers */
-        font-weight: bold; /* Make it bold for emphasis */
-        }
+
 @media (max-width: 768px) {
   .tile {
     max-width: 100%;
@@ -181,7 +197,20 @@ footer {
 
 .data-heading {
   color: rgb(10, 52, 104); /* ifoBlue */
+  margin-top: 2.5em;    /* space before each section */
+  margin-bottom: -0.5em; /* space after heading */
+  font-size: 1.2em;   /* optional: make it stand out slightly more */
 }
+
+h3.data-heading {
+  color: rgb(10, 52, 104);
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 2.5rem;      /* space above */
+  margin-bottom: 0.5rem;   /* space below */
+  margin-left: 1.2rem;     /* align with text indent */
+}
+
 
 .abstract {
   display: none;
@@ -294,4 +323,17 @@ display: block;
 .panel p {
   margin: 0.4rem 0;
   line-height: 1.4;
+}
+
+/* Only indent link rows inside the Data section */
+#data .pub-links {
+  padding-left: 1.2rem;   /* use padding, not margin, so it always indents */
+}
+
+/* Optional: tidy separators and wrapping without changing global .pub-links */
+#data .pub-links .separator { opacity: 0.6; margin: 0 0.35rem; }
+#data .pub-links {
+  display: inline;         /* keep inline flow (avoid flex if set elsewhere) */
+  white-space: normal;     /* allow wrapping on small screens */
+  line-height: 1.5;
 }

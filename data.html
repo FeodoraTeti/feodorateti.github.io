@@ -21,6 +21,8 @@
       setTimeout(() => abstract.classList.add("active"), 10);
     }
   }
+
+
 </script>
 
 
@@ -59,142 +61,112 @@ document.addEventListener('DOMContentLoaded', function () {
     </nav>
   </header>
 
-  <!-- Data Section -->
-<section id="data">
+  <!-- Global Tariff Database (Beta Version v_beta1-2024-12) -->
+<section id="GTD">
   <h2 class="section-title">
     Global Tariff Database (Beta Version v_beta1-2024-12)
   </h2>
 
-  <!-- Accordion for Overview -->
-<button class="accordion data-heading">
-  Overview 
-  <svg class="arrow" width="12" height="12" viewBox="0 0 20 20" fill="none">
-    <polyline points="6 4 14 10 6 16" stroke="#003865" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-  </svg>
-</button>
-<div class="panel">
+<!-- Overview -->
+<h3 class="data-heading"></h3>
+<p>
+  The <strong class="ifoblue">Global Tariff Database (GTD)</strong> provides 
+  <strong class="ifoblue">bilateral statutory tariff rates</strong> for 
+  <strong class="ifoblue">200 importers</strong> and their partners, spanning 
+  <strong class="ifoblue">34 years (1988–2021)</strong>. It includes both 
+  <strong class="ifoblue">MFN</strong> and 
+  <strong class="ifoblue">preferential tariffs</strong> and is based on 
+  <strong class="ifoblue">HS6-level tariff rates (HS88/92 Nomenclature)</strong>, 
+  covering <strong class="ifoblue">over 6.9 billion observations</strong>.
+</p>
+<p>
+  The <strong class="ifoblue">GTD does not</strong> include tariff types 
+  <strong class="ifoblue">beyond MFN</strong> and <strong class="ifoblue">preferential tariffs</strong>, such as 
+  <strong class="ifoblue">safeguards</strong>, 
+  <strong class="ifoblue">anti-dumping tariffs</strong>, or those related to the 
+  <strong class="ifoblue">US trade war</strong>.
+</p>
+<p>
+  Find details about the <strong class="ifoblue">available variables</strong> in the GTD and the <strong class="ifoblue">reference data</strong> in the dictionary below. 
+  The accompanying <strong class="ifoblue">paper</strong> and its <strong class="ifoblue">Online Appendix C</strong> provide a detailed <strong class="ifoblue">description</strong> of the <strong class="ifoblue">algorithm</strong>.
+</p>
+
+  <div class="pub-links" style="font-size: 0.95rem; margin-top: 0.3rem; margin-left: 2.4rem;">
+  <a href="GTD/Data Dictionary.pdf" 
+     class="text-link" target="_blank" rel="noopener noreferrer">data dictionary</a>
+  <span class="separator">|</span>
+  <a href="https://www.cesifo.org/en/publications/2024/working-paper/missing-tariffs" 
+     class="text-link" target="_blank" rel="noopener noreferrer">paper</a>
+</div>
+
+ 
+<!-- Download the Data (section, flat version) -->
+<h3 class="data-heading">Download the Data</h3>
+<p>
+  Pair-level and sector-level tariff data are available in <code class="ifoblue">.dta</code> and <code class="ifoblue">.csv</code> formats,
+  including both <strong class="ifoblue">simple averages</strong> and current-year <strong class="ifoblue">trade-weighted</strong> averages.
+
+
   <p>
-    The <strong class="ifoblue">Global Tariff Database (GTD)</strong> provides 
-    <strong class="ifoblue">bilateral statutory tariff rates</strong> for 
-    <strong class="ifoblue">200 importers</strong> and their partners, spanning 
-    <strong class="ifoblue">34 years (1988–2021)</strong>. It includes both 
-    <strong class="ifoblue">MFN</strong> and 
-    <strong class="ifoblue">preferential tariffs</strong> and is based on 
-    <strong class="ifoblue">HS6-level tariff rates (HS88/92 Nomenclature)</strong>, 
-    covering <strong class="ifoblue">over 6.9 billion observations</strong>.
-  </p>
-  </div>
+  If you would like to use the dataset, please <strong class="ifoblue">cite</strong> it as:
+</p>
 
+<div style="border-left: 3px solid #d1d5db; padding-left: 1rem; margin-left: 1.5rem;">
+  <em><strong class="ifoblue">
+    "Feodora Teti's Global Tariff Database (v_beta1-2024-12) from Teti&nbsp;(2024)."
+  </strong></em>
+</div>
 
-  <!-- Accordion for Limitations -->
-<button class="accordion data-heading">
-  Limitations 
-  <svg class="arrow" width="12" height="12" viewBox="0 0 20 20" fill="none">
-    <polyline points="6 4 14 10 6 16" stroke="#003865" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-  </svg>
-</button>
-<div class="panel">
-  <p>
-    The <strong class="ifoblue">GTD does not</strong> include tariff types 
-    <strong>beyond MFN</strong> and <strong>preferential tariffs</strong>, such as 
-    <strong class="ifoblue">safeguards</strong>, 
-    <strong class="ifoblue">anti-dumping tariffs</strong>, or those related to the 
-    <strong class="ifoblue">US trade war</strong>.
-  </p>
-  </div>
+<p style="margin-top: 1rem;">
+  <strong >References</strong><br>
+  Teti, Feodora A. (2024). 
+  <em>Missing Tariffs</em>, CESifo Working Paper No. 11590.    
+</p>
 
 
 
-  <!-- Accordion for Access to Microdata -->
-<button class="accordion data-heading">
-  Access to HS6-Level Microdata 
-  <svg class="arrow" width="12" height="12" viewBox="0 0 20 20" fill="none">
-    <polyline points="6 4 14 10 6 16" stroke="#003865" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-  </svg>
-</button>
-<div class="panel">
+  <div class="pub-links" style="font-size: 0.95rem; margin-top: 0.3rem; margin-left: 2.4rem;">
+  <a href="https://www.dropbox.com/scl/fi/wnsgnkkqz2ifb2vqiuyce/Pairs_vbeta1-2024-12.7z?rlkey=5m4ka7142bl9y1z0dndsaso36&st=b0tq7wr2&dl=1"
+     class="text-link" target="_blank" rel="noopener noreferrer">pair-level</a>
+  <span class="separator">|</span>
+  <a href="https://www.dropbox.com/scl/fi/2mmbh4ma3hl4p5vo5r08f/Ag-NonAg_vbeta1-2024-12.7z?rlkey=46za8gyekw0hw4h1fzaqgbxuk&st=d9zrgw59&dl=1"
+     class="text-link" target="_blank" rel="noopener noreferrer">ag-nonAg</a>
+  <span class="separator">|</span>
+  <a href="https://www.dropbox.com/scl/fi/7dg2y9y4cpjlnt0n1rxky/section_88_21_vbeta1-2024-12.7z?rlkey=7e92fzc19q3izuoxe6fohe65q&st=661kl1uc&dl=1"
+     class="text-link" target="_blank" rel="noopener noreferrer">sections</a>
+  <span class="separator">|</span>
+  <a href="https://www.dropbox.com/scl/fi/jjknrptwj814vf3d3lqw6/isic33_vbeta1-2024-12.7z?rlkey=4dvoeic1w6g7aqhaqbgdqeev2&st=6u8u78vx&dl=1"
+     class="text-link" target="_blank" rel="noopener noreferrer">isic33 (2-dig)</a>
+  <span class="separator">|</span>
+  <a href="https://www.dropbox.com/scl/fi/7pwgz280xdanxcp8m2f6t/GTAP_vbeta1-2024-12.7z?rlkey=idcdlxpi1495gybab5onpz5fh&st=ol8mdmxp&dl=1"
+     class="text-link" target="_blank" rel="noopener noreferrer">GTAP</a>
+  <span class="separator">|</span>
+  <a href="GTD/ref_ISO3_vbeta1-2024-12.csv"
+     class="text-link" target="_blank" rel="noopener noreferrer">iso3</a>
+  <span class="separator">|</span>
+  <a href="GTD/Bibtex_Teti2024.bib" 
+     class="text-link" target="_blank" rel="noopener noreferrer">bibtex</a>
+</div>
+
+ 
+
+
+
+<!-- Access to HS6-Level Microdata -->
+<h3 class="data-heading">Access to HS6-Level Microdata</h3>
 <p>
   The detailed microdata at the HS6-level are currently 
   <strong class="ifoblue">not publicly available</strong>. 
   Access is restricted to a <strong class="ifoblue">small test group</strong> of experienced researchers during this beta phase.
   If you would like to be considered, please 
   <a href="mailto:teti@ifo.de">send me an email</a> and include a completed copy of this 
-  <a href="https://github.com/FeodoraTeti/feodorateti.github.io/raw/refs/heads/main/GTD/ProjectOverview_template.xlsx" target="_blank">Excel sheet</a> 
+  <a href="https://github.com/FeodoraTeti/feodorateti.github.io/raw/refs/heads/main/GTD/ProjectOverview_template.xlsx" target="_blank" rel="noopener noreferrer">Excel sheet</a> 
   outlining your project details.
 </p>
 <p>
   Please note that access is not guaranteed. Priority is given to users who can provide constructive feedback and help improve the dataset for future public releases.
 </p>
 
-  </div>
-
-
-  
-
-
-
-   
-
-
-  <!-- Tile container -->
-  <div class="tile-container">
-
-    <!-- Download Data Tile -->
-<div class="tile">
-  <h3>Download the Data</h3>
-  <p class="moreText">
-    Pair-level and sector-level tariff data are available in <code>.dta</code> and <code>.csv</code> formats, 
-    including both <strong>simple averages</strong> and (contemporary) <strong>trade-weighted</strong> averages.
-  </p>
-  
-  <div class="tile-controls"> 
-    <a href="https://www.dropbox.com/scl/fi/wnsgnkkqz2ifb2vqiuyce/Pairs_vbeta1-2024-12.7z?rlkey=5m4ka7142bl9y1z0dndsaso36&st=b0tq7wr2&dl=1" class="text-link" target="_blank">pair-level</a> 
-    <span class="separator">|</span>
-    <a href="javascript:void(0);" class="toggle-abstract" onclick="toggleAbstract('sectors')">avail. sectors</a>
-    <span class="separator">|</span>
-    <a href="GTD/ref_ISO3_vbeta1-2024-12.csv" class="text-link" target="_blank">iso3</a>
-  </div>
-
-  <div id="sectors" class="abstract">
-    <ul class="dash-list">
-      <li><a href="https://www.dropbox.com/scl/fi/2mmbh4ma3hl4p5vo5r08f/Ag-NonAg_vbeta1-2024-12.7z?rlkey=46za8gyekw0hw4h1fzaqgbxuk&st=d9zrgw59&dl=1" class="text-link" target="_blank">ag-nonAg</a> </li>
-      <li><a href="https://www.dropbox.com/scl/fi/7dg2y9y4cpjlnt0n1rxky/section_88_21_vbeta1-2024-12.7z?rlkey=7e92fzc19q3izuoxe6fohe65q&st=661kl1uc&dl=1" class="text-link" target="_blank">sections</a></li>
-      <li><a href="https://www.dropbox.com/scl/fi/jjknrptwj814vf3d3lqw6/isic33_vbeta1-2024-12.7z?rlkey=4dvoeic1w6g7aqhaqbgdqeev2&st=6u8u78vx&dl=1" class="text-link" target="_blank">isic33 (2-dig)</a></li>
-      <li><a href="https://www.dropbox.com/scl/fi/7pwgz280xdanxcp8m2f6t/GTAP_vbeta1-2024-12.7z?rlkey=idcdlxpi1495gybab5onpz5fh&st=ol8mdmxp&dl=1" class="text-link" target="_blank">GTAP</a></li>
-    </ul>
-  </div>
-</div>
-
-    <!-- How to Cite Tile -->
-    <div class="tile">
-      <h3>How to Cite</h3>
-      <p class ="moreText"> 
-        Please cite the GTD as:<br>
-        <em> <strong>"Feodora Teti's Global Tariff Database (v_beta1-2024-12) from Teti (2024)"</strong></em>
-      </p>
-      <p class="moreText">
-        Reference: Teti, Feodora A. (2024), <em>Missing Tariffs</em>, CESifo Working Papers No. 11590.
-      </p>
-      <p>
-        <a href="GTD/Bibtex_Teti2024.bib" class="text-link" target="_blank">bibtex</a>
-      </p>
-    </div>
-
-    <!-- Details Tile -->
-    <div class="tile">
-      <h3>Details</h3>
-      <p class="moreText">
-        Find details about the <strong>available variables</strong> in the GTD and <strong>reference data</strong> in the dictionary below. 
-        The accompanying <strong> paper</strong> and its <strong> Online Appendix C</strong> provide a detailed <strong> description</strong> of the <strong> algorithm</strong>. 
-      </p>
-      <div class="tile-controls">
-        <a href="GTD/Data Dictionary.pdf" class="text-link" target="_blank">data dictionary</a>
-        <span class="separator">|</span>
-        <a href="https://www.cesifo.org/en/publications/2024/working-paper/missing-tariffs"class="text-link" target="_blank">paper </a>            
-      </div>
-    </div>
-
-  </div>
 
   <h3 class="data-heading">Feedback</h3>
   <p>
@@ -202,6 +174,67 @@ document.addEventListener('DOMContentLoaded', function () {
   </p>
 </section>
 
+
+
+  <!-- US Extension -->
+<section id="GTDUS">
+  <h2 class="section-title">
+    Global Tariff Database: U.S. Trade War Extension (Version v_2025-10)
+  </h2>
+
+ <h3 class="data-heading">Overview</h3>
+ <p>
+  The <strong class="ifoblue">Global Tariff Database: U.S. Trade War Extension (GTD&mdash;U.S. Trade War)</strong> provides daily, product-level data on U.S. import and export tariffs vis-à-vis all trading partners from <strong class="ifoblue">January 2018 through August 15, 2025</strong>.  
+  This extension builds on the <em>Global Tariff Database (v&nbsp;beta1-2024-12)</em>, incorporating all tariff measures imposed by the United States and applied to U.S. exports abroad during the 2018&ndash;2025 trade wars, consolidated into a single dataset.
+  For an extensive description of the construction of the GTD&mdash;U.S. Trade War, please refer to the accompanying <strong class="ifoblue">paper</strong> and its <strong class="ifoblue">Online Appendix A</strong>.
+</p>
+  
+
+<!-- Download the Data (section, flat version) -->
+<h3 class="data-heading">Download the Data</h3>
+
+<p>
+  Tariff data are available at both the 
+  <strong class="ifoblue">national tariff-line</strong> and 
+  <strong class="ifoblue">harmonized HS6 (HS&nbsp;2017)</strong> levels in 
+  <code class="ifoblue">.dta</code> and <code class="ifoblue">.csv</code> formats.
+</p>
+
+<p>
+  If you would like to use the dataset, please <strong class="ifoblue">cite</strong> it as:
+</p>
+
+<div style="border-left: 3px solid #d1d5db; padding-left: 1rem; margin-left: 1.5rem;">
+  <em><strong class="ifoblue">
+    "The Global Tariff Database: U.S. Trade War Extension (v_2025-10) 
+    from Rodríguez-Clare et&nbsp;al.&nbsp;(2025), based on the methodology developed in Teti&nbsp;(2024)."
+  </strong></em>
+</div>
+
+<p style="margin-top: 1rem;">
+  <strong >References</strong><br>
+
+  Rodríguez-Clare, Andrés, Teti, Feodora A., Ulate, Mauricio, Vásquez, Jose P., &amp; Zárate, Roman D. (2025). 
+  <em>The&nbsp;2025&nbsp;Trade&nbsp;War: Dynamic&nbsp;Impacts&nbsp;Across&nbsp;U.S.&nbsp;States&nbsp;and&nbsp;the&nbsp;Global&nbsp;Economy</em>, CESifo Working Paper, No. 12179, 2025.
+</p>
+
+<p style="margin-top: 0.75rem;">
+  Teti, Feodora A. (2024). 
+ <em>Missing Tariffs</em>, CESifo Working Paper No. 11590.
+</p>
+
+  <div class="pub-links" style="font-size: 0.95rem; margin-top: 0.3rem; margin-left: 2.4rem;">
+  <a href="https://www.dropbox.com/scl/fi/abmmkzq0gxqz8pm8wlihz/GTD-tradeWar_US-hts10.7z?rlkey=te0nmj943ivx9h6g5ynvuxdp4&st=nfj6xsm7&dl=1"
+     class="text-link" target="_blank" rel="noopener noreferrer">HTS10 (U.S. only)</a>
+  <span class="separator">|</span>
+  <a href="https://www.dropbox.com/scl/fi/4sm750wzdvyq71tx7e4h4/GTD-tradeWar_hs6.7z?rlkey=vvwxepqyye8d0gjaxjmv8rfv5&st=hemewd50&dl=1"
+     class="text-link" target="_blank" rel="noopener noreferrer">HS6 (bilateral)</a>
+  <span class="separator">|</span>
+  <a href="GTD-US/Bibtex_GTD-US.bib" 
+     class="text-link" target="_blank" rel="noopener noreferrer">bibtex</a>
+</div>
+
+</section>
 
   <!-- Matching Footer -->
   <footer>

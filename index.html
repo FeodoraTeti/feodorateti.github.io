@@ -18,14 +18,14 @@
       max-width: 1000px; /* Adjust width for your content */
     }
   .button-container {
-    margin-top: 10px;
+    margin-top: 10px; 
   }
   header {
     background: rgb(10, 52, 104); /* ifoBlueDark */
     padding: 20px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center; 
     color: white;
     max-width: 100%;
     margin: 0 auto;
@@ -472,6 +472,32 @@ section:last-of-type {
 <section id="working-papers">
   <h2 class="section-title">Working Papers</h2>
 
+  <!-- Leaky Sanctions (JMP) -->
+  <div class="pub-item" style="margin: 1.5rem 0; margin-left: 1.2rem; margin-right: 1.2rem;">
+    <h3 style="font-size: 0.9rem; font-weight: 600; color: rgb(10, 52, 104); margin-bottom: 0.2rem;">
+      Leaky Sanctions
+      <span style="font-weight: 400; color: gray;">
+        with
+        <a href="https://www.ifo.de/scheckenhofer-l" target="_blank" style="color: gray; text-decoration: none;"
+           onmouseover="this.style.textDecoration='underline';" onmouseout="this.style.textDecoration='none';">Lisa Scheckenhofer</a>,
+        <a href="https://sites.google.com/view/davidtorun/" target="_blank" style="color: gray; text-decoration: none;"
+           onmouseover="this.style.textDecoration='underline';" onmouseout="this.style.textDecoration='none';">David Torun</a> and
+        <a href="https://www.wiwi.uni-wuerzburg.de/qiee/team/prof-dr-joschka-wanner/" target="_blank" style="color: gray; text-decoration: none;"
+           onmouseover="this.style.textDecoration='underline';" onmouseout="this.style.textDecoration='none';">Joschka Wanner</a> (JMP, new draft coming soon).
+      </span>
+    </h3>
+
+    <div class="pub-links" style="font-size: 0.95rem; margin-top: 0.3rem; margin-left: 0.0rem;">
+      <a href="javascript:void(0);" class="toggle-abstract" onclick="toggleAbstract('LeakySanctions')">abstract</a>
+    </div>
+
+    <div id="LeakySanctions" class="abstract" style="display:none; margin-top: 1rem; font-size: 1.05rem;">
+      <p>
+        Discriminatory trade policy creates incentives to circumvent it by transshipping goods through third countries. We study how much transshipment weakens the export bans the European Union imposed on Russia in 2022. Linking Russian transaction-level customs records with new data on the bans, we observe transshipment directly: banned EU goods worth about 20% of pre-war imports keep arriving. The bans act like a 69% tariff, and stricter enforcement shifted sales to third-country intermediaries rather than stopping them. In a general-equilibrium model with endogenous transshipment, the same bans would raise Russia's real-income loss by 32% without transshipment. Closing every route currently in use would recover only 41% of Russia's gain from transshipment, because trade moves to routes not yet used.
+      </p>
+    </div>
+  </div>
+
   <!-- Missing Tariffs -->
   <div class="pub-item" style="margin: 1.5rem 0; margin-left: 1.2rem; margin-right: 1.2rem;">
     <h3 style="font-size: 0.9rem; font-weight: 600; color: rgb(10, 52, 104); margin-bottom: 0.2rem;">
@@ -796,21 +822,6 @@ section:last-of-type {
 <!-- Work in Progress Section --> 
 <section id="work-in-progress">
   <h2 class="section-title">Work in Progress</h2>
-   
-  <div class="pub-item" style="margin: 1.2rem 0; margin-left: 1.2rem; margin-right: 1.2rem;">
-    <h3 style="font-size: 0.9rem; font-weight: 600; color: rgb(10, 52, 104); margin: 0;">
-      Leaky Sanctions
-      <span style="font-weight: 400; color: gray;">
-        with 
-        <a href="https://www.ifo.de/scheckenhofer-l" target="_blank" style="color: gray; text-decoration: none;"
-           onmouseover="this.style.textDecoration='underline';" onmouseout="this.style.textDecoration='none';">Lisa Scheckenhofer</a>, 
-        <a href="https://sites.google.com/view/davidtorun/" target="_blank" style="color: gray; text-decoration: none;"
-           onmouseover="this.style.textDecoration='underline';" onmouseout="this.style.textDecoration='none';">David Torun</a> and 
-        <a href="https://www.wiwi.uni-wuerzburg.de/qiee/team/prof-dr-joschka-wanner/" target="_blank" style="color: gray; text-decoration: none;"
-           onmouseover="this.style.textDecoration='underline';" onmouseout="this.style.textDecoration='none';">Joschka Wanner</a> (JMP, new draft coming soon).
-      </span>
-    </h3>
-  </div>
 
   <div class="pub-item" style="margin: 1.2rem 0; margin-left: 1.2rem; margin-right: 1.2rem;">
     <h3 style="font-size: 0.9rem; font-weight: 600; color: rgb(10, 52, 104); margin: 0;">
@@ -823,6 +834,16 @@ section:last-of-type {
            onmouseover="this.style.textDecoration='underline';" onmouseout="this.style.textDecoration='none';">Lisa Scheckenhofer</a>.
       </span>
     </h3>
+
+    <div class="pub-links" style="font-size: 0.95rem; margin-top: 0.3rem; margin-left: 0.0rem;">
+      <a href="javascript:void(0);" class="toggle-abstract" onclick="toggleAbstract('RedTape')">abstract</a>
+    </div>
+
+    <div id="RedTape" class="abstract" style="display:none; margin-top: 1rem; font-size: 1.05rem;">
+      <p>
+        With tariffs at historically low levels, current trade policy is very much centered around reducing non-tariff barriers (NTBs), yet quantifying their effects remains challenging. This paper uses Brexit as a policy shock to estimate the effect of NTBs on trade. We compile new product-level data on the universe of regulatory measures that a UK-firm must fulfill at the border when exporting a product to the EU in response to Brexit. The structure of the event and the data allows us to account for endogeneity of trade policy, demand- and supply-shocks and isolate one channel through which NTBs affect trade &ndash; the documentary compliance costs. Our findings indicate that one additional requirement at the EU border decreases trade on both margins. This negative effect is magnified in small and new EU member states and heterogeneous across sectors. We categorize NTBs by type and show that the costs of Brexit are substantially influenced by the characteristics of NTBs and the extent of regulatory leeway.
+      </p>
+    </div>
   </div>
 
   <div class="pub-item" style="margin: 1.2rem 0; margin-left: 1.2rem; margin-right: 1.2rem;">
@@ -853,6 +874,16 @@ section:last-of-type {
          onmouseout="this.style.textDecoration='none';">Roman D. Zárate</a>.
       </span>
     </h3>
+
+    <div class="pub-links" style="font-size: 0.95rem; margin-top: 0.3rem; margin-left: 0.0rem;">
+      <a href="javascript:void(0);" class="toggle-abstract" onclick="toggleAbstract('FTAElasticities')">abstract</a>
+    </div>
+
+    <div id="FTAElasticities" class="abstract" style="display:none; margin-top: 1rem; font-size: 1.05rem;">
+      <p>
+        This paper estimates trade elasticities using tariff reductions generated by free trade agreements. We construct a novel instrument that interacts the timing of an agreement with pre-agreement MFN tariffs: after an agreement enters into force, products with higher initial MFN tariffs are expected to experience larger preferential tariff cuts. This generates policy-driven variation in applied tariffs across products within country pairs over time. We focus on Article XXIV agreements, which correspond to reciprocal free trade agreements and customs unions. In this sample, tariffs fall gradually after entry into force, with larger reductions at longer horizons. Trade flows respond with a lag, and the implied IV estimates point to trade elasticities of about one in absolute value after the first few years, rising to roughly 1.3&ndash;1.4 by later horizons. The results show that FTA-induced tariff variation provides a useful source of identification for trade elasticities and that accounting for gradual implementation is important for measuring the dynamic response of trade to tariff reductions.
+      </p>
+    </div>
   </div>
 </section>
 

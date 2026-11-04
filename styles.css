@@ -1,38 +1,43 @@
-/* Global Styles for Feodora Teti's Website */
-
-/* Ensure consistency across all pages */
-body {
-  font-family: 'Roboto', sans-serif;
-  background-color: #ffffff;
-  color: rgb(125, 133, 150);
-  margin: 40px auto;
-  padding: 20px;
-  font-size: 14px;
-  line-height: 1.6;
-  max-width: 1000px;
-}
-
-/* Header styling */
-header {
-  background: rgb(10, 52, 104); /* ifoBlueDark */
-  padding: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: white;
-  max-width: 100%;
-  margin: 0 auto;
-}
-
+/* =====================================================================
+   Shared stylesheet for index.html and data.html
+   (moved out of index.html so both pages always look the same)
+   ===================================================================== */
+    body {
+      font-family: 'Inter', 'Roboto', system-ui, sans-serif;
+      background-color: #f7f8fa; /* cool off-white: faint blue-gray, matches the blue palette */
+      color: rgb(125, 133, 150); /* ifoGray */
+      margin: 0 auto;
+      padding: 0 20px 20px;
+      font-size: 14px;
+      line-height: 1.6;
+      max-width: 860px; /* narrower column: abstracts ~100 characters per line */
+    }
+  .button-container {
+    margin-top: 10px; 
+  }
+  header {
+    position: sticky;            /* stays visible while scrolling */
+    top: 0;
+    z-index: 10;
+    background: #f7f8fa;       /* solid page color: nothing shows through when scrolling */
+    border-bottom: 1px solid #e2e6ec; /* hairline */
+    padding: 16px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto 30px;
+  }
 header h1 {
   margin: 0;
-  font-size: 24px;
+  font-size: 19px;
+  font-weight: 700;
+  color: rgb(13, 64, 128); /* CV blue: single accent in the top bar; menu stays gray */
 }
 
 nav ul {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 0; 
   display: flex;
 }
 
@@ -40,69 +45,367 @@ nav ul li {
   margin: 0 15px;
 }
 
-nav ul li a {
-  color: white !important;
+nav ul li a,
+nav ul li a:visited {
+  color: rgb(13, 64, 128); /* CV blue like the name; normal weight keeps the name dominant */
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 400;
+  font-size: 15px;
 }
-
 nav ul li a:hover {
-  color: rgb(200, 200, 200)  !important;
-}
-
-/* Ensure links remain the same color globally */
-a, a:visited {
-  color: rgb(10, 52, 104); /* ifoBlueDark */
-  text-decoration: none;
-}
-
-a:hover {
   text-decoration: underline;
-  color: #0073b1;
+  text-underline-offset: 4px;
 }
 
-/* Section title styling */
-h2.section-title {
-  color: rgb(10, 52, 104);
-  border-bottom: 1px solid rgb(200, 200, 200);
-  padding-bottom: 10px;
-  margin-bottom: 20px;
-  font-size: 20px;
-  font-weight: 700;
-}
-/* Ensure titles have consistent breathing space */
-h2.data-heading {
-  margin-top: 1.8rem;
-  margin-bottom: 0.5rem;
-}
 
-/* Indent text paragraphs inside data sections */
-#GTD p,
-#GTDUS p {
-  margin-left: 1.2rem;   /* same as pub-item indent */
-  margin-right: 1.2rem;
-  margin-bottom: 1rem;   /* adds a bit of space between paragraphs */
-  line-height: 1.6;
-}
 
-   section {
+
+    section {
         padding: 20px 20px 40px 20px; /* Reduce top padding */
         max-width: 90%;
         margin: 0 auto;
          /*border-bottom: 1px solid rgb(200, 200, 200);*/  /*Divider */
       }
+    h2.section-title {
+        color: rgb(13, 64, 128); /* ifoBlueDark */
+        border-bottom: 1px solid #e2e6ec; /* hairline */
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+        font-size: 15px;
+        font-weight: 700;      /* same weight as the name, so the blue reads identical */
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
 
-/* Footer styling */
-footer {
-  text-align: center;
-  padding: 10px;
-  background: rgb(10, 52, 104);
-  color: white;
-  margin-top: 20px;
+      }
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+      }
+    .tile {
+        background: rgb(245, 245, 245);
+        padding: 20px;
+        border: none; /* Removes the border */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Subtle shadow instead of a border */
+        transition: box-shadow 0.3s;
+        text-align: left; /* Align text naturally (not justified) */
+        word-wrap: break-word; /* Prevent long words from breaking the layout */
+        hyphens: auto; /* Add automatic hyphenation for a natural text flow */
+        }
+      
+    .tile:hover {
+          box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Slight lift on hover */
+        }
+    .tile h3 {
+        margin-bottom: 5px;
+        color: rgb(13, 64, 128);
+        font-size: 14px;  /* Recommended for tile headers */
+        font-weight: bold; /* Make it bold for emphasis */
+        }
+    .bibliography {
+        font-size: 12px;
+        color: rgb(125, 133, 150);
+        margin-bottom: 5px;
+      }
+      .coauthors {
+        font-style: italic;
+        color: rgb(125, 133, 150);
+      }
+    .tile-controls {
+        display: flex;
+        gap: 10px;             /* Even spacing between the links */
+        margin-top: 10px;
+        align-items: center;
+        justify-content: flex-start;
+        flex-wrap: wrap;      /* Allows buttons to wrap if necessary */
+      }
+    .link-container {
+      display: flex;
+      text-align: left;
+      gap: 0px; /* Tighten the spacing */
+      align-items: center;
+      margin-top: 0px; /* Reduce space above links */
+      }
+    .text-link {
+      font-size: 10px;       /* Slightly larger for readability */
+      font-weight: bold;      /* Lighter for a minimalist feel */
+      font-family: 'IBM Plex Mono', monospace;
+      color: rgb(13, 64, 128); /* ifoBlueDark */
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+    
+    .text-link:hover {
+      color: #0073b1;       /* Light blue on hover */
+      text-decoration: underline;
+    }
+  .separator {
+    color: #d3d8df;      /* light cool gray, close to the hairlines */
+    font-weight: 300;    /* thin stroke instead of bold */
+    margin: 0 3px;       /* a little air so the thin bar doesn't crowd the links */
+    font-size: 10px;     /* same size as the links (1:1), so the bar isn't taller than the words */
+  }
+  .section-divider {
+      border-top: 1px solid rgb(200, 200, 200);
+      margin: 40px 0;
+    }
+  .toggle-abstract {
+    background: none;
+    border: none;
+    color: rgb(13, 64, 128);
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: bold;
+    font-size: 10px;       /* Slightly larger for readability */
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  
+  .toggle-abstract:hover {
+          color: #0073b1;       /* Light blue on hover */
+          text-decoration: underline;
+  }
+
+  .button-container a {
+    padding: 5px 12px;
+    font-size: 10px;
+    font-weight: bold;
+    color: white;
+    background: rgb(13, 64, 128);
+    border-radius: 3px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+  }
+
+  .button-container a:hover {
+    background: rgb(102, 0, 0);
+  }
+
+  .abstract {
+    display: none;
+    margin-top: 10px;
+    font-size: 12px;   /* abstracts and media lists: same size, a step below body text */
+    color: rgb(90,90,90); /* darkGray */
+    line-height: 1.55;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    opacity: 0;
+    padding: 0 10px;
+    text-align: justify;
+    hyphens: manual; /* no automatic word splitting (avoids breaks like "barri-ers") */
+    word-wrap: break-word;
+  }
+
+/* Prizes sit at the end of the links row; a gap plus the star sets them apart, no | dividers */
+.award {
+  margin-left: 1.2em;
+}
+.award {
+  /* same font/size/weight as .text-link so it matches the links row */
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  font-weight: bold;
+  color: rgb(125, 133, 150); /* ifoGray: signals "not a link" */
 }
 
+.abstract.active {
+  max-height: 500px;
+  opacity: 1;
+  display: block;
+}
 
-/* Responsive adjustments */
+/* "New" announcement: set apart from the bio by space + a short hairline above (no box) */
+.news-box {
+  /* two columns: "NEW:" label | the items, each on its own line, left-aligned under each other */
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 10px;
+  align-items: baseline;
+  font-size: 12px;   /* close to the 11px uppercase NEW: label, so label and text read as one unit */
+  color: rgb(92, 92, 92);
+  margin-top: 22px;
+  padding-top: 14px;
+  border-top: 1px solid #e2e6ec;
+}
+.news-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgb(13, 64, 128);
+}
+.news-box a,
+.news-box a:visited {
+  color: rgb(92, 92, 92);                  /* gray text, like the rest of the line */
+  text-decoration: underline;
+  text-decoration-color: rgb(13, 64, 128); /* CV-blue underline signals the link */
+  text-decoration-thickness: 2px;          /* 1px got blended with the background and looked lighter */
+  text-underline-offset: 3px;              /* a little air between text and line */
+}
+.news-box a:hover {
+  color: rgb(13, 64, 128);                 /* text turns blue on hover */
+}
+.news-box a {
+  font-weight: 600;
+  white-space: nowrap; /* keep each link name on one line (e.g. "GTD: U.S. Trade War") */
+}
+
+/* Paper entries: clear hierarchy, title larger than the details
+   - title (the link directly inside h3): 15px semibold, blue
+   - coauthors / series / journal (spans directly inside h3): 13px */
+.pub-item h3 {
+  font-size: 15px;
+  line-height: 1.45;
+}
+.pub-item h3 > span {
+  font-size: 13px;
+}
+/* journal names: upright, semibold, blue, as large as the title */
+.pub-item h3 > span.journal,
+.pub-meta .journal {
+  font-size: 15px;
+  font-weight: 600;
+  color: rgb(13, 64, 128);
+}
+
+/* Media list (opens like an abstract): outlet names in one line, separated by dots */
+.media-list {
+  text-align: left;
+  font-size: 12px;   /* same as the abstract text */
+}
+.media-list p {
+  margin: 0;
+}
+.media-list a,
+.media-list a:visited {
+  color: rgb(90, 90, 90);   /* same gray as the abstract text */
+  text-decoration: none;
+  margin-right: 18px;       /* space between outlets instead of a divider */
+  white-space: nowrap;      /* keep each outlet name on one line */
+}
+.media-list a:hover {
+  text-decoration: underline;
+}
+
+.about-container {
+  display: grid;
+  grid-template-columns: 200px auto 1fr;
+  align-items: flex-start; /* Align the text with the top of the image */
+  gap: 20px; /* Space between image and text */
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.profile-pic {
+  width: 100%;
+  height: auto;
+  border-radius: 50%; /* round portrait */
+  object-fit: cover;
+  max-width: 200px;
+}
+       
+.about-text {
+  font-size: 14px;
+  line-height: 1.6;
+  text-align: justify;
+  padding-left: 20px;  /* Ensures consistent space between contact and text */
+}
+
+.contact-info {
+  font-size: 12px;
+  line-height: 1.4;
+  text-align: left;  /* Left-align contact information */
+}
+
+.contact-info p {
+  margin: 5px 0;
+}
+    
+.icon-links {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.contact-info .icon-links a {
+  display: inline-flex;
+  margin: 0;
+}
+.contact-info .icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+.contact-info {
+  margin-top: 14px;
+  font-size: 12px;
+  line-height: 1.4;
+  text-align: left;  /* Left-align contact information */
+}
+
+.contact-info p {
+  margin: 5px 0;
+}
+    
+.icon-links {
+  margin-top: 10px;
+}
+
+.icon-links a {
+  margin-right: 10px;
+  display: inline-block;
+}
+
+.icon {
+ width: 24px;
+  height: 24px;
+  transition: transform 0.2s ease, fill 0.2s ease;
+  fill: rgb(13, 64, 128); /* ifoBlueDark for a consistent color */
+}
+
+.icon:hover {
+  transform: scale(1.2);  /* Slight zoom effect on hover */
+  fill: #0073b1; /* LinkedIn blue for hover effect (change as you like) */
+
+}
+
+.icon:hover .cv-rect,    
+.icon:hover .cv-text {
+  stroke: #0073b1;  /* Light blue outline on hover */
+}
+
+    
+.cv-text {
+  transition: stroke 0.2s ease;
+}
+
+    footer {
+      text-align: center;
+      padding: 24px 10px 40px;
+      border-top: 1px solid #e2e6ec; /* hairline */
+      color: rgb(138, 138, 138);
+      font-size: 13px;
+      margin-top: 20px;
+    }
+  a {
+  color: rgb(13, 64, 128); /* ifoBlueDark */
+  text-decoration: none;
+}
+a:visited {
+  color: rgb(13, 64, 128); /* Keep visited links the same color */
+}
+a:hover {
+  text-decoration: underline; /* Optional underline on hover */
+}
+
+.data-heading {
+    color: rgb(13, 64, 128);
+    font-size: 14px;  /* Recommended for tile headers */
+    font-weight: bold; /* Make it bold for emphasis */
+    margin-top: 20px; /* Adjust this value to increase spacing */
+}
+
+/* Responsive adjustments for screens smaller than 768px (phones) */
 @media (max-width: 768px) {
   body {
     max-width: 100%;
@@ -112,228 +415,202 @@ footer {
   }
 
   header {
-    flex-direction: row;
-    justify-content: space-between;   
+    flex-direction: row; /* Ensure the header stays in a row */
+    justify-content: space-between;
+    padding: 12px 10px;
   }
+  nav ul li { margin: 0 8px; }
+  nav ul li a { font-size: 13px; }
 
   header h1 {
     font-size: 18px;
   }
 
   nav ul {
-    flex-direction: row;
+    flex-direction: row; /* Keep menu items inline */
     justify-content: center;
   }
-}
-.ifoblue {
-  color: rgb(10, 52, 104);
+
+  .about-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns for picture and contact */
+    gap: 10px;
+  }
+
+  .about-text {
+    grid-column: 1 / -1; /* Span the full width below the image and contact */
+    font-size: 12px;
+    margin-top: 10px;
+  }
+
+  .profile-pic {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .contact-info {
+    font-size: 11px;
+    line-height: 1.4;
+  }
+
+  .tile {
+    font-size: 12px;
+    padding: 10px;
+  }
+
+  .abstract {
+    font-size: 11px;   /* phones */
+  }
+
+  .icon {
+    width: 20px;
+    height: 20px;
+  }
 }
 
-.text-link {
-  font-size: 10px;       /* Slightly larger for readability */
-  font-weight: bold;      /* Lighter for a minimalist feel */
+section:last-of-type {
+  padding-bottom: 60px; /* Adds space before the footer */
+}
+  
+
+/* =====================================================================
+   Data page (data.html)
+   ===================================================================== */
+
+
+/* body text of the dataset sections */
+.data-section p {
+  line-height: 1.6;
+  margin: 0 0 12px;
+}
+
+/* sub-headings inside a dataset (Download the Data, Feedback, ...) */
+.data-section h3.data-heading {
+  color: rgb(13, 64, 128);
+  font-size: 15px;
+  font-weight: 600;
+  margin: 30px 0 8px;
+}
+
+/* link rows (downloads, dictionary, bibtex): same look as the paper link rows */
+.data-section .pub-links {
+  margin: 4px 0 16px;
+}
+
+/* suggested citation: thin blue rule on the left, gray italic text (no box) */
+.cite {
+  border-left: 2px solid rgb(13, 64, 128);
+  padding: 2px 0 2px 14px;
+  margin: 6px 0 16px;
+  color: rgb(92, 92, 92);
+  font-style: italic;
+}
+
+/* reference list under the citation */
+.refs {
+  font-size: 13px;
+}
+.refs p {
+  margin: 0 0 8px;
+}
+.refs .news-label {
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* file formats like .dta / .csv */
+.data-section code {
   font-family: 'IBM Plex Mono', monospace;
-  color: rgb(10, 52, 104); /* ifoBlueDark */
-  text-decoration: none;
-  transition: color 0.2s ease;
+  font-size: 12px;
+  color: rgb(13, 64, 128);
 }
 
-.text-link:hover {
-  color: #0073b1;       /* Light blue on hover */
+/* data page: dataset sub-menu as a second row of the pinned top bar */
+header:has(.subnav) {
+  flex-wrap: wrap;            /* lets the sub-menu drop onto its own row */
+}
+.subnav {
+  flex-basis: 100%;           /* full-width second row */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 22px;
+  margin-top: 10px;
+  padding-top: 8px;
+  border-top: 1px solid #e2e6ec; /* hairline between the two rows */
+  font-size: 12.5px;
+}
+.subnav a,
+.subnav a:visited {
+  color: rgb(125, 133, 150);  /* gray, quieter than the main menu */
+  text-decoration: none;
+}
+.subnav a:hover {
+  color: rgb(13, 64, 128);
+}
+
+/* the top bar is pinned, so leave room above any section reached by a #link */
+section[id] {
+  scroll-margin-top: 80px;
+}
+/* taller pinned bar on the data page (two rows) -> a bit more room */
+body:has(.subnav) section[id] {
+  scroll-margin-top: 115px;
+}
+
+/* second line of a paper entry: status + journal, then series (gray details) */
+.pub-meta {
+  font-size: 13px;
+  color: gray;
+  line-height: 1.45;
+  margin: 0 0 2px;
+}
+.meta-sep {
+  color: #a3abb7;   /* between text gray and hairline gray: visible, but quieter than the text */
+  margin: 0 7px;    /* the only spacing around the dot (no text spaces) -> exactly equal gaps */
+  font-size: 21px;  /* dot clearly larger than the 13px text around it */
+  line-height: 0;   /* larger glyph must not make the line taller */
+  vertical-align: -2px; /* keep the bigger dot centered on the text */
+}
+
+
+
+/* working-paper series on the title line: link, but looks like the gray coauthor names */
+.series-link,
+.series-link:visited {
+  color: gray;
+  text-decoration: none;
+}
+.series-link:hover {
   text-decoration: underline;
 }
 
-.tile-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 20px;
-  margin: 40px auto;
-  max-width: 1000px; /* Controls total width */
+
+
+/* data page: current version next to the "Download the Data" heading */
+.dl-version {
+  font-size: 13px;
+  font-weight: 400;
+  color: gray;
+  margin-left: 8px;
 }
 
-.tile {
-  background: rgb(245, 245, 245);
-  padding: 20px;
-  border: none;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  transition: box-shadow 0.3s;
-  text-align: left;
-  word-wrap: break-word;
-  hyphens: auto;
-  width: calc((100% - 160px) / 3); /* 3 tiles, accounting for 2 x 20px gaps */
-  min-width: 0; /* Allow shrinking */
-}
-
-.tile-controls {
-      display: flex;
-      gap: 10px;             /* Even spacing between the links */
-      margin-top: 10px;
-      align-items: center;
-      justify-content: flex-start;
-      flex-wrap: wrap;      /* Allows buttons to wrap if necessary */
-    }
-
-    .tile:hover {
-          box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Slight lift on hover */
-        }
-
-@media (max-width: 768px) {
-  .tile {
-    max-width: 100%;
-  }
-}
- 
-.moreText {
-  margin-top: 10px;
-  font-size: 10px;
-  color: rgb(90,90,90); /* darkGray */
-  line-height: 1.4;
-  padding: 0 0px;
-  text-align: justify;
-  hyphens: auto;
-  word-wrap: break-word;
-}
-
-.data-heading {
-  color: rgb(10, 52, 104); /* ifoBlue */
-  margin-top: 2.5em;    /* space before each section */
-  margin-bottom: -0.5em; /* space after heading */
-  font-size: 1.2em;   /* optional: make it stand out slightly more */
-}
-
-h3.data-heading {
-  color: rgb(10, 52, 104);
-  font-size: 14px;
-  font-weight: bold;
-  margin-top: 2.5rem;      /* space above */
-  margin-bottom: 0.5rem;   /* space below */
-  margin-left: 1.2rem;     /* align with text indent */
-}
-
-
-.abstract {
-  display: none;
-  margin-top: 10px;
-  font-size: 10px;
-  color: rgb(90,90,90); /* darkGray */
-  line-height: 1.4;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
-  opacity: 0;
-  padding: 0 10px;
-  text-align: justify;
-  hyphens: auto;
-  word-wrap: break-word;
-}
-
-.abstract.active {
-max-height: 500px;
-opacity: 1;
-display: block;
-}
-
-.toggle-abstract {
-  background: none;
-  border: none;
-  color: rgb(10, 52, 104);
+/* date of the latest draft next to "paper" (only where it is newer than the series version) */
+.paper-date {
   font-family: 'IBM Plex Mono', monospace;
-  font-weight: bold;
-  font-size: 10px;       /* Slightly larger for readability */
+  font-size: 10px;
+  color: rgb(125, 133, 150);
+  margin-left: 5px;
+}
+
+/* a prize that links to its source: same look as the other prizes, underline on hover */
+a.award-link,
+a.award-link:visited {
+  color: rgb(125, 133, 150);
   text-decoration: none;
-  transition: color 0.2s ease;
 }
-
-.toggle-abstract:hover {
-        color: #0073b1;       /* Light blue on hover */
-        text-decoration: underline;
+a.award-link:hover {
+  text-decoration: none;      /* the star stays without underline ... */
 }
-
-.dash-list {
-  list-style-type: none; /* Remove default bullets */
-  padding-left: 0; /* No extra space on the left */
-}
-
-.dash-list li {
-  display: flex;
-  align-items: flex-start; /* Align text properly */
-}
-
-.dash-list li::before {
-  content: "-"; /* Add dash */
-  margin-right: 8px; /* Space between dash and text */
-  flex-shrink: 0; /* Prevents the dash from moving */
-}
-
-.separator {
-  color: rgb(200, 200, 200); /* Subtle gray */
- font-weight: bold;
- }
-
- 
- section:last-of-type {
-  padding-bottom: 60px; /* Adds space before the footer */
-}
-
-
-
-.accordion.data-heading {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: rgb(10, 52, 104); /* match section-title */
-  font-size: 16px;
-  font-weight: 700;
- padding: 0.2rem 0;
-  border-radius: 4px;
-  transition: background-color 0.2s ease;
-  margin-top: 1rem;
-  margin-bottom: 2px;
-  width: 100%;
-  text-align: left;
-}
-
-.accordion.data-heading:hover {
-  background-color: rgba(10, 52, 104, 0.05);
-  margin-bottom: 10px;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
-}
-
-.arrow {
-  font-size: 1rem;
-  color: #999;
-}
-
-.accordion.active .arrow {
-  color: #003865;
-  transform: rotate(90deg);
-}
-
-
-.panel {
-  padding: 0.3rem 0;
-  margin-left: 0.5rem;
-  display: none;
-}
-
-.panel p {
-  margin: 0.4rem 0;
-  line-height: 1.4;
-}
-
-/* Only indent link rows inside the Data section */
-#data .pub-links {
-  padding-left: 1.2rem;   /* use padding, not margin, so it always indents */
-}
-
-/* Optional: tidy separators and wrapping without changing global .pub-links */
-#data .pub-links .separator { opacity: 0.6; margin: 0 0.35rem; }
-#data .pub-links {
-  display: inline;         /* keep inline flow (avoid flex if set elsewhere) */
-  white-space: normal;     /* allow wrapping on small screens */
-  line-height: 1.5;
+a.award-link:hover .award-text {
+  text-decoration: underline; /* ... only the prize text is underlined */
 }

@@ -4,58 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Data | Feodora Teti</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-
-
-
-<script>
-  function toggleAbstract(id) {
-    var abstract = document.getElementById(id);
-    if (abstract.classList.contains("active")) {
-      abstract.classList.remove("active");
-      setTimeout(() => (abstract.style.display = "none"), 300);
-    } else {
-      abstract.style.display = "block";
-      setTimeout(() => abstract.classList.add("active"), 10);
-    }
-  }
-
-
-</script>
-
-
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  const acc = document.getElementsByClassName("accordion");
-
-  for (let i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("click", function () {
-      const panel = this.nextElementSibling;
-      this.classList.toggle("active");
-
-      if (panel.style.display === "block") {
-        panel.style.display = "none";
-      } else {
-        panel.style.display = "block";
-      }
-    });
-  }
-});
-</script>
-
-
+  <!-- same stylesheet as index.html; ?v= forces browsers to load the new version -->
+  <link rel="stylesheet" href="styles.css?v=2026-11-04">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
 </head>
 <body>
 
   <!-- Header (same as index.html) -->
   <header>
-    <h1>
-          <a href="index.html" style="text-decoration: none; color: inherit;">
-      Feodora Teti
-    </a>
-    </h1>
+    <h1><a href="index.html" style="text-decoration: none; color: inherit;">Feodora Teti</a></h1>
     <nav>
       <ul>
         <li><a href="index.html">About</a></li>
@@ -63,187 +24,277 @@ document.addEventListener('DOMContentLoaded', function () {
         <li><a href="data.html">Data</a></li>
       </ul>
     </nav>
+    <!-- second row of the pinned bar (data page only): jump to each dataset -->
+    <nav class="subnav">
+      <a href="#GTD">Global Tariff Database</a>
+      <a href="#GTDUS">GTD: U.S. Trade War</a>
+      <a href="#MIL">Military Goods</a>
+      <a href="#SANC2014">EU Sanctions 2014</a>
+    </nav>
   </header>
 
-  <!-- Global Tariff Database (Beta Version v_beta1-2024-12) -->
-<section id="GTD">
-  <h2 class="section-title">
-    Global Tariff Database (Beta Version v_beta1-2024-12)
-  </h2>
 
-<!-- Overview -->
-<h3 class="data-heading"></h3>
-<p>
-  The <strong class="ifoblue">Global Tariff Database (GTD)</strong> provides 
-  <strong class="ifoblue">bilateral statutory tariff rates</strong> for 
-  <strong class="ifoblue">200 importers</strong> and their partners, spanning 
-  <strong class="ifoblue">34 years (1988–2021)</strong>. It includes both 
-  <strong class="ifoblue">MFN</strong> and 
-  <strong class="ifoblue">preferential tariffs</strong> and is based on 
-  <strong class="ifoblue">HS6-level tariff rates (HS88/92 Nomenclature)</strong>, 
-  covering <strong class="ifoblue">over 6.9 billion observations</strong>.
-</p>
-<p>
-  The <strong class="ifoblue">GTD does not</strong> include tariff types 
-  <strong class="ifoblue">beyond MFN</strong> and <strong class="ifoblue">preferential tariffs</strong>, such as 
-  <strong class="ifoblue">safeguards</strong>, 
-  <strong class="ifoblue">anti-dumping tariffs</strong>, or those related to the 
-  <strong class="ifoblue">US trade war</strong>.
-</p>
-<p>
-  Find details about the <strong class="ifoblue">available variables</strong> in the GTD and the <strong class="ifoblue">reference data</strong> in the dictionary below. 
-  The accompanying <strong class="ifoblue">paper</strong> and its <strong class="ifoblue">Online Appendix C</strong> provide a detailed <strong class="ifoblue">description</strong> of the <strong class="ifoblue">algorithm</strong>.
-</p>
+  <!-- ============================================================
+       Global Tariff Database (Beta Version v_beta1-2024-12)
+       ============================================================ -->
+  <section id="GTD" class="data-section">
+    <h2 class="section-title">
+      Global Tariff Database
+    </h2>
 
-  <div class="pub-links" style="font-size: 0.95rem; margin-top: 0.3rem; margin-left: 2.4rem;">
-  <a href="GTD/Data Dictionary.pdf" 
-     class="text-link" target="_blank" rel="noopener noreferrer">data dictionary</a>
-  <span class="separator">|</span>
-  <a href="https://www.cesifo.org/en/publications/2024/working-paper/missing-tariffs" 
-     class="text-link" target="_blank" rel="noopener noreferrer">paper</a>
-</div>
+    <!-- Overview -->
+    <p>
+      The Global Tariff Database (GTD) provides bilateral statutory tariff rates for
+      200 importers and their partners, spanning 34 years (1988–2021). It includes both
+      MFN and preferential tariffs and is based on HS6-level tariff rates (HS88/92 Nomenclature),
+      covering over 6.9 billion observations.
+    </p>
+    <p>
+      The GTD does not include tariff types beyond MFN and preferential tariffs, such as
+      safeguards, anti-dumping tariffs, or those related to the US trade war.
+    </p>
+    <p>
+      Find details about the available variables in the GTD and the reference data in the data dictionary.
+      The accompanying paper and its Online Appendix C provide a detailed description of the algorithm.
+    </p>
 
- 
-<!-- Download the Data (section, flat version) -->
-<h3 class="data-heading">Download the Data</h3>
-<p>
-  Pair-level and sector-level tariff data are available in <code class="ifoblue">.dta</code> and <code class="ifoblue">.csv</code> formats,
-  including both <strong class="ifoblue">simple averages</strong> and current-year <strong class="ifoblue">trade-weighted</strong> averages.
+    <div class="pub-links">
+      <a href="https://www.cesifo.org/en/publications/2024/working-paper/missing-tariffs" class="text-link" target="_blank" rel="noopener noreferrer">paper</a>
+      <span class="separator">|</span>
+      <a href="sharedData/GTD/Data Dictionary.pdf" class="text-link" target="_blank" rel="noopener noreferrer">data dictionary</a>
+    </div>
 
+    <!-- Download the Data -->
+    <h3 class="data-heading">Download the Data <span class="dl-version">[v_beta1-2024-12 (beta)]</span></h3>
+    <p>
+      Pair-level and sector-level tariff data are available in <code>.dta</code> and <code>.csv</code> formats,
+      including both simple averages and current-year trade-weighted averages.
+    </p>
 
-  <p>
-  If you would like to use the dataset, please <strong class="ifoblue">cite</strong> it as:
-</p>
+    <div class="pub-links">
+      <a href="https://www.dropbox.com/scl/fi/wnsgnkkqz2ifb2vqiuyce/Pairs_vbeta1-2024-12.7z?rlkey=5m4ka7142bl9y1z0dndsaso36&st=b0tq7wr2&dl=1"
+         class="text-link" target="_blank" rel="noopener noreferrer">pair-level</a>
+      <span class="separator">|</span>
+      <a href="https://www.dropbox.com/scl/fi/2mmbh4ma3hl4p5vo5r08f/Ag-NonAg_vbeta1-2024-12.7z?rlkey=46za8gyekw0hw4h1fzaqgbxuk&st=d9zrgw59&dl=1"
+         class="text-link" target="_blank" rel="noopener noreferrer">ag-nonAg</a>
+      <span class="separator">|</span>
+      <a href="https://www.dropbox.com/scl/fi/7dg2y9y4cpjlnt0n1rxky/section_88_21_vbeta1-2024-12.7z?rlkey=7e92fzc19q3izuoxe6fohe65q&st=661kl1uc&dl=1"
+         class="text-link" target="_blank" rel="noopener noreferrer">sections</a>
+      <span class="separator">|</span>
+      <a href="https://www.dropbox.com/scl/fi/jjknrptwj814vf3d3lqw6/isic33_vbeta1-2024-12.7z?rlkey=4dvoeic1w6g7aqhaqbgdqeev2&st=6u8u78vx&dl=1"
+         class="text-link" target="_blank" rel="noopener noreferrer">isic33 (2-dig)</a>
+      <span class="separator">|</span>
+      <a href="https://www.dropbox.com/scl/fi/7pwgz280xdanxcp8m2f6t/GTAP_vbeta1-2024-12.7z?rlkey=idcdlxpi1495gybab5onpz5fh&st=ol8mdmxp&dl=1"
+         class="text-link" target="_blank" rel="noopener noreferrer">GTAP</a>
+      <span class="separator">|</span>
+      <a href="sharedData/GTD/ref_ISO3_vbeta1-2024-12.csv" class="text-link" target="_blank" rel="noopener noreferrer">iso3</a>
+      <span class="separator">|</span>
+      <a href="sharedData/GTD/Bibtex_Teti2024.bib" class="text-link" target="_blank" rel="noopener noreferrer">bibtex</a>
+    </div>
 
-<div style="border-left: 3px solid #d1d5db; padding-left: 1rem; margin-left: 1.5rem;">
-  <em><strong class="ifoblue">
-    "Feodora Teti's Global Tariff Database (v_beta1-2024-12) from Teti&nbsp;(2024)."
-  </strong></em>
-</div>
+    <p>If you would like to use the dataset, please cite it as:</p>
+    <div class="cite">
+      "Feodora Teti's Global Tariff Database (v_beta1-2024-12) from Teti&nbsp;(2024)."
+    </div>
 
-<p style="margin-top: 1rem;">
-  <strong >References</strong><br>
-  Teti, Feodora A. (2024). 
-  <em>Missing Tariffs</em>, CESifo Working Paper No. 11590.    
-</p>
+    <div class="refs">
+      <span class="news-label">References</span>
+      <p>Teti, Feodora A. (2024). <em>Missing Tariffs</em>, CESifo Working Paper No. 11590.</p>
+    </div>
 
+    <!-- Access to HS6-Level Microdata -->
+    <h3 class="data-heading">Access to HS6-Level Microdata</h3>
+    <p>
+      The detailed microdata at the HS6-level are currently not publicly available.
+      Access is restricted to a small test group of experienced researchers during this beta phase.
+      If you would like to be considered, please
+      <a href="mailto:teti@ifo.de">send me an email</a> and include a completed copy of this
+      <a href="sharedData/GTD/ProjectOverview_template.xlsx" download>Excel sheet</a>
+      outlining your project details.
+    </p>
+    <p>
+      Please note that access is not guaranteed. Priority is given to users who can provide constructive feedback and help improve the dataset for future public releases.
+    </p>
 
-
-  <div class="pub-links" style="font-size: 0.95rem; margin-top: 0.3rem; margin-left: 2.4rem;">
-  <a href="https://www.dropbox.com/scl/fi/wnsgnkkqz2ifb2vqiuyce/Pairs_vbeta1-2024-12.7z?rlkey=5m4ka7142bl9y1z0dndsaso36&st=b0tq7wr2&dl=1"
-     class="text-link" target="_blank" rel="noopener noreferrer">pair-level</a>
-  <span class="separator">|</span>
-  <a href="https://www.dropbox.com/scl/fi/2mmbh4ma3hl4p5vo5r08f/Ag-NonAg_vbeta1-2024-12.7z?rlkey=46za8gyekw0hw4h1fzaqgbxuk&st=d9zrgw59&dl=1"
-     class="text-link" target="_blank" rel="noopener noreferrer">ag-nonAg</a>
-  <span class="separator">|</span>
-  <a href="https://www.dropbox.com/scl/fi/7dg2y9y4cpjlnt0n1rxky/section_88_21_vbeta1-2024-12.7z?rlkey=7e92fzc19q3izuoxe6fohe65q&st=661kl1uc&dl=1"
-     class="text-link" target="_blank" rel="noopener noreferrer">sections</a>
-  <span class="separator">|</span>
-  <a href="https://www.dropbox.com/scl/fi/jjknrptwj814vf3d3lqw6/isic33_vbeta1-2024-12.7z?rlkey=4dvoeic1w6g7aqhaqbgdqeev2&st=6u8u78vx&dl=1"
-     class="text-link" target="_blank" rel="noopener noreferrer">isic33 (2-dig)</a>
-  <span class="separator">|</span>
-  <a href="https://www.dropbox.com/scl/fi/7pwgz280xdanxcp8m2f6t/GTAP_vbeta1-2024-12.7z?rlkey=idcdlxpi1495gybab5onpz5fh&st=ol8mdmxp&dl=1"
-     class="text-link" target="_blank" rel="noopener noreferrer">GTAP</a>
-  <span class="separator">|</span>
-  <a href="GTD/ref_ISO3_vbeta1-2024-12.csv"
-     class="text-link" target="_blank" rel="noopener noreferrer">iso3</a>
-  <span class="separator">|</span>
-  <a href="GTD/Bibtex_Teti2024.bib" 
-     class="text-link" target="_blank" rel="noopener noreferrer">bibtex</a>
-</div>
-
- 
-
-
-
-<!-- Access to HS6-Level Microdata -->
-<h3 class="data-heading">Access to HS6-Level Microdata</h3>
-<p>
-  The detailed microdata at the HS6-level are currently 
-  <strong class="ifoblue">not publicly available</strong>. 
-  Access is restricted to a <strong class="ifoblue">small test group</strong> of experienced researchers during this beta phase.
-  If you would like to be considered, please 
-  <a href="mailto:teti@ifo.de">send me an email</a> and include a completed copy of this 
-  <a href="https://github.com/FeodoraTeti/feodorateti.github.io/raw/refs/heads/main/GTD/ProjectOverview_template.xlsx" target="_blank" rel="noopener noreferrer">Excel sheet</a> 
-  outlining your project details.
-</p>
-<p>
-  Please note that access is not guaranteed. Priority is given to users who can provide constructive feedback and help improve the dataset for future public releases.
-</p>
+    <!-- Feedback -->
+    <h3 class="data-heading">Feedback</h3>
+    <p>
+      This is a Beta Version. Please <a href="mailto:teti@ifo.de">contact me</a> if you find any mistakes, so I can improve the algorithm.
+    </p>
+  </section>
 
 
-  <h3 class="data-heading">Feedback</h3>
-  <p>
-    This is a Beta Version. Please <a href="mailto:teti@ifo.de">contact me</a> if you find any mistakes, so I can improve the algorithm.
-  </p>
-</section>
+  <!-- ============================================================
+       GTD: U.S. Trade War Extension (Version v_2025-10)
+       ============================================================ -->
+  <section id="GTDUS" class="data-section">
+    <h2 class="section-title">
+      Global Tariff Database: U.S. Trade War Extension
+    </h2>
+
+    <!-- Overview -->
+    <p>
+      The Global Tariff Database: U.S. Trade War Extension (GTD&mdash;U.S. Trade War) provides daily, product-level data on U.S. import and export tariffs vis-à-vis all trading partners from January 2018 through August 15, 2025.
+      This extension builds on the <em>Global Tariff Database (v&nbsp;beta1-2024-12)</em>, incorporating all tariff measures imposed by the United States and applied to U.S. exports abroad during the 2018&ndash;2025 trade wars, consolidated into a single dataset.
+      For an extensive description of the construction of the GTD&mdash;U.S. Trade War, please refer to the accompanying paper and its Online Appendix A.
+      The data will be updated periodically to include new tariff measures as they are announced and implemented, although typically with some lag.
+    </p>
+
+    <div class="pub-links">
+      <a href="https://www.ifo.de/en/cesifo/publications/2025/working-paper/2025-trade-war-dynamic-impacts-across-us-states-and-global-economy" class="text-link" target="_blank" rel="noopener noreferrer">paper</a>
+    </div>
+
+    <!-- Download the Data -->
+    <h3 class="data-heading">Download the Data <span class="dl-version">[v_2025-10]</span></h3>
+    <p>
+      Tariff data are available at both the national tariff-line and harmonized HS6 (HS&nbsp;2017) levels in
+      <code>.dta</code> and <code>.csv</code> formats.
+    </p>
+
+    <div class="pub-links">
+      <a href="https://www.dropbox.com/scl/fi/abmmkzq0gxqz8pm8wlihz/GTD-tradeWar_US-hts10.7z?rlkey=te0nmj943ivx9h6g5ynvuxdp4&st=nfj6xsm7&dl=1"
+         class="text-link" target="_blank" rel="noopener noreferrer">HTS10 (U.S. only)</a>
+      <span class="separator">|</span>
+      <a href="https://www.dropbox.com/scl/fi/4sm750wzdvyq71tx7e4h4/GTD-tradeWar_hs6.7z?rlkey=vvwxepqyye8d0gjaxjmv8rfv5&st=hemewd50&dl=1"
+         class="text-link" target="_blank" rel="noopener noreferrer">HS6 (bilateral)</a>
+      <span class="separator">|</span>
+      <a href="sharedData/GTD-US/Bibtex_GTD-US.bib" class="text-link" target="_blank" rel="noopener noreferrer">bibtex</a>
+    </div>
+
+    <p>If you would like to use the dataset, please cite it as:</p>
+    <div class="cite">
+      "The Global Tariff Database: U.S. Trade War Extension (v_2025-10)
+      from Rodríguez-Clare et&nbsp;al.&nbsp;(2025), based on the methodology developed in Teti&nbsp;(2024)."
+    </div>
+
+    <div class="refs">
+      <span class="news-label">References</span>
+      <p>
+        Rodríguez-Clare, Andrés, Teti, Feodora A., Ulate, Mauricio, Vásquez, José P., &amp; Zárate, Román D. (2025).
+        <em>The 2025 Trade War: Dynamic Impacts Across U.S. States and the Global Economy</em>, CESifo Working Paper No. 12179.
+      </p>
+      <p>Teti, Feodora A. (2024). <em>Missing Tariffs</em>, CESifo Working Paper No. 11590.</p>
+    </div>
+  </section>
 
 
+  <!-- ============================================================
+       Military goods: EU Common High Priority (CHP) list, HS 2017
+       ============================================================ -->
+  <section id="MIL" class="data-section">
+    <h2 class="section-title">
+      Military Goods
+    </h2>
 
-  <!-- US Extension -->
-<section id="GTDUS">
-  <h2 class="section-title">
-    Global Tariff Database: U.S. Trade War Extension (Version v_2025-10)
-  </h2>
+    <!-- Overview -->
+    <p>
+      The list contains the 44 HS6 product codes (HS 2017 nomenclature) of the European Union's
+      Common High Priority (CHP) items: dual-use goods such as semiconductors, ball bearings and
+      communication equipment that are critical for Russian weapon systems and have repeatedly been
+      found in Russian military equipment in Ukraine. The list is used in
+      Scheckenhofer et&nbsp;al.&nbsp;(2025).
+    </p>
 
- <h3 class="data-heading">Overview</h3>
- <p>
-  The <strong class="ifoblue">Global Tariff Database: U.S. Trade War Extension (GTD&mdash;U.S. Trade War)</strong> provides daily, product-level data on U.S. import and export tariffs vis-à-vis all trading partners from <strong class="ifoblue">January 2018 through August 15, 2025</strong>.  
-  This extension builds on the <em>Global Tariff Database (v&nbsp;beta1-2024-12)</em>, incorporating all tariff measures imposed by the United States and applied to U.S. exports abroad during the 2018&ndash;2025 trade wars, consolidated into a single dataset.
-  For an extensive description of the construction of the GTD&mdash;U.S. Trade War, please refer to the accompanying <strong class="ifoblue">paper</strong> and its <strong class="ifoblue">Online Appendix A</strong>.
-  The data will be updated periodically to include new tariff measures as they are announced and implemented, although typically with some lag.
-</p>
-  
+    <div class="pub-links">
+      <a href="docs/Scheckenhofer et al_2025-P&amp;P.pdf" class="text-link" target="_blank" rel="noopener noreferrer">paper</a>
+      <span class="separator">|</span>
+      <a href="https://www.aeaweb.org/content/file?id=22757" class="text-link" target="_blank" rel="noopener noreferrer">supplemental appendix (pdf)</a>
+      <span class="separator">|</span>
+      <a href="https://finance.ec.europa.eu/system/files/2023-09/list-common-high-priority-items_en.pdf" class="text-link" target="_blank" rel="noopener noreferrer">EU CHP list (source)</a>
+    </div>
 
-<!-- Download the Data (section, flat version) -->
-<h3 class="data-heading">Download the Data</h3>
+    <!-- Download the Data -->
+    <h3 class="data-heading">Download the Data</h3>
+    <p>
+      HS 2017 six-digit codes with their product descriptions in <code>.dta</code>, <code>.csv</code> and <code>.parquet</code> formats.
+    </p>
 
-<p>
-  Tariff data are available at both the 
-  <strong class="ifoblue">national tariff-line</strong> and 
-  <strong class="ifoblue">harmonized HS6 (HS&nbsp;2017)</strong> levels in 
-  <code class="ifoblue">.dta</code> and <code class="ifoblue">.csv</code> formats.
-</p>
+    <div class="pub-links">
+      <a href="sharedData/MilitaryGoods/CHP_militaryGoods_HS2017.dta" class="text-link" download>dta</a>
+      <span class="separator">|</span>
+      <a href="sharedData/MilitaryGoods/CHP_militaryGoods_HS2017.csv" class="text-link" download>csv</a>
+      <span class="separator">|</span>
+      <a href="sharedData/MilitaryGoods/CHP_militaryGoods_HS2017.parquet" class="text-link" download>parquet</a>
+      <span class="separator">|</span>
+      <a href="sharedData/MilitaryGoods/Bibtex_MilitaryGoods.bib" class="text-link" download>bibtex</a>
+    </div>
 
-<p>
-  If you would like to use the dataset, please <strong class="ifoblue">cite</strong> it as:
-</p>
+    <p>If you would like to use the list, please cite it as:</p>
+    <div class="cite">
+      "The Military Goods List from Scheckenhofer et&nbsp;al.&nbsp;(2025),
+      based on the European Union's Common High Priority items list."
+    </div>
 
-<div style="border-left: 3px solid #d1d5db; padding-left: 1rem; margin-left: 1.5rem;">
-  <em><strong class="ifoblue">
-    "The Global Tariff Database: U.S. Trade War Extension (v_2025-10) 
-    from Rodríguez-Clare et&nbsp;al.&nbsp;(2025), based on the methodology developed in Teti&nbsp;(2024)."
-  </strong></em>
-</div>
+    <div class="refs">
+      <span class="news-label">References</span>
+      <p>
+        Scheckenhofer, Lisa, Teti, Feodora A., &amp; Wanner, Joschka (2025).
+        <em>Dodging Trade Sanctions? Evidence from Military Goods</em>, AEA Papers and Proceedings, 115, 573–577.
+      </p>
+    </div>
+  </section>
 
-<p style="margin-top: 1rem;">
-  <strong >References</strong><br>
 
-  Rodríguez-Clare, Andrés, Teti, Feodora A., Ulate, Mauricio, Vásquez, Jose P., &amp; Zárate, Roman D. (2025). 
-  <em>The&nbsp;2025&nbsp;Trade&nbsp;War: Dynamic&nbsp;Impacts&nbsp;Across&nbsp;U.S.&nbsp;States&nbsp;and&nbsp;the&nbsp;Global&nbsp;Economy</em>, CESifo Working Paper, No. 12179, 2025.
-</p>
+  <!-- ============================================================
+       EU trade sanctions on Russia 2014, CN8 (ROIE paper)
+       ============================================================ -->
+  <section id="SANC2014" class="data-section">
+    <h2 class="section-title">
+      EU Sanctions on Russia 2014
+    </h2>
 
-<p style="margin-top: 0.75rem;">
-  Teti, Feodora A. (2024). 
- <em>Missing Tariffs</em>, CESifo Working Paper No. 11590.
-</p>
+    <!-- Overview -->
+    <p>
+      The list contains all 478 CN8 product codes (Combined Nomenclature 2014) covered by the trade
+      restrictions the European Union imposed on Russia in 2014: the arms embargo (Council Decision
+      2014/512/CFSP), which bans both exports to and imports from Russia, and the export authorization
+      requirement for oil-sector equipment (Council Regulation (EU) No 833/2014). The product codes are
+      taken from the EU's TARIC database. The list is used in Flach et al.&nbsp;(2024).
+    </p>
+    <p>
+      Russia's 2014 counter-sanctions (the import ban on agricultural products and foodstuffs) are not
+      included; see <a href="https://doi.org/10.1093/epolic/eiaa006" target="_blank" rel="noopener noreferrer">Crozet and Hinz (2020)</a> for the list of affected products.
+    </p>
 
-  <div class="pub-links" style="font-size: 0.95rem; margin-top: 0.3rem; margin-left: 2.4rem;">
-  <a href="https://www.dropbox.com/scl/fi/abmmkzq0gxqz8pm8wlihz/GTD-tradeWar_US-hts10.7z?rlkey=te0nmj943ivx9h6g5ynvuxdp4&st=nfj6xsm7&dl=1"
-     class="text-link" target="_blank" rel="noopener noreferrer">HTS10 (U.S. only)</a>
-  <span class="separator">|</span>
-  <a href="https://www.dropbox.com/scl/fi/4sm750wzdvyq71tx7e4h4/GTD-tradeWar_hs6.7z?rlkey=vvwxepqyye8d0gjaxjmv8rfv5&st=hemewd50&dl=1"
-     class="text-link" target="_blank" rel="noopener noreferrer">HS6 (bilateral)</a>
-  <span class="separator">|</span>
-  <a href="GTD-US/Bibtex_GTD-US.bib" 
-     class="text-link" target="_blank" rel="noopener noreferrer">bibtex</a>
-</div>
+    <div class="pub-links">
+      <a href="docs/Flach et al_2023.pdf" class="text-link" target="_blank" rel="noopener noreferrer">paper</a>
+    </div>
 
-</section>
+    <!-- Download the Data -->
+    <h3 class="data-heading">Download the Data</h3>
+    <p>
+      One row per CN8 code, with indicators for export restrictions, import bans and the two measures,
+      and the date the measure applies, in <code>.dta</code>, <code>.csv</code> and <code>.parquet</code> formats.
+    </p>
 
-  <!-- Matching Footer -->
+    <div class="pub-links">
+      <a href="sharedData/Sanctions2014/EU_sanctions_Russia_2014_CN8.dta" class="text-link" download>dta</a>
+      <span class="separator">|</span>
+      <a href="sharedData/Sanctions2014/EU_sanctions_Russia_2014_CN8.csv" class="text-link" download>csv</a>
+      <span class="separator">|</span>
+      <a href="sharedData/Sanctions2014/EU_sanctions_Russia_2014_CN8.parquet" class="text-link" download>parquet</a>
+      <span class="separator">|</span>
+      <a href="sharedData/Sanctions2014/Bibtex_EUSanctions2014.bib" class="text-link" download>bibtex</a>
+    </div>
+
+    <p>If you would like to use the list, please cite it as:</p>
+    <div class="cite">
+      "The EU Sanctions on Russia 2014 list from Flach et&nbsp;al.&nbsp;(2024),
+      based on the European Union's TARIC database."
+    </div>
+
+    <div class="refs">
+      <span class="news-label">References</span>
+      <p>
+        Flach, Lisandra, Heiland, Inga, Larch, Mario, Steininger, Marina, &amp; Teti, Feodora A. (2024).
+        <em>Quantifying the Partial and General Equilibrium Effects of Sanctions on Russia</em>, Review of International Economics, 32(1), 281–323.
+      </p>
+    </div>
+  </section>
+
+
   <footer>
-    <p>© 2025 Feodora Teti</p>
+    <p>© 2026 Feodora Teti</p>
   </footer>
 
 </body>

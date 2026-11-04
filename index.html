@@ -4,371 +4,43 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Feodora Teti | Academic Website</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Roboto', sans-serif;  /* Changed from 'Arial' to 'Roboto' */
-      background-color: #ffffff;
-      color: rgb(125, 133, 150); /* ifoGray */
-      margin: 40px auto;
-      padding: 20px;
-      font-size: 14px;
-      line-height: 1.6;
-      max-width: 1000px; /* Adjust width for your content */
-    }
-  .button-container {
-    margin-top: 10px; 
-  }
-  header {
-    background: rgb(10, 52, 104); /* ifoBlueDark */
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center; 
-    color: white;
-    max-width: 100%;
-    margin: 0 auto;
-  }
-header h1 {
-  margin: 0;
-  font-size: 24px;
-}
-
-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0; 
-  display: flex;
-}
-
-nav ul li {
-  margin: 0 15px;
-}
-
-nav ul li a {
-  color: white; /* Ensure it contrasts with the header background */
-  text-decoration: none;
-  font-weight: bold;
-}
-nav ul li a:visited {
-  color: white; /* Keep the same color for visited links */
-}
-nav ul li a:hover {
-  color: rgb(200, 200, 200); /* Subtle lighter gray for hover effect */
-}
-
-
-
-
-    section {
-        padding: 20px 20px 40px 20px; /* Reduce top padding */
-        max-width: 90%;
-        margin: 0 auto;
-         /*border-bottom: 1px solid rgb(200, 200, 200);*/  /*Divider */
-      }
-    h2.section-title {
-        color: rgb(10, 52, 104); /* ifoBlueDark */
-        border-bottom: 1px solid rgb(200, 200, 200); /* Subtle divider */
-        padding-bottom: 10px;
-        margin-bottom: 20px;
-        font-size: 20px;
-        font-weight: 700;
-
-      }
-    .grid-container {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 20px;
-      }
-    .tile {
-        background: rgb(245, 245, 245);
-        padding: 20px;
-        border: none; /* Removes the border */
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Subtle shadow instead of a border */
-        transition: box-shadow 0.3s;
-        text-align: left; /* Align text naturally (not justified) */
-        word-wrap: break-word; /* Prevent long words from breaking the layout */
-        hyphens: auto; /* Add automatic hyphenation for a natural text flow */
-        }
-      
-    .tile:hover {
-          box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Slight lift on hover */
-        }
-    .tile h3 {
-        margin-bottom: 5px;
-        color: rgb(10, 52, 104);
-        font-size: 14px;  /* Recommended for tile headers */
-        font-weight: bold; /* Make it bold for emphasis */
-        }
-    .bibliography {
-        font-size: 12px;
-        color: rgb(125, 133, 150);
-        margin-bottom: 5px;
-      }
-      .coauthors {
-        font-style: italic;
-        color: rgb(125, 133, 150);
-      }
-    .tile-controls {
-        display: flex;
-        gap: 10px;             /* Even spacing between the links */
-        margin-top: 10px;
-        align-items: center;
-        justify-content: flex-start;
-        flex-wrap: wrap;      /* Allows buttons to wrap if necessary */
-      }
-    .link-container {
-      display: flex;
-      text-align: left;
-      gap: 0px; /* Tighten the spacing */
-      align-items: center;
-      margin-top: 0px; /* Reduce space above links */
-      }
-    .text-link {
-      font-size: 10px;       /* Slightly larger for readability */
-      font-weight: bold;      /* Lighter for a minimalist feel */
-      font-family: 'IBM Plex Mono', monospace;
-      color: rgb(10, 52, 104); /* ifoBlueDark */
-      text-decoration: none;
-      transition: color 0.2s ease;
-    }
-    
-    .text-link:hover {
-      color: #0073b1;       /* Light blue on hover */
-      text-decoration: underline;
-    }
-  .separator {
-     color: rgb(200, 200, 200); /* Subtle gray */
-    font-weight: bold;
-    }
-  .section-divider {
-      border-top: 1px solid rgb(200, 200, 200);
-      margin: 40px 0;
-    }
-  .toggle-abstract {
-    background: none;
-    border: none;
-    color: rgb(10, 52, 104);
-    font-family: 'IBM Plex Mono', monospace;
-    font-weight: bold;
-    font-size: 10px;       /* Slightly larger for readability */
-    text-decoration: none;
-    transition: color 0.2s ease;
-  }
-  
-  .toggle-abstract:hover {
-          color: #0073b1;       /* Light blue on hover */
-          text-decoration: underline;
-  }
-
-  .button-container a {
-    padding: 5px 12px;
-    font-size: 10px;
-    font-weight: bold;
-    color: white;
-    background: rgb(10, 52, 104);
-    border-radius: 3px;
-    text-decoration: none;
-    transition: background 0.3s ease;
-  }
-
-  .button-container a:hover {
-    background: rgb(102, 0, 0);
-  }
-
-  .abstract {
-    display: none;
-    margin-top: 10px;
-    font-size: 10px;
-    color: rgb(90,90,90); /* darkGray */
-    line-height: 1.4;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
-    opacity: 0;
-    padding: 0 10px;
-    text-align: justify;
-    hyphens: auto;
-    word-wrap: break-word;
-  }
-
-.abstract.active {
-  max-height: 500px;
-  opacity: 1;
-  display: block;
-}
-
-.about-container {
-  display: grid;
-  grid-template-columns: 200px auto 1fr;
-  align-items: flex-start; /* Align the text with the top of the image */
-  gap: 20px; /* Space between image and text */
-  max-width: 100%;
-  margin: 0 auto;
-}
-
-.profile-pic {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  object-fit: cover;
-  max-width: 200px; /* Keeps it square */
-}
-       
-.about-text {
-  font-size: 14px;
-  line-height: 1.6;
-  text-align: justify;
-  padding-left: 20px;  /* Ensures consistent space between contact and text */
-}
-
-.contact-info {
-  font-size: 12px;
-  line-height: 1.4;
-  text-align: left;  /* Left-align contact information */
-}
-
-.contact-info p {
-  margin: 5px 0;
-}
-    
-.icon-links {
-  margin-top: 10px;
-}
-
-.icon-links a {
-  margin-right: 10px;
-  display: inline-block;
-}
-
-.icon {
- width: 24px;
-  height: 24px;
-  transition: transform 0.2s ease, fill 0.2s ease;
-  fill: rgb(10, 52, 104); /* ifoBlueDark for a consistent color */
-}
-
-.icon:hover {
-  transform: scale(1.2);  /* Slight zoom effect on hover */
-  fill: #0073b1; /* LinkedIn blue for hover effect (change as you like) */
-
-}
-
-.icon:hover .cv-rect,    
-.icon:hover .cv-text {
-  stroke: #0073b1;  /* Light blue outline on hover */
-}
-
-    
-.cv-text {
-  transition: stroke 0.2s ease;
-}
-
-    footer {
-      text-align: center;
-      padding: 10px;
-      background: rgb(10, 52, 104); /* ifoBlueDark */
-      color: white;
-      margin-top: 20px;
-    }
-  a {
-  color: rgb(10, 52, 104); /* ifoBlueDark */
-  text-decoration: none;
-}
-a:visited {
-  color: rgb(10, 52, 104); /* Keep visited links the same color */
-}
-a:hover {
-  text-decoration: underline; /* Optional underline on hover */
-}
-
-.data-heading {
-    color: rgb(10, 52, 104);
-    font-size: 14px;  /* Recommended for tile headers */
-    font-weight: bold; /* Make it bold for emphasis */
-    margin-top: 20px; /* Adjust this value to increase spacing */
-}
-
-/* Responsive adjustments for screens smaller than 768px (phones) */
-@media (max-width: 768px) {
-  body {
-    max-width: 100%;
-    margin: 10px auto;
-    padding: 10px;
-    font-size: 12px;
-  }
-
-  header {
-    flex-direction: row; /* Ensure the header stays in a row */
-    justify-content: space-between;
-  }
-
-  header h1 {
-    font-size: 18px;
-  }
-
-  nav ul {
-    flex-direction: row; /* Keep menu items inline */
-    justify-content: center;
-  }
-
-  .about-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Two columns for picture and contact */
-    gap: 10px;
-  }
-
-  .about-text {
-    grid-column: 1 / -1; /* Span the full width below the image and contact */
-    font-size: 12px;
-    margin-top: 10px;
-  }
-
-  .profile-pic {
-    max-width: 100%;
-    height: auto;
-  }
-
-  .contact-info {
-    font-size: 11px;
-    line-height: 1.4;
-  }
-
-  .tile {
-    font-size: 12px;
-    padding: 10px;
-  }
-
-  .abstract {
-    font-size: 10px;
-  }
-
-  .icon {
-    width: 20px;
-    height: 20px;
-  }
-}
-
-section:last-of-type {
-  padding-bottom: 60px; /* Adds space before the footer */
-}
-  </style>
+  <link rel="stylesheet" href="styles.css?v=2026-11-04">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png"> <!-- ?v= forces browsers to load the new version -->
 
 
 
 
   
 <script>
+  // Close a panel immediately (no animation), used when another panel opens
+  function closeNow(el) {
+    el.classList.remove("active");
+    el.style.display = "none";
+  }
+
+  // Open/close a panel (abstract or media).
+  // Only one panel is open on the whole page. When opening a new one, the others close
+  // instantly and the page is scrolled by exactly the height that disappeared, so the
+  // row you clicked stays in place (no jumping).
   function toggleAbstract(id) {
-    var abstract = document.getElementById(id);
-    if (abstract.classList.contains("active")) {
-      abstract.classList.remove("active");
-      setTimeout(() => (abstract.style.display = "none"), 300);
-    } else {
-      abstract.style.display = "block";
-      setTimeout(() => abstract.classList.add("active"), 10);
+    var panel = document.getElementById(id);
+    if (panel.classList.contains("active")) {
+      panel.classList.remove("active");
+      setTimeout(() => (panel.style.display = "none"), 300);
+      return;
     }
+    var paper = panel.closest(".pub-item");
+    var row = paper ? paper.querySelector(".pub-links") : panel;   // the clicked links row
+    var before = row.getBoundingClientRect().top;                   // its position on screen
+    document.querySelectorAll(".abstract.active").forEach(closeNow);
+    var after = row.getBoundingClientRect().top;
+    window.scrollBy(0, after - before);                             // keep the row where it was
+    panel.style.display = "block";
+    setTimeout(() => panel.classList.add("active"), 10);
   }
 </script>
 
@@ -392,7 +64,7 @@ section:last-of-type {
 <div class="about-container">
   
   <!-- Profile Picture Column -->
-        <img src="ProfilePic_cropped.JPG" alt="Feodora Teti" class="profile-pic">
+        <img src="ProfilePic_round.png" alt="Feodora Teti" class="profile-pic">
 
   
   <!-- Contact Info Column -->
@@ -403,10 +75,10 @@ section:last-of-type {
     81679 Munich</p>
     <div class="icon-links">
        <!-- CV -->
-        <a href="/docs/CV_Teti.pdf?v=2026-10-05" target="_blank">
+        <a href="/docs/CV_Teti.pdf?v=2026-11-04b" target="_blank">
           <svg class="icon cv" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <rect class="cv-rect" x="2" y="2" width="20" height="20" rx="3" ry="3" fill="white" stroke="rgb(10, 52, 104)" stroke-width="1"></rect>
-            <text class="cv-text" x="12" y="15" font-size="10" font-family="Arial" text-anchor="middle" fill="rgb(10, 52, 104)">CV</text>
+            <rect class="cv-rect" x="2" y="2" width="20" height="20" rx="3" ry="3" fill="white" stroke="rgb(13, 64, 128)" stroke-width="1"></rect>
+            <text class="cv-text" x="12" y="15" font-size="10" font-family="Arial" text-anchor="middle" fill="rgb(13, 64, 128)">CV</text>
           </svg>
         </a> 
         
@@ -433,33 +105,37 @@ section:last-of-type {
     <div class="about-text">
 
       <p>
-        I am an <strong style="color: rgb(10, 52, 104);">Assistant Professor</strong> at
-        <a href="https://www.econ.lmu.de/en/" target="_blank"><strong>LMU Munich</strong></a> and an
-        <strong style="color: rgb(10, 52, 104);">Economist</strong> at the
-        <a href="https://www.ifo.de/en" target="_blank"><strong>ifo Institute</strong></a>,
+        I am an Assistant Professor at
+        <a href="https://www.econ.lmu.de/en/" target="_blank">LMU Munich</a> and an
+        Economist at the
+        <a href="https://www.ifo.de/en" target="_blank">ifo Institute</a>,
         with research affiliations at
-        <a href="https://www.cesifo.org" target="_blank"><strong>CESifo</strong></a> and
-        <a href="https://cepr.org" target="_blank"><strong>CEPR</strong></a>.
+        <a href="https://www.cesifo.org" target="_blank">CESifo</a> and
+        <a href="https://cepr.org" target="_blank">CEPR</a>.
       </p>
 
       <p>
         My research in applied trade studies
-        <strong style="color: rgb(10, 52, 104);">the effects of trade policy</strong> and its
-        <strong style="color: rgb(10, 52, 104);">role as a geopolitical instrument</strong>.
+        the effects of trade policy and its
+        role as a geopolitical instrument.
       </p>
 
       <p>
         I spent the 2024/25 academic year at
-        <a href="https://ies.princeton.edu/" target="_blank"><strong>Princeton</strong></a> as an
-        <strong style="color: rgb(10, 52, 104);">IES Postdoctoral Fellow</strong>.
+        <a href="https://ies.princeton.edu/" target="_blank">Princeton</a> as an
+        IES Postdoctoral Fellow.
       </p>
 
       <p>
-        <strong style="color: rgb(10, 52, 104);">I am on the job market (2026/27).</strong>
+        <strong style="color: rgb(13, 64, 128);">I am on the job market (2026/27).</strong>
       </p>
 
-  <p style="color: rgb(10, 52, 104); background-color: rgb(245, 245, 245); padding: 10px; border-radius: 8px;">
-    <strong>New: <a href="/data.html#GTD" style="color: rgb(10, 52, 104); text-decoration: underline;">Global Tariff Database</a> (beta) and the <a href="/data.html#GTDUS" style="color: rgb(10, 52, 104); text-decoration: underline;">GTD: U.S. Trade War</a></strong>
+  <p class="news-box">
+    <span class="news-label">New:</span>
+    <span class="news-items">
+      <a href="/data.html#GTD">Global Tariff Database</a> and the
+      <a href="/data.html#GTDUS">GTD: U.S. Trade War</a>
+    </span>
   </p>
 
 
@@ -474,58 +150,84 @@ section:last-of-type {
 
   <!-- Leaky Sanctions (JMP) -->
   <div class="pub-item" style="margin: 1.5rem 0; margin-left: 1.2rem; margin-right: 1.2rem;">
-    <h3 style="font-size: 0.9rem; font-weight: 600; color: rgb(10, 52, 104); margin-bottom: 0.2rem;">
-      Leaky Sanctions
+    <h3 style="font-weight: 600; color: rgb(13, 64, 128); margin-bottom: 0.2rem;">
+      <a href="docs/Teti_JMP.pdf" target="_blank"
+         style="color: rgb(13, 64, 128); text-decoration: none;"
+         onmouseover="this.style.textDecoration='underline';"
+         onmouseout="this.style.textDecoration='none';">
+        Leaky Sanctions
+      </a>
+      <span style="font-weight: 400; color: gray;">(JMP)</span>
       <span style="font-weight: 400; color: gray;">
         with
         <a href="https://www.ifo.de/scheckenhofer-l" target="_blank" style="color: gray; text-decoration: none;"
            onmouseover="this.style.textDecoration='underline';" onmouseout="this.style.textDecoration='none';">Lisa Scheckenhofer</a>,
-        <a href="https://sites.google.com/view/davidtorun/" target="_blank" style="color: gray; text-decoration: none;"
+        <a href="https://www.davidtorun.com/" target="_blank" style="color: gray; text-decoration: none;"
            onmouseover="this.style.textDecoration='underline';" onmouseout="this.style.textDecoration='none';">David Torun</a> and
         <a href="https://www.wiwi.uni-wuerzburg.de/qiee/team/prof-dr-joschka-wanner/" target="_blank" style="color: gray; text-decoration: none;"
-           onmouseover="this.style.textDecoration='underline';" onmouseout="this.style.textDecoration='none';">Joschka Wanner</a> (JMP, draft coming soon).
+           onmouseover="this.style.textDecoration='underline';" onmouseout="this.style.textDecoration='none';">Joschka Wanner</a>
       </span>
     </h3>
 
     <div class="pub-links" style="font-size: 0.95rem; margin-top: 0.3rem; margin-left: 0.0rem;">
       <a href="javascript:void(0);" class="toggle-abstract" onclick="toggleAbstract('LeakySanctions')">abstract</a>
+      <span class="separator">|</span>
+      <a href="docs/Teti_JMP.pdf" class="text-link" target="_blank">paper</a><span class="paper-date">(Nov 26)</span>
+      <span class="separator">|</span>
+      <a href="https://cepr.org/voxeu/columns/export-bans-werent-really-bans-how-russia-kept-importing-military-goods" class="text-link" target="_blank">VoxEU</a>
+      <span class="separator">|</span>
+      <a href="javascript:void(0);" class="toggle-abstract" onclick="toggleAbstract('LeakySanctionsMedia')">media</a>
     </div>
 
-    <div id="LeakySanctions" class="abstract" style="display:none; margin-top: 1rem; font-size: 1.05rem;">
+    <!-- Media coverage: opens/closes like the abstract -->
+    <div id="LeakySanctionsMedia" class="abstract media-list" style="display:none; margin-top: 1rem;">
+      <p><a href="https://www.ifo.de/econpol/publikationen/2026/working-paper/effectiveness-of-eu-export-bans-on-military-goods" target="_blank">EconPol Policy Brief 80</a>
+        <a href="https://www.ifo.de/en/press-release/2026-02-19/eu-military-goods-mainly-reaching-russia-via-turkey-and-china" target="_blank">ifo press release</a>
+        <a href="https://www.wiwo.de/unternehmen/industrie/ukraine-krieg-hochrisikogueter-kommen-trotz-sanktionen-nach-russland/100201670.html" target="_blank">WirtschaftsWoche</a>
+        <a href="https://www.eunews.it/en/2026/02/19/european-weapons-still-reach-russia-more-than-a-third-pass-through-turkey/" target="_blank">Eunews</a></p>
+    </div>
+
+    <div id="LeakySanctions" class="abstract" style="display:none; margin-top: 1rem;">
       <p>
-        Discriminatory trade policy creates incentives to circumvent it by transshipping goods through third countries. We study how much transshipment weakens the export bans the European Union imposed on Russia in 2022. Linking Russian transaction-level customs records with new data on the bans, we observe transshipment directly: banned EU goods worth about 20% of pre-war imports keep arriving. The bans act like a 69% tariff, and stricter enforcement shifted sales to third-country intermediaries rather than stopping them. In a general-equilibrium model with endogenous transshipment, the same bans would raise Russia's real-income loss by 32% without transshipment. Closing every route currently in use would recover only 41% of Russia's gain from transshipment, because trade moves to routes not yet used.
+        Discriminatory trade policy creates incentives to circumvent it by transshipping goods through third countries. We study how much transshipment weakens the export bans the European Union imposed on Russia in 2022. Linking Russian transaction-level customs records with new data on the bans, we observe transshipment directly: banned EU goods worth about 20% of pre-war imports keep arriving. The bans act like a 69% trade cost increase, and stricter enforcement shifted sales to third-country intermediaries rather than stopping them. In a general-equilibrium model with endogenous transshipment, the same bans would raise Russia's real-income loss by 32% without transshipment. Closing every route currently in use would recover only 41% of Russia's gain from transshipment, because trade moves to routes not yet used.
       </p>
     </div>
   </div>
 
   <!-- Missing Tariffs -->
   <div class="pub-item" style="margin: 1.5rem 0; margin-left: 1.2rem; margin-right: 1.2rem;">
-    <h3 style="font-size: 0.9rem; font-weight: 600; color: rgb(10, 52, 104); margin-bottom: 0.2rem;">
-        <a href="docs/Teti_MissingTariffs_2024_12_19.pdf" target="_blank" 
-     style="color: rgb(10, 52, 104); text-decoration: none;"
+    <h3 style="font-weight: 600; color: rgb(13, 64, 128); margin-bottom: 0.2rem;">
+        <a href="docs/Teti_MissingTariffs.pdf" target="_blank"
+     style="color: rgb(13, 64, 128); text-decoration: none;"
      onmouseover="this.style.textDecoration='underline';" 
      onmouseout="this.style.textDecoration='none';">
           Missing Tariffs
   </a>
-      <span style="font-weight: 400; color: gray;"> </span>
-      <span style="font-weight: 600; font-style: italic; color: rgb(10, 52, 104);">CESifo Working Paper</span><span style="color: gray; font-weight: 400;">,</span>
-      <span style="font-weight: 400; color: gray;"> No. 11590, 2024; Revise &amp; Resubmit, </span>
-      <span style="font-weight: 600; font-style: italic; color: rgb(10, 52, 104);">American Economic Review</span><span style="font-weight: 400; color: gray;"> (JMP).</span>
+      <span style="font-weight: 400; color: gray;">(JMP)</span><span class="meta-sep">·</span><span style="font-weight: 400; color: gray;"><a href="https://www.cesifo.org/en/publications/2024/working-paper/missing-tariffs" class="series-link" target="_blank">CESifo Working Paper, No. 11590, 2024</a></span>
     </h3>
-
+    <!-- second line: where the paper is published / under review -->
+    <div class="pub-meta">
+      <span class="journal">R&amp;R, American Economic Review</span>
+    </div>
     <div class="pub-links" style="font-size: 0.95rem; margin-top: 0.3rem; margin-left: 0.0rem;">
       <a href="javascript:void(0);" class="toggle-abstract" onclick="toggleAbstract('MissingTariffs')">abstract</a>
       <span class="separator">|</span>
-      <a href="docs/Teti_MissingTariffs_2024_12_19.pdf" class="text-link" target="_blank">current draft</a>
+      <a href="docs/Teti_MissingTariffs.pdf" class="text-link" target="_blank">paper</a><span class="paper-date">(Oct 26)</span>
       <span class="separator">|</span>
-      <a href="https://www.cesifo.org/en/publications/2024/working-paper/missing-tariffs" class="text-link" target="_blank">working paper</a>
-      <span class="separator">|</span>
-      <a href="https://x.com/FeodoraTeti/status/1708995572580184486" class="text-link" target="_blank">twitter</a>
+      <a href="data.html#GTD" class="text-link">Global Tariff Database</a>
       <span class="separator">|</span>
       <a href="https://cepr.org/voxeu/columns/missing-tariffs-how-flawed-data-turn-trade-policy-analysis-herculean-task" class="text-link" target="_blank">VoxEU</a>
+      <span class="separator">|</span>
+      <a href="javascript:void(0);" class="toggle-abstract" onclick="toggleAbstract('MissingTariffsMedia')">media</a>
+      <a href="https://www.ifo.de/en/cesifo/event/2023-05-05/cesifo-area-conference-global-economy-2023" class="award award-link" target="_blank">&#9733; <span class="award-text">Best Paper Finalist, CESifo 2023</span></a>
     </div>
 
-    <div id="MissingTariffs" class="abstract" style="display:none; margin-top: 1rem; font-size: 1.05rem;">
+    <!-- Media: coverage and threads; opens like the abstract -->
+    <div id="MissingTariffsMedia" class="abstract media-list" style="display:none; margin-top: 1rem;">
+      <p><a href="https://x.com/FeodoraTeti/status/1708995572580184486" target="_blank">X thread</a></p>
+    </div>
+
+    <div id="MissingTariffs" class="abstract" style="display:none; margin-top: 1rem;">
       <p>
         This paper reveals significant errors in a key variable in international trade: tariff rates. The issues arise from incomplete
         reporting, leading to measurement error from false interpolation by the data provider, the World Integrated Trade Solution (WITS),
@@ -539,14 +241,14 @@ section:last-of-type {
 
  <!-- The 2025 Trade War -->
   <div class="pub-item" style="margin: 1.5rem 0; margin-left: 1.2rem; margin-right: 1.2rem;">
-    <h3 style="font-size: 0.9rem; font-weight: 600; color: rgb(10, 52, 104); margin-bottom: 0.2rem;">
+    <h3 style="font-weight: 600; color: rgb(13, 64, 128); margin-bottom: 0.2rem;">
   <a href="docs/Rodriguez et al_2026-02-06.pdf" target="_blank" 
-     style="color: rgb(10, 52, 104); text-decoration: none;"
+     style="color: rgb(13, 64, 128); text-decoration: none;"
      onmouseover="this.style.textDecoration='underline';" 
      onmouseout="this.style.textDecoration='none';">
     The 2025 Trade War: Dynamic Impacts Across U.S. States and the Global Economy
   </a>
-       <span style="font-weight: 400; color: gray;">
+      <span style="font-weight: 400; color: gray;">
       with 
       <a href="https://andres.econ.berkeley.edu/" target="_blank" style="color: gray; text-decoration: none;"
          onmouseover="this.style.textDecoration='underline';" 
@@ -556,29 +258,34 @@ section:last-of-type {
          onmouseout="this.style.textDecoration='none';">Mauricio Ulate</a>,
       <a href="https://jpvasquez-econ.github.io/" target="_blank" style="color: gray; text-decoration: none;"
          onmouseover="this.style.textDecoration='underline';" 
-         onmouseout="this.style.textDecoration='none';">Jose P. Vásquez</a>
+         onmouseout="this.style.textDecoration='none';">José P. Vásquez</a>
          and
       <a href="https://www.romandavidzarate.com/" target="_blank" style="color: gray; text-decoration: none;"
          onmouseover="this.style.textDecoration='underline';" 
-         onmouseout="this.style.textDecoration='none';">Roman D. Zárate</a>.
-    </span>
-      <span style="font-weight: 400; color: gray;"> </span>
-      <span style="font-weight: 600; font-style: italic; color: rgb(10, 52, 104);">CESifo Working Paper</span><span style="color: gray; font-weight: 400;">,</span>
-      <span style="font-weight: 400; color: gray;"> No. 12179, 2025; Revise & Resubmit, </span>
-      <span style="font-weight: 600; font-style: italic; color: rgb(10, 52, 104);">Journal of International Economics</span><span style="font-weight: 400; color: gray;">.</span>
+         onmouseout="this.style.textDecoration='none';">Román D. Zárate</a></span><span class="meta-sep">·</span><span style="font-weight: 400; color: gray;"><a href="https://www.ifo.de/en/cesifo/publications/2025/working-paper/2025-trade-war-dynamic-impacts-across-us-states-and-global-economy" class="series-link" target="_blank">CESifo Working Paper, No. 12179, 2025</a></span>
     </h3>
+    <!-- second line: where the paper is published / under review -->
+    <div class="pub-meta">
+      <span class="journal">R&amp;R, Journal of International Economics</span>
+    </div>
  
-    <div class="pub-links" style="font-size: 0.95rem; margin-top: 0.3rem; margin-left: 0.0;">
+    <div class="pub-links" style="font-size: 0.95rem; margin-top: 0.3rem; margin-left: 0.0rem;">
       <a href="javascript:void(0);" class="toggle-abstract" onclick="toggleAbstract('LibDay')">abstract</a>
       <span class="separator">|</span>
-      <a href="docs/Rodriguez et al_2026-02-06.pdf" class="text-link" target="_blank">current draft</a>
+      <a href="docs/Rodriguez et al_2026-02-06.pdf" class="text-link" target="_blank">paper</a><span class="paper-date">(Feb 26)</span>
       <span class="separator">|</span>
-      <a href="https://www.ifo.de/en/cesifo/publications/2025/working-paper/2025-trade-war-dynamic-impacts-across-us-states-and-global-economy" class="text-link" target="_blank">working paper</a>
+      <a href="data.html#GTDUS" class="text-link">GTD: U.S. Trade War</a>
       <span class="separator">|</span>
-      <a href="data.html#GTDUS" class="text-link" target="_blank">data</a>
+      <a href="javascript:void(0);" class="toggle-abstract" onclick="toggleAbstract('LibDayMedia')">media</a>
     </div>
 
-    <div id="LibDay" class="abstract" style="display:none; margin-top: 1rem; font-size: 1.05rem;">
+    <!-- Media: coverage and explainers; opens like the abstract -->
+    <div id="LibDayMedia" class="abstract media-list" style="display:none; margin-top: 1rem;">
+      <p><a href="https://www.nzz.ch/visuals/trump-droht-der-welt-mit-reziproken-zoellen-was-das-fuer-die-schweiz-und-deutschland-bedeutet-ld.1876848" target="_blank">NZZ analysis</a>
+        <a href="https://www.linkedin.com/feed/update/urn:li:activity:7392140510662086656/" target="_blank">SCOTUS explainer</a></p>
+    </div>
+
+    <div id="LibDay" class="abstract" style="display:none; margin-top: 1rem;">
       <p>
         We use detailed tariff data and a dynamic trade and reallocation model with downward nominal wage rigidities to quantitatively assess the economic consequences of the recent increase in U.S. import tariffs and the responses of its trading partners. Higher tariffs trigger an expansion in U.S. manufacturing and agricultural employment, but this comes at the expense of a decline in service employment, with overall employment declining as lower real wages reduce labor-force participation. For the United States as a whole, real income falls around 0.4% by 2028, the last year we assume the high tariffs are in effect. Importantly, our analysis disaggregates the U.S. into its 50 states, while incorporating cross-state redistribution of the tariff-generated fiscal revenue, allowing us to analyze which states gain or lose more from the shock. Turning to cross-country results, some close U.S. trading partners&mdash;like Canada, Mexico, and Ireland&mdash;suffer the largest real income losses.
       </p>
@@ -588,14 +295,14 @@ section:last-of-type {
 
   <!-- Geoeconomics and Trade -->
   <div class="pub-item" style="margin: 1.5rem 0; margin-left: 1.2rem; margin-right: 1.2rem;">
-    <h3 style="font-size: 0.9rem; font-weight: 600; color: rgb(10, 52, 104); margin-bottom: 0.2rem;">
+    <h3 style="font-weight: 600; color: rgb(13, 64, 128); margin-bottom: 0.2rem;">
     <a href="https://www.ecb.europa.eu/pub/pdf/scpdps/ecb.dp31~0e62e3849a.en.pdf" target="_blank"
-      style="color: rgb(10, 52, 104); text-decoration: none;"
+      style="color: rgb(13, 64, 128); text-decoration: none;"
       onmouseover="this.style.textDecoration='underline';"
       onmouseout="this.style.textDecoration='none';">
       Geoeconomics and Trade
     </a>
-        <span style="font-weight: 400; color: gray;">
+      <span style="font-weight: 400; color: gray;">
         with
         <a href="https://sites.google.com/site/georgiosgeorgiadis111/" target="_blank" style="color: gray; text-decoration: none;"
            onmouseover="this.style.textDecoration='underline';"
@@ -606,19 +313,24 @@ section:last-of-type {
         and
         <a href="https://www.ecb.europa.eu/pub/research/authors/profiles/georg-strasser.en.html" target="_blank" style="color: gray; text-decoration: none;"
            onmouseover="this.style.textDecoration='underline';"
-           onmouseout="this.style.textDecoration='none';">Georg Strasser</a>.
-      </span>
-      <span style="font-weight: 600; font-style: italic; color: rgb(10, 52, 104);">ECB Discussion Paper</span><span style="color: gray; font-weight: 400;">,</span>
-      <span style="font-weight: 400; color: gray;"> No. 31, 2026.</span>
+           onmouseout="this.style.textDecoration='none';">Georg Strasser</a></span><span class="meta-sep">·</span><span style="font-weight: 400; color: gray;"><a href="https://www.ecb.europa.eu/pub/pdf/scpdps/ecb.dp31~0e62e3849a.en.pdf" class="series-link" target="_blank">ECB Discussion Paper, No. 31, 2026</a></span>
     </h3>
 
     <div class="pub-links" style="font-size: 0.95rem; margin-top: 0.3rem; margin-left: 0.0rem;">
       <a href="javascript:void(0);" class="toggle-abstract" onclick="toggleAbstract('ECBDP2026')">abstract</a>
       <span class="separator">|</span>
-      <a href="https://www.ecb.europa.eu/pub/pdf/scpdps/ecb.dp31~0e62e3849a.en.pdf" class="text-link" target="_blank">working paper</a>
+      <a href="https://www.ecb.europa.eu/pub/pdf/scpdps/ecb.dp31~0e62e3849a.en.pdf" class="text-link" target="_blank">paper</a>
+      <span class="separator">|</span>
+      <a href="javascript:void(0);" class="toggle-abstract" onclick="toggleAbstract('ECBDP2026Media')">media</a>
     </div>
 
-    <div id="ECBDP2026" class="abstract" style="display:none; margin-top: 1rem; font-size: 1.05rem;">
+    <!-- Media: coverage and posts; opens like the abstract -->
+    <div id="ECBDP2026Media" class="abstract media-list" style="display:none; margin-top: 1rem;">
+      <p><a href="https://www.linkedin.com/feed/update/urn:li:activity:7483041893530988544/" target="_blank">LinkedIn summary</a>
+        <a href="https://www.linkedin.com/posts/when-trade-becomes-leverage-ugcPost-7496180933025447937-DjqJ/" target="_blank">explainer video</a></p>
+    </div>
+
+    <div id="ECBDP2026" class="abstract" style="display:none; margin-top: 1rem;">
       <p>
         We study the role of geoeconomics in shaping globalisation and trade policy. We first review the evolution of world trade since the end of
         World War II, highlighting the drivers of globalisation and its economic consequences. We then synthesise recent research on geoeconomics,
@@ -631,37 +343,34 @@ section:last-of-type {
   </div>
 
 
-  <!-- Revisiting the Trade-Creating Effects of Non-Tariff Barriers -->
+  <!-- Revisiting the Trade-Creating Effects of Nontariff Barriers -->
   <div class="pub-item" style="margin: 1.5rem 0; margin-left: 1.2rem; margin-right: 1.2rem;">
-    <h3 style="font-size: 0.9rem; font-weight: 600; color: rgb(10, 52, 104); margin-bottom: 0.2rem;">
+    <h3 style="font-weight: 600; color: rgb(13, 64, 128); margin-bottom: 0.2rem;">
     <a href="docs/Felbermayr and Teti_2023.pdf" target="_blank" 
-      style="color: rgb(10, 52, 104); text-decoration: none;"
+      style="color: rgb(13, 64, 128); text-decoration: none;"
       onmouseover="this.style.textDecoration='underline';" 
       onmouseout="this.style.textDecoration='none';">
-      Revisiting the Trade-Creating Effects of Non-Tariff Barriers
+      Revisiting the Trade-Creating Effects of Nontariff Barriers
     </a>
-        <span style="font-weight: 400; color: gray;">
+      <span style="font-weight: 400; color: gray;">
         with
         <a href="https://www.wifo.ac.at/person/gabriel-felbermayr/" target="_blank"
            style="color: gray; text-decoration: none;"
            onmouseover="this.style.textDecoration='underline';"
-           onmouseout="this.style.textDecoration='none';">Gabriel Felbermayr</a>.
-      </span>
-      <span style="font-weight: 600; font-style: italic; color: rgb(10, 52, 104);">World Bank Policy Research Working Paper</span><span style="color: gray; font-weight: 400;">,</span>
-      <span style="font-weight: 400; color: gray;"> WPS 10322, 2023.</span>
+           onmouseout="this.style.textDecoration='none';">Gabriel Felbermayr</a></span><span class="meta-sep">·</span><span style="font-weight: 400; color: gray;"><a href="https://documents1.worldbank.org/curated/en/099618302272351037/pdf/IDU08ddcaa260b1ed047e80b4950d3f0a1acbd2f.pdf" class="series-link" target="_blank">World Bank Policy Research Working Paper, WPS 10322, 2023</a></span>
     </h3>
 
     <div class="pub-links" style="font-size: 0.95rem; margin-top: 0.3rem; margin-left: 0.0rem;">
       <a href="javascript:void(0);" class="toggle-abstract" onclick="toggleAbstract('NTB2023')">abstract</a>
       <span class="separator">|</span>
-      <a href="docs/Felbermayr and Teti_2023.pdf" class="text-link" target="_blank">working paper</a>
+      <a href="docs/Felbermayr and Teti_2023.pdf" class="text-link" target="_blank">paper</a>
       <span class="separator">|</span>
-      <a href="https://cepr.org/publications/books-and-reports/beyond-trade-how-deep-trade-agreements-shape-non-trade-outcomes" class="text-link" target="_blank">Vox eBooks</a>
+      <a href="https://cepr.org/publications/books-and-reports/beyond-trade-how-deep-trade-agreements-shape-non-trade-outcomes" class="text-link" target="_blank">Vox eBook</a>
     </div>
 
-    <div id="NTB2023" class="abstract" style="display:none; margin-top: 1rem; font-size: 1.05rem;">
+    <div id="NTB2023" class="abstract" style="display:none; margin-top: 1rem;">
       <p>
-        Modern regional trade agreements (RTAs) focus on promoting bilateral exchange mostly by lowering non-tariff barriers to trade (NTBs).
+        Modern regional trade agreements (RTAs) focus on promoting bilateral exchange mostly by lowering non&#8209;tariff barriers to trade (NTBs).
         But do existing RTAs actually deliver what they promise? We argue that existing results in the literature are upward-biased because of
         measurement error in a crucial control variable: tariff rates. Using a novel data set of high-quality tariff information, we show that,
         on average, NTB reductions in deep RTAs boost services trade but not goods trade. Estimating separate NTB effects for each RTA reveals
@@ -679,14 +388,14 @@ section:last-of-type {
 <section id="publications">
   <h2 class="section-title">Publications</h2>
 <div class="pub-item" style="margin: 1.5rem 0; margin-left: 1.2rem; margin-right: 1.2rem;">
-  <h3 style="font-size: 0.9rem; font-weight: 600; color: rgb(10, 52, 104); margin-bottom: 0.2rem;">
+  <h3 style="font-weight: 600; color: rgb(13, 64, 128); margin-bottom: 0.2rem;">
     <a href="docs/Felbermayr et al_2019.pdf" target="_blank" 
-      style="color: rgb(10, 52, 104); text-decoration: none;"
+      style="color: rgb(13, 64, 128); text-decoration: none;"
       onmouseover="this.style.textDecoration='underline';" 
       onmouseout="this.style.textDecoration='none';">
          Rules of Origin and the Profitability of Trade Deflection
     </a>
-    <span style="font-weight: 400; color: gray;">
+      <span style="font-weight: 400; color: gray;">
       with 
       <a href="https://www.wifo.ac.at/person/gabriel-felbermayr/" 
          target="_blank" 
@@ -701,13 +410,13 @@ section:last-of-type {
          style="color: gray; text-decoration: none;"
          onmouseover="this.style.textDecoration='underline';" 
          onmouseout="this.style.textDecoration='none';">
-         Erdal Yalcin</a>.
+         Erdal Yalcin</a>,
     </span>
-    <span style="font-weight: 600; font-style: italic; color: rgb(10, 52, 104);">
-      Journal of International Economics
-    </span><span style="color: gray; font-weight: 400; margin-left: -0.1rem;">,</span>
-    <span style="font-weight: 400; color: gray;">121, 103248, 2019.</span>
-  </h3>
+    </h3>
+    <!-- second line: where the paper is published / under review -->
+    <div class="pub-meta">
+      <span class="journal">Journal of International Economics</span>, 121, 103248, 2019.
+    </div>
 
   <div class="pub-links" style="font-size: 0.95rem; margin-top: 0.3rem; margin-left: 0.0rem;">
     <a href="javascript:void(0);" class="toggle-abstract" onclick="toggleAbstract('JIE2019')">abstract</a>
@@ -719,7 +428,7 @@ section:last-of-type {
     <a href="https://cepr.org/voxeu/columns/rules-origin-trade-arrangements-largely-unnecessary-simply-protectionist" class="text-link" target="_blank">VoxEU</a>
   </div>
 
-  <div id="JIE2019" class="abstract" style="display:none; margin-top: 1rem; font-size: 1.05rem;">
+  <div id="JIE2019" class="abstract" style="display:none; margin-top: 1rem;">
     <p>
       When a country grants preferential tariffs to another, either reciprocally in a free trade agreement (FTA) or unilaterally, rules of origin (RoOs) are defined to determine whether a product is eligible for preferential treatment. RoOs exist to avoid that exports from third countries enter through the member with the lowest tariff (trade deflection). However, RoOs distort exporters' sourcing decisions and burden them with red tape. Using a global data set, we show that, for 86% of all bilateral product-level comparisons within FTAs, trade deflection is not profitable because external tariffs are rather similar and transportation costs are non-negligible; in the case of unilateral trade preferences extended by rich countries to poor ones that ratio is a striking 98%. The pervasive and unconditional use of RoOs is, therefore, hard to rationalize.
     </p>
@@ -728,14 +437,14 @@ section:last-of-type {
 
 
 <div class="pub-item" style="margin: 1.5rem 0; margin-left: 1.2rem; margin-right: 1.2rem;">
-  <h3 style="font-size: 0.9rem; font-weight: 600; color: rgb(10, 52, 104); margin-bottom: 0.2rem;">
+  <h3 style="font-weight: 600; color: rgb(13, 64, 128); margin-bottom: 0.2rem;">
     <a href="docs/Flach et al_2023.pdf" target="_blank" 
-      style="color: rgb(10, 52, 104); text-decoration: none;"
+      style="color: rgb(13, 64, 128); text-decoration: none;"
       onmouseover="this.style.textDecoration='underline';" 
       onmouseout="this.style.textDecoration='none';">
          Quantifying the Partial and General Equilibrium Effects of Sanctions on Russia 
     </a>
-    <span style="font-weight: 400; color: gray;">
+      <span style="font-weight: 400; color: gray;">
       with 
       <a href="https://sites.google.com/site/lisandraflach" target="_blank" style="color: gray; text-decoration: none;"
          onmouseover="this.style.textDecoration='underline';" 
@@ -748,39 +457,42 @@ section:last-of-type {
          onmouseout="this.style.textDecoration='none';">Mario Larch</a> and 
       <a href="https://sites.google.com/view/marina-steininger/home" target="_blank" style="color: gray; text-decoration: none;"
          onmouseover="this.style.textDecoration='underline';" 
-         onmouseout="this.style.textDecoration='none';">Marina Steininger</a>.
+         onmouseout="this.style.textDecoration='none';">Marina Steininger</a>,
     </span>
-    <span style="font-weight: 600; font-style: italic; color: rgb(10, 52, 104);">
-      Review of International Economics
-    </span><span style="color: gray; font-weight: 400; margin-left: -0.1rem;">,</span>
-    <span style="font-weight: 400; color: gray;">32 (1), 281–323, 2024.</span>
-  </h3>
-
+    </h3>
+    <!-- second line: where the paper is published / under review -->
+    <div class="pub-meta">
+      <span class="journal">Review of International Economics</span>, 32(1), 281–323, 2024.
+    </div>
   <div class="pub-links" style="font-size: 0.95rem; margin-top: 0.3rem; margin-left: 0.0rem;">
     <a href="javascript:void(0);" class="toggle-abstract" onclick="toggleAbstract('ROIE2024')">abstract</a>
     <span class="separator">|</span>
     <a href="docs/Flach et al_2023.pdf" class="text-link" target="_blank">paper</a>
     <span class="separator">|</span>
     <a href="https://www.dropbox.com/scl/fo/5p765ntvmz57w32j6gciy/h?rlkey=hghsa2na557rh1duxwjnflbgu&st=g4j4ul8w&dl=1" class="text-link" target="_blank">data &amp; code</a>
+    <span class="separator">|</span>
+    <a href="data.html#SANC2014" class="text-link">EU sanctions 2014</a>
+    <span class="award">&#9733; ifo Research and Policy Prize</span>
+    <span class="award">&#9733; Top 10% most-viewed paper 2023</span>
   </div>
 
-  <div id="ROIE2024" class="abstract" style="display:none; margin-top: 1rem; font-size: 1.05rem;">
+  <div id="ROIE2024" class="abstract" style="display:none; margin-top: 1rem;">
     <p>
       This paper evaluates the effects of sanctions on Russia between 2014 and 2019 and the resulting countersanctions. We estimate their impact on trade in a gravity framework, allowing for treatment heterogeneity among pairs and sectors, and use the estimated elasticities in a general equilibrium analysis. We find that the sanctions decreased trade with Russia in key sectors, translating to a loss in real income in Russia by 0.3%. Full decoupling of the EU and its allies from Russia would increase this effect to over 4%. Our results emphasize the role of deep sanctions as a foreign policy instrument and international cooperation.
     </p>
   </div>
-</div>
+</div> 
 
 
 <div class="pub-item" style="margin: 1.5rem 0; margin-left: 1.2rem; margin-right: 1.2rem;">
-  <h3 style="font-size: 0.9rem; font-weight: 600; color: rgb(10, 52, 104); margin-bottom: 0.2rem;">
-     <a href="docs/Scheckenhofer et al_2025-P&P.pdf" target="_blank" 
-      style="color: rgb(10, 52, 104); text-decoration: none;"
+  <h3 style="font-weight: 600; color: rgb(13, 64, 128); margin-bottom: 0.2rem;">
+     <a href="docs/Scheckenhofer et al_2025-P&P.pdf" target="_blank"  
+      style="color: rgb(13, 64, 128); text-decoration: none;"
       onmouseover="this.style.textDecoration='underline';" 
       onmouseout="this.style.textDecoration='none';">
          Dodging Trade Sanctions? Evidence from Military Goods
     </a>
-    <span style="font-weight: 400; color: gray;">
+      <span style="font-weight: 400; color: gray;">
       with 
       <a href="https://www.ifo.de/scheckenhofer-l" target="_blank" style="color: gray; text-decoration: none;"
          onmouseover="this.style.textDecoration='underline';" 
@@ -788,25 +500,25 @@ section:last-of-type {
       and 
       <a href="https://www.wiwi.uni-wuerzburg.de/qiee/team/prof-dr-joschka-wanner/" target="_blank" style="color: gray; text-decoration: none;"
          onmouseover="this.style.textDecoration='underline';" 
-         onmouseout="this.style.textDecoration='none';">Joschka Wanner</a>.
+         onmouseout="this.style.textDecoration='none';">Joschka Wanner</a>,
     </span>
-    <span style="font-weight: 600; font-style: italic; color: rgb(10, 52, 104);">
-      AEA Papers and Proceedings
-    </span><span style="color: gray; font-weight: 400; margin-left: -0.1rem;">,</span>
-    <span style="font-weight: 400; color: gray;"> 115, 573–577, 2025.</span>
-  </h3>
-
+    </h3>
+    <!-- second line: where the paper is published / under review -->
+    <div class="pub-meta">
+      <span class="journal">AEA Papers and Proceedings</span>, 115, 573–577, 2025.
+    </div>
   <div class="pub-links" style="font-size: 0.95rem; margin-top: 0.3rem; margin-left: 0.0rem;">
     <a href="javascript:void(0);" class="toggle-abstract" onclick="toggleAbstract('PP2025')">abstract</a>
     <span class="separator">|</span>
-    <a href="https://www.dropbox.com/scl/fi/nf44i954q82y20fzdm9et/Scheckenhofer-et-al_2025_final.pdf?rlkey=v6vkoamxcqht0d0kgvuchf5cq&st=osu2samn&dl=1" class="text-link" target="_blank">paper</a>
-    <span class="separator">|</span>
-    <a href="https://www.aeaweb.org/content/file?id=22757" class="text-link" target="_blank">military goods (HS6)</a>
+    <a href="docs/Scheckenhofer et al_2025-P&amp;P.pdf" class="text-link" target="_blank">paper</a>
     <span class="separator">|</span>
     <a href="https://www.openicpsr.org/openicpsr/project/229941/version/V1/view" class="text-link" target="_blank">data &amp; code</a>
+    <span class="separator">|</span>
+    <a href="data.html#MIL" class="text-link">military goods (HS6)</a>
+    <span class="award">&#9733; ifo Research and Policy Prize</span>
   </div>
 
-  <div id="PP2025" class="abstract" style="display:none; margin-top: 1rem; font-size: 1.05rem;">
+  <div id="PP2025" class="abstract" style="display:none; margin-top: 1rem;">
     <p>
       The Russian invasion of Ukraine in 2022 led to unprecedented sanctions aimed at denying Russia access to critical technologies essential for sustaining its war efforts. 
       This paper examines whether trade sanctions targeting military goods were undermined by evasion, specifically through transshipment through Russia-friendly countries. 
@@ -824,30 +536,7 @@ section:last-of-type {
   <h2 class="section-title">Work in Progress</h2>
 
   <div class="pub-item" style="margin: 1.2rem 0; margin-left: 1.2rem; margin-right: 1.2rem;">
-    <h3 style="font-size: 0.9rem; font-weight: 600; color: rgb(10, 52, 104); margin: 0;">
-      Constrained by Red Tape: Trade and Welfare Effects from Documentation
-      <span style="font-weight: 400; color: gray;">
-        with 
-        <a href="https://sites.google.com/site/lisandraflach" target="_blank" style="color: gray; text-decoration: none;"
-           onmouseover="this.style.textDecoration='underline';" onmouseout="this.style.textDecoration='none';">Lisandra Flach</a> and 
-        <a href="https://www.ifo.de/scheckenhofer-l" target="_blank" style="color: gray; text-decoration: none;"
-           onmouseover="this.style.textDecoration='underline';" onmouseout="this.style.textDecoration='none';">Lisa Scheckenhofer</a>.
-      </span>
-    </h3>
-
-    <div class="pub-links" style="font-size: 0.95rem; margin-top: 0.3rem; margin-left: 0.0rem;">
-      <a href="javascript:void(0);" class="toggle-abstract" onclick="toggleAbstract('RedTape')">abstract</a>
-    </div>
-
-    <div id="RedTape" class="abstract" style="display:none; margin-top: 1rem; font-size: 1.05rem;">
-      <p>
-        With tariffs at historically low levels, current trade policy is very much centered around reducing non-tariff barriers (NTBs), yet quantifying their effects remains challenging. This paper uses Brexit as a policy shock to estimate the effect of NTBs on trade. We compile new product-level data on the universe of regulatory measures that a UK-firm must fulfill at the border when exporting a product to the EU in response to Brexit. The structure of the event and the data allows us to account for endogeneity of trade policy, demand- and supply-shocks and isolate one channel through which NTBs affect trade &ndash; the documentary compliance costs. Our findings indicate that one additional requirement at the EU border decreases trade on both margins. This negative effect is magnified in small and new EU member states and heterogeneous across sectors. We categorize NTBs by type and show that the costs of Brexit are substantially influenced by the characteristics of NTBs and the extent of regulatory leeway.
-      </p>
-    </div>
-  </div>
-
-  <div class="pub-item" style="margin: 1.2rem 0; margin-left: 1.2rem; margin-right: 1.2rem;">
-    <h3 style="font-size: 0.9rem; font-weight: 600; color: rgb(10, 52, 104); margin: 0;">
+    <h3 style="font-weight: 600; color: rgb(13, 64, 128); margin: 0;">
       What Do Free Trade Agreements Tell Us About Trade Elasticities?
       <span style="font-weight: 400; color: gray;">
         with 
@@ -860,7 +549,7 @@ section:last-of-type {
          and
        <a href="https://www.romandavidzarate.com/" target="_blank" style="color: gray; text-decoration: none;"
          onmouseover="this.style.textDecoration='underline';"
-         onmouseout="this.style.textDecoration='none';">Roman D. Zárate</a>.
+         onmouseout="this.style.textDecoration='none';">Román D. Zárate</a>
       </span>
     </h3>
 
@@ -868,7 +557,7 @@ section:last-of-type {
       <a href="javascript:void(0);" class="toggle-abstract" onclick="toggleAbstract('FTAElasticities')">abstract</a>
     </div>
 
-    <div id="FTAElasticities" class="abstract" style="display:none; margin-top: 1rem; font-size: 1.05rem;">
+    <div id="FTAElasticities" class="abstract" style="display:none; margin-top: 1rem;">
       <p>
         This paper estimates trade elasticities using tariff reductions generated by free trade agreements. We construct a novel instrument that interacts the timing of an agreement with pre-agreement MFN tariffs: after an agreement enters into force, products with higher initial MFN tariffs are expected to experience larger preferential tariff cuts. This generates policy-driven variation in applied tariffs across products within country pairs over time. We focus on Article XXIV agreements, which correspond to reciprocal free trade agreements and customs unions. In this sample, tariffs fall gradually after entry into force, with larger reductions at longer horizons. Trade flows respond with a lag, and the implied IV estimates point to trade elasticities of about one in absolute value after the first few years, rising to roughly 1.3&ndash;1.4 by later horizons. The results show that FTA-induced tariff variation provides a useful source of identification for trade elasticities and that accounting for gradual implementation is important for measuring the dynamic response of trade to tariff reductions.
       </p>
@@ -876,12 +565,58 @@ section:last-of-type {
   </div>
 
   <div class="pub-item" style="margin: 1.2rem 0; margin-left: 1.2rem; margin-right: 1.2rem;">
-    <h3 style="font-size: 0.9rem; font-weight: 600; color: rgb(10, 52, 104); margin: 0;">
+    <h3 style="font-weight: 600; color: rgb(13, 64, 128); margin: 0;">
+      Constrained by Red Tape: Trade and Welfare Effects from Documentation
+      <span style="font-weight: 400; color: gray;">
+        with
+        <a href="https://sites.google.com/site/lisandraflach" target="_blank" style="color: gray; text-decoration: none;"
+           onmouseover="this.style.textDecoration='underline';" onmouseout="this.style.textDecoration='none';">Lisandra Flach</a> and
+        <a href="https://www.ifo.de/scheckenhofer-l" target="_blank" style="color: gray; text-decoration: none;"
+           onmouseover="this.style.textDecoration='underline';" onmouseout="this.style.textDecoration='none';">Lisa Scheckenhofer</a>
+      </span>
+    </h3>
+
+    <div class="pub-links" style="font-size: 0.95rem; margin-top: 0.3rem; margin-left: 0.0rem;">
+      <a href="javascript:void(0);" class="toggle-abstract" onclick="toggleAbstract('RedTape')">abstract</a>
+    </div>
+
+    <div id="RedTape" class="abstract" style="display:none; margin-top: 1rem;">
+      <p>
+        With tariffs at historically low levels, current trade policy is very much centered around reducing non&#8209;tariff barriers (NTBs), yet quantifying their effects remains challenging. This paper uses Brexit as a policy shock to estimate the effect of NTBs on trade. We compile new product-level data on the universe of regulatory measures that a UK-firm must fulfill at the border when exporting a product to the EU in response to Brexit. The structure of the event and the data allows us to account for endogeneity of trade policy, demand- and supply-shocks and isolate one channel through which NTBs affect trade &ndash; the documentary compliance costs. Our findings indicate that one additional requirement at the EU border decreases trade on both margins. This negative effect is magnified in small and new EU member states and heterogeneous across sectors. We categorize NTBs by type and show that the costs of Brexit are substantially influenced by the characteristics of NTBs and the extent of regulatory leeway.
+      </p>
+    </div>
+  </div>
+
+  <div class="pub-item" style="margin: 1.2rem 0; margin-left: 1.2rem; margin-right: 1.2rem;">
+    <h3 style="font-weight: 600; color: rgb(13, 64, 128); margin: 0;">
+      Escaping Protectionism: Discriminatory Tariffs and Endogenous Transshipment
+      <span style="font-weight: 400; color: gray;">
+        with
+        <a href="https://www.davidtorun.com/" target="_blank" style="color: gray; text-decoration: none;"
+           onmouseover="this.style.textDecoration='underline';" onmouseout="this.style.textDecoration='none';">David Torun</a> and
+        <a href="https://www.wiwi.uni-wuerzburg.de/qiee/team/prof-dr-joschka-wanner/" target="_blank" style="color: gray; text-decoration: none;"
+           onmouseover="this.style.textDecoration='underline';" onmouseout="this.style.textDecoration='none';">Joschka Wanner</a>
+      </span>
+    </h3>
+
+    <div class="pub-links" style="font-size: 0.95rem; margin-top: 0.3rem; margin-left: 0.0rem;">
+      <a href="javascript:void(0);" class="toggle-abstract" onclick="toggleAbstract('EscapingProtectionism')">abstract</a>
+    </div>
+
+    <div id="EscapingProtectionism" class="abstract" style="display:none; margin-top: 1rem;">
+      <p>
+        Origin-specific tariffs make it profitable to reroute goods through third countries, yet quantitative trade models typically assume that trade barriers are fully enforced. We quantify the role of such transshipment for the 2025&ndash;26 U.S. tariffs, which are large, highly discriminatory across origins, and were imposed without new rules of origin. We embed endogenous rerouting in a product-level Eaton-Kortum model, in which rerouting is profitable only when the tariff saved by declaring the transshipment country as the origin exceeds the additional route cost and any duty levied there, and in which tariff revenue is tracked along the chosen route. Rerouting substantially attenuates the import response: aggregate U.S. imports from foreign origins fall by 32% under full enforcement but by only 13% under least-cost transshipment. Tariff revenue is USD 35 billion lower, and the U.S. welfare effect flips from a loss of 0.15% to a gain of 0.04%. Separating transshipment from trade diversion, our framework bounds how much the full-enforcement assumption overstates the effects of discriminatory tariffs.
+      </p>
+    </div>
+  </div>
+
+  <div class="pub-item" style="margin: 1.2rem 0; margin-left: 1.2rem; margin-right: 1.2rem;">
+    <h3 style="font-weight: 600; color: rgb(13, 64, 128); margin: 0;">
       The Content of Trade Agreements: Same, Same but Different?
       <span style="font-weight: 400; color: gray;">
         with
         <a href="https://www.economics.ox.ac.uk/people/ekin-ergin" target="_blank" style="color: gray; text-decoration: none;"
-           onmouseover="this.style.textDecoration='underline';" onmouseout="this.style.textDecoration='none';">Ekin Ergin</a>.
+           onmouseover="this.style.textDecoration='underline';" onmouseout="this.style.textDecoration='none';">Ekin Ergin</a>
       </span>
     </h3>
   </div>
@@ -890,7 +625,7 @@ section:last-of-type {
 
 
   <footer>
-    <p>© 2025 Feodora Teti</p>
+    <p>© 2026 Feodora Teti · Photo: © ifo Institut | Enno Kapitza</p>
   </footer>
 </body>
 </html>
